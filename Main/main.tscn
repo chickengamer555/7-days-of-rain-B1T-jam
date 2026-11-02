@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://xc8hn5n5goux"]
+
+[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="1_2w1kt"]
+[ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="2_qvhan"]
+[ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://Main/clock_test.gd" id="3_qvhan"]
+
+[node name="Main" type="Node2D" unique_id=1734866862]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1780990519]
+position = Vector2(0.00024414063, -1)
+scale = Vector2(26.585938, 19.59375)
+texture = ExtResource("1_2w1kt")
+
+[node name="Player" parent="." unique_id=1859766813 instance=ExtResource("2_qvhan")]
+position = Vector2(-1026, -725)
+
+[node name="Label" type="Label" parent="." unique_id=634537517]
+offset_left = -1443.0
+offset_top = -1043.0
+offset_right = -1403.0
+offset_bottom = -1020.0
+theme_override_font_sizes/font_size = 70
+text = "test"
+script = ExtResource("3_qvhan")

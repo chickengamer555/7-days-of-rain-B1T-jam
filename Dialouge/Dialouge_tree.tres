@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://dnpwfsnvyjfne"]
+
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge/dialogue_node.gd" id="1_73tbe"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge/dialogue_choice.gd" id="2_vdost"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge/dialogue_tree.gd" id="2_ydcgo"]
+
+[sub_resource type="Resource" id="Resource_73tbe"]
+script = ExtResource("1_73tbe")
+id = "start"
+speaker = "Tadashi"
+text = "ITS FOCKING RAINING"
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[resource]
+script = ExtResource("2_ydcgo")
+start_id = "start"
+nodes = Array[ExtResource("1_73tbe")]([SubResource("Resource_73tbe")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
