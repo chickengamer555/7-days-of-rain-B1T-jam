@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="1_2w1kt"]
 [ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="2_qvhan"]
 [ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://Main/clock_test.gd" id="3_qvhan"]
+[ext_resource type="Script" uid="uid://cc26361lqegxd" path="res://Main/rule_test.gd" id="4_eunhr"]
+[ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/tadashi.tres" id="5_k3v36"]
+[ext_resource type="Script" uid="uid://bf4cxcshmclos" path="res://Main/talk_test.gd" id="6_liyct"]
 
 [node name="Main" type="Node2D" unique_id=1734866862]
 
@@ -22,3 +25,24 @@ offset_bottom = -1020.0
 theme_override_font_sizes/font_size = 70
 text = "test"
 script = ExtResource("3_qvhan")
+
+[node name="Node" type="Node" parent="." unique_id=389967113]
+script = ExtResource("4_eunhr")
+npc = ExtResource("5_k3v36")
+
+[node name="TalkTest" type="CanvasLayer" parent="." unique_id=1236414903]
+script = ExtResource("6_liyct")
+npc = ExtResource("5_k3v36")
+
+[node name="Box" type="PanelContainer" parent="TalkTest" unique_id=518961776]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBox" type="VBoxContainer" parent="TalkTest/Box" unique_id=1897566098]
+layout_mode = 2
+
+[node name="Line" type="Label" parent="TalkTest/Box/VBox" unique_id=1335293989]
+layout_mode = 2
+
+[node name="Choices" type="VBoxContainer" parent="TalkTest/Box/VBox" unique_id=453589110]
+layout_mode = 2

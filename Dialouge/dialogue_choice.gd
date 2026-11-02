@@ -3,7 +3,8 @@ extends Resource
 
 @export var label: String = ""
 @export var next_id: String = ""
-
+@export var effect: Effect 
+@export var condition: Condition 
 
 ## The text shown on the player's button: `label` with every inline `{...}` tag removed.
 func display_label() -> String:

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bsle7vqddyrc8"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_6mdjr"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_idt7p"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_po5mu"]
+[ext_resource type="Resource" uid="uid://ubyjnjdbv781" path="res://data/Dialouge/Tadashi/tadashi_confront.tres" id="3_idt7p"]
+[ext_resource type="Resource" uid="uid://bfhj7djt0p3f6" path="res://data/Dialouge/Tadashi/tadashi_idle.tres" id="4_nqqh8"]
+
+[sub_resource type="Resource" id="Resource_7ofpc"]
+script = ExtResource("2_idt7p")
+needs_flags = Array[String](["has_cost_book"])
+from_day = 4
+to_day = 4
+to_phase = 0
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_aoiv7"]
+script = ExtResource("1_6mdjr")
+condition = SubResource("Resource_7ofpc")
+tree = ExtResource("3_idt7p")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_7fu7r"]
+script = ExtResource("1_6mdjr")
+tree = ExtResource("4_nqqh8")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[resource]
+script = ExtResource("2_po5mu")
+id = "tadashi"
+display_name = "Tadashi"
+rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_aoiv7"), SubResource("Resource_7fu7r")])
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
