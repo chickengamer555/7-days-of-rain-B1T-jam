@@ -1,0 +1,117 @@
+﻿Seven Days of Rain
+Game Design Document. B1T Jam, theme: Shrine.
+Overview
+Seven Days of Rain is a small top-down mystery game. A river village floods on the seventh night of a week of rain. You play the new bell-ringer at the shrine above the village. After the flood, the dusk bell rings once and you wake up on the morning of Day 1 with all your memories. Nobody else remembers anything.
+There is no combat, no items and no stats. The only thing that carries over between loops is what you know. The game writes it down in a notebook called the ledger, and the ledger decides which dialogue genrealoptions and interactions are open. If you learned about the cracked embankment in an earlier loop, you can ask about it. If you didn't, that option doesn't exist.
+Quick facts:
+* Genre: top-down time-loop mystery
+* Camera: fixed, one screen per place
+* Screen: 240 x 160, scaled up by whole numbers, 16 x 16 tiles
+* Colors: two only. Paper #c6baac and ink #1e1c32
+* Controls: move with arrows or WASD, one action button, one button for the ledger
+* Length: one loop is about 7 minutes, a first full clear is 15 to 25 minutes
+* Engine: Godot, exported to web for itch.io
+Story
+Setting
+The village of Mizuhara sits below Hinoe Shrine. For as long as anyone remembers, the shrine bell has been rung once at dusk to keep the rain in check. It has rained for six days already. When the game starts it is the first morning of the seventh-day storm. On the seventh night the river breaks the old dike at the Kuma bend and the village is lost. The bell rings once and it is Day 1 again.
+What really happened
+The player works this out slowly, a piece at a time.
+1. Forty years ago a flood killed thirty-one villagers, including Kenji's father. The old bell-ringer had died that spring and nobody took the rope for a month. The river came in the gap.
+2. Haruko took the rope and promised the kami she would ring every dusk until the village could stand without her protection. She kept that promise for forty years.
+3. The kami is Shizu-hime, the spirit of still water. She has held the river back for centuries. The bell is a promise between her and the village.
+4. The village built an earth dike. Two years ago the carpenter Tadashi was paid to rebuild it with a stone facing. His wife was dying and he was in debt, so he kept the stone money and built it from mud and bamboo. His wife died anyway.
+5. Haruko died six months ago. Her last journal page asks for one more rain to see the village through. The player took the rope after her but doesn't carry her promise.
+6. Shizu-hime is worn out and grieving. She can't stand to lose the village a second time, so she replays this last week over and over. The player remembers because the bell links them to her.
+7. The loop only breaks when the village can really stand without her. The dike is mended, everyone is safe, and the player says the words Haruko whispered every dusk but never said out loud because they weren't true yet.
+What happens if the player does nothing
+* Days 1 to 3: the river rises one stake a day. Tadashi drinks. Kenji sharpens poles and counts coins.
+* Day 4: the bridge beam starts to rot. Sato sees fresh cracks in the dike.
+* Day 5: the bridge closes in the morning. At dusk Kenji rows downstream to warn his family and the ferry is gone.
+* Day 6: at dusk Mio climbs the mountain trail with her grandmother's bell-cord, hoping to stop the rain.
+* Day 7: the river reaches the seventh stake. After the dusk bell the dike breaks and the trail slides. Day 1.
+What the player has to fix
+There are three problems. They can be solved in any order as long as the steps in each are met.
+The dike. Okabe, the headman, has to order the repair by Day 5 dusk, and he needs three things first: the cost book from Tadashi's workshop (only reachable on Day 3 at noon, when Tadashi is out), Tadashi agreeing to mend it (confront him on Day 4 morning with the book), and the old stair stones from the Priest (he only gives them if you know the line from Haruko's journal).
+The evacuation. Okabe will only move everyone to the shrine hill if both Sato and Chiyo speak for the river, so the player needs what Sato says about the sixth stake and what Chiyo remembers of the old flood. This has to happen by Day 6 noon. Kenji is also leaving on Day 5. If the player learns he only wants to warn his family in Shirakawa and tells Okabe, Okabe sends a rider and Kenji stays to run the ferry.
+Mio. On Day 6 morning the Priest agrees to let her ring the bell with the player. At noon the player finds her on the stairs and asks her to ring with them. If that fails, Kuro the dog barks at the foot of the trail at dusk and leads the player to her at the half-way hut.
+The release words are a fourth thing, needed only for the true ending. Haruko's last journal page and Chiyo's memory of the old flood lead Chiyo to tell the player the words.
+Gameplay
+Time. One day lasts about 60 seconds, split into four phases of about 15 seconds: morning, noon, dusk and night. A loop is seven days. Time stops during dialogue and in menus. There is a fast-forward button, and a clock icon on the screen shows the phase.
+Movement. The player walks in four or eight directions. One button talks, reads, opens things and rings the bell.
+Schedules. Every villager has a fixed timetable for where they are in each phase of each day. Most slots repeat, so only the changes get written down. The player learns the timetables by watching and asking, and being in the right place at the right time is most of the game.
+Ledger. It is the only thing that survives a loop. Each entry is one line, tagged with the day and phase it was learned. Dialogue options check the ledger, not items. Anything the player does in a loop, like taking the cost book, is a flag that resets on Day 1.
+Bell and hourglass. At the shrine the player can ring the bell to end the loop early, or use the hourglass to skip forward to any day they have already reached. This saves time when testing Day 5 without replaying Days 1 to 3.
+Failing. The player can't die. The loop resets when the flood arrives or when the bell is rung early, and a short card tells them it started again.
+Characters
+Ten villagers and a dog. The first five carry the story.
+* Priest Genshin: runs the shrine, was Haruko's oldest friend, suspects the loop. Gives the stones and lets Mio ring. Secret: he hasn't read Haruko's journal because he's afraid of what it says.
+* Ume: tea house owner who hears everything and calls the player little bell. Source of rumors. Secret: Tadashi owes her money and she has guessed why.
+* Tadashi: carpenter who rebuilt the dike. Proud and exhausted. Secret: he kept the stone money to pay for his wife's care.
+* Kenji: ferryman whose father drowned in the old flood. Seems to be leaving but only wants to warn his family.
+* Mio: nine years old, Haruko's granddaughter, wears her grandmother's bell-cord. The person the player is really trying to save.
+* Okabe: headman. Trusts proof and nothing else. Gives the orders.
+* Sato: fisherman who reads the river on seven carved stakes. Knows about the cracks.
+* Chiyo: eighty years old, remembers the old flood. Knows the release words.
+* Hanae: Mio's mother. Explains what Mio believes and what she needs.
+* Tomo: shrine novice who mentions the journal and the old west stair, and lets the player into the inner room.
+* Kuro: the shrine dog. Follows Mio everywhere.
+Places, each one screen: Hinoe Shrine, Shrine Stairs, Village Lane (the hub), Tea House, Workshop, Headman's House, Haruko's House, Flood Memorial, River Road, Dock, Embankment, Bridge and Mountain Trail.
+The ledger
+There are 20 entries. Needs means the player must already know that entry.
+* A1: The flood comes after dusk on Day 7. Automatic after the first flood.
+* S1: Haruko rang the shrine bell for forty years. The kami Shizu-hime holds the river back. Priest, Day 1 dusk.
+* S2: Forty years ago the bell fell silent for a month and the river broke through. Chiyo, Day 2 morning.
+* S3: Haruko's journal is in the shrine's inner room. Tomo, Day 2 noon.
+* S4: The shrine stands because the village stands. Journal, Day 4 noon. Needs S3.
+* S5: Haruko's last page asks to see them through one more rain. Journal, Day 4 noon. Needs S3.
+* S6: The release words, we can stand now, thank you. Chiyo, Day 6 or 7. Needs S2 and S5.
+* R1: The dike is cracked at the Kuma bend. Sato, Day 3 morning.
+* R2: When the river reaches the sixth stake it reaches the cracks. Sato, Day 4 morning. Needs R1.
+* E1: Tadashi rebuilt the dike two years ago and it was meant to have a stone facing. Ume, Day 1 noon.
+* E2: The dike is only mud and bamboo. Ume, Day 2 noon. Needs E1.
+* E3: Tadashi's cost book shows the stone was never ordered. Workshop floorboard, Day 3 noon. Needs E2 to look for it.
+* E4: Tadashi will mend the dike if given stone and Okabe's order by Day 5 dusk. Tadashi, Day 4 morning.
+* E5: The old west stair holds a hundred flat stones. Tomo, Day 3 noon.
+* V1: Kenji means to leave on Day 5 at dusk. Ume, Day 2 dusk.
+* V2: Kenji only wants to warn his family in Shirakawa. Kenji, Day 3 dusk. Needs V1.
+* V3: Okabe will order an evacuation if Sato and Chiyo speak for the river. Okabe, Day 2 noon.
+* M1: Mio believes her offering can stop the rain. Hanae, Day 3 noon.
+* M2: Mio will climb the mountain trail at dusk on Day 6. Mio, Day 4 or 5 dusk. Needs M1.
+* M3: Mio will stay if she has a part in the bell. Hanae, Day 4 or 5. Needs M1.
+Endings
+There are two endings. The flood that resets the loop is not counted as one.
+The Quiet Village. The evacuation worked and Mio is safe, but the dike was not fixed. Everyone lives and the village is lost. The loop ends but the rain doesn't.
+Dawn, the true ending. The dike, the evacuation and Mio are all solved. At dusk on Day 7 the player rings the bell and says the release words. Shizu-hime answers through the bell and asks if it is true. The player says yes, she asks them to ring once more for Haruko, the rain stops and the dike holds. The screen switches to a warmer second palette for the first time.
+If the dike holds but the player only rings the bell without speaking, the loop resets with a card saying the river holds and she is still waiting.
+Art and sound
+The game should look like an ink drawing of rain on paper. Roofs are solid ink with a paper-colored ridge line, the river is a checkerboard dither, stairs are rows of short lines. Characters are small sprites with a different silhouette each, since there is no color to tell them apart.
+Rain is short diagonal strokes that scroll down the screen, flipping color where they cross ink so they stay visible. This is the main visual effect and gets the most polish.
+Three cheap palette tricks: invert the colors for two frames on thunder, add a little more dither in the screen corners each day so the world closes in, and swap to a warm second palette (paper #eadfc8, ink #2a1d17) for the Dawn ending.
+Audio is a rain loop under everything, a low drone that grows each day, footsteps on wet ground and thunder. The dusk bell is the main sound and sounds slightly different in the true ending. Web builds need a click to start audio, so the title screen has a click to start prompt.
+Technical notes
+* Three autoloads: Clock (day, phase and signals), Ledger (entries that survive resets) and Dialogue (loads JSON where each option has requires and grants lists).
+* Scenes: World, NPC (with a schedule resource), Interactable, HUD and Ending.
+* A loop reset reloads the World scene and clears flags. The ledger stays and is saved to user:// so a page reload doesn't lose it.
+* Draw to a small SubViewport, scale with nearest filtering, and use a palette shader to force exactly two colors.
+* Test the web export early.
+Schedule
+Ten days.
+* Day 1: scaling, movement, tilemap, clock. Start writing dialogue.
+* Day 2: NPC schedules and interaction.
+* Day 3: dialogue system, ledger and gated options.
+* Day 4: loop reset, saving, bell and hourglass.
+* Day 5: build the full puzzle chain and test it.
+* Day 6: art pass and ledger look.
+* Day 7: rain, thunder, palette effects and audio.
+* Day 8: story polish and both endings.
+* Day 9: playtest with someone new and add a short tutorial.
+* Day 10: export, test the web build, write the itch.io page and submit.
+If time runs short, cut in this order: the Kuro rescue route, idle lines beyond two per character, Tomo, the hourglass, then phases (schedule by day only). Never cut the clock, the ledger, the schedules or the bell.
+References
+Search each name plus gameplay on YouTube.
+* Twelve Minutes: a small space and a short loop with a lot of story in it.
+* Minit: very short loops where each one teaches you something.
+* Majora's Mask: the best known example of NPC schedules in a timed cycle.
+* Outer Wilds: progress is only knowledge. The ledger comes from its ship log.
+* Return of the Obra Dinn: a two-tone mystery.
+For the look, search 1-bit rain pixel art, sumi-e rain, and Hiroshige's Sudden Shower over Shin-Ohashi Bridge.

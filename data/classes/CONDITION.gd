@@ -16,7 +16,7 @@ func is_met() -> bool:
 		return false
 	if not Flags.has_all_tags(needs_flags):
 		return false
-	if Flags.has_any_tag(needs_flags):
+	if Flags.has_any_tag(blocked_by_flags):
 		return false
 	var start = (from_day - 1) * 4 + from_phase
 	var finish = (to_day - 1) * 4 + to_phase
