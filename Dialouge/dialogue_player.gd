@@ -71,7 +71,8 @@ func _available_indices(node: DialogueNode) -> Array[int]:
 	for i: int in node.choices.size():
 		var choice: DialogueChoice = node.choices[i]
 		if choice != null and (repeat_questions or not _asked.has(choice)):
-			out.append(i)
+			if choice.condition == null or choice.condition.is_met():
+				out.append(i)
 	return out
 
 
