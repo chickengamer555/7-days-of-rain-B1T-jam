@@ -5,10 +5,10 @@ extends Node
 
 func _ready() -> void:
 	print_rule()
-	if apply_test_state:
-		Clock.day = 4
-		Flags.add("has_cost_book")
-		print_rule()
+#	Clock.day = 4
+	print_rule()
+	Flags.add("has_cost_book")
+	print_rule()
 
 func print_rule():
 	if npc == null:

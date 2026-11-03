@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://xc8hn5n5goux"]
+
+[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="1_s3n3v"]
+[ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://test/placeholder.gd" id="2_aeque"]
+[ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="2_kgdm3"]
+[ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://test/clock_test.gd" id="3_aeque"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_f6u32"]
+[ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/tadashi.tres" id="5_5jhup"]
+[ext_resource type="Script" uid="uid://bf4cxcshmclos" path="res://test/talk_test.gd" id="6_v2t6q"]
+[ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="9_v2t6q"]
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="10_vvaop"]
+[ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="11_ibfm0"]
+
+[sub_resource type="Resource" id="Resource_h5ro5"]
+script = ExtResource("11_ibfm0")
+id = "has_cost_book"
+metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
+
+[node name="test" type="Node2D" unique_id=1734866862]
+position = Vector2(28, -105)
+script = ExtResource("2_aeque")
+npcs = Array[ExtResource("3_f6u32")]([ExtResource("5_5jhup")])
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1780990519]
+position = Vector2(0.00024414063, -1)
+scale = Vector2(26.585938, 19.59375)
+texture = ExtResource("1_s3n3v")
+
+[node name="Player" parent="." unique_id=1859766813 instance=ExtResource("2_kgdm3")]
+position = Vector2(-549, -531)
+
+[node name="Label" type="Label" parent="." unique_id=634537517]
+offset_left = -1443.0
+offset_top = -1043.0
+offset_right = -1403.0
+offset_bottom = -1020.0
+theme_override_font_sizes/font_size = 70
+text = "test"
+script = ExtResource("3_aeque")
+
+[node name="TalkTest" type="CanvasLayer" parent="." unique_id=1236414903]
+script = ExtResource("6_v2t6q")
+npc = ExtResource("5_5jhup")
+
+[node name="Box" type="PanelContainer" parent="TalkTest" unique_id=518961776]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBox" type="VBoxContainer" parent="TalkTest/Box" unique_id=1897566098]
+layout_mode = 2
+
+[node name="Line" type="Label" parent="TalkTest/Box/VBox" unique_id=1335293989]
+layout_mode = 2
+
+[node name="Choices" type="VBoxContainer" parent="TalkTest/Box/VBox" unique_id=453589110]
+layout_mode = 2
+
+[node name="PlaceHolder" type="Node2D" parent="." unique_id=1171560324]
+
+[node name="Spots" type="Node2D" parent="." unique_id=1765391010]
+
+[node name="spot 1" type="Marker2D" parent="Spots" unique_id=441940488]
+position = Vector2(-671, -905)
+
+[node name="spot 2" type="Marker2D" parent="Spots" unique_id=1793227087]
+position = Vector2(-1307, -525)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1684505752]
+
+[node name="Interactable" parent="." unique_id=62630446 instance=ExtResource("9_v2t6q")]
+position = Vector2(-222, -249)
+data = SubResource("Resource_h5ro5")
