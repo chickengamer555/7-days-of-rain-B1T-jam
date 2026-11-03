@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_po5mu"]
 [ext_resource type="Resource" uid="uid://ubyjnjdbv781" path="res://data/Dialouge/Tadashi/tadashi_confront.tres" id="3_idt7p"]
 [ext_resource type="Resource" uid="uid://bfhj7djt0p3f6" path="res://data/Dialouge/Tadashi/tadashi_idle.tres" id="4_nqqh8"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="5_5auiw"]
+[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="7_7fu7r"]
 
 [sub_resource type="Resource" id="Resource_7ofpc"]
 script = ExtResource("2_idt7p")
@@ -25,9 +27,24 @@ script = ExtResource("1_6mdjr")
 tree = ExtResource("4_nqqh8")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
+[sub_resource type="Resource" id="Resource_kgdm3"]
+script = ExtResource("5_5auiw")
+place = "place 1"
+spot = "spot 1"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_nr7i4"]
+script = ExtResource("5_5auiw")
+day = 2
+place = "place 2"
+spot = "spot 2"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
 [resource]
 script = ExtResource("2_po5mu")
 id = "tadashi"
 display_name = "Tadashi"
 rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_aoiv7"), SubResource("Resource_7fu7r")])
+sprite = ExtResource("7_7fu7r")
+schedule = Array[ExtResource("5_5auiw")]([SubResource("Resource_kgdm3"), SubResource("Resource_nr7i4")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
