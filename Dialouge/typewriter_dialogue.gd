@@ -1,5 +1,5 @@
 class_name TypewriterDialogue
-extends CanvasLayer
+extends Control
 
 # Dialogue box with a typewriter effect: types each line out, then waits for a click.
 

@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
 	pass
 
 func interact(): #Lets us test npcs
-	print(data.id)
+	Dialouge.run_first_match(data.rules, data.id) # Start first convo alloweed 

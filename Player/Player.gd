@@ -11,8 +11,12 @@ func _ready() -> void:
 	pass
 
 func get_input() -> void:
+	if not Clock.running:
+		velocity = Vector2.ZERO
+		return	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
+
 
 func is_dialogue_active() -> bool:
 	var dm = get_node_or_null("/root/DialogueManager")
@@ -27,15 +31,10 @@ func _physics_process(delta: float) -> void:
 	get_input()
 	move_and_slide()
 
-	
-
-
-
-
-
-
 func _unhandled_input(event):
 	if not event.is_action_pressed("Interact"):
+		return
+	if not Clock.running:
 		return
 	var closest = null
 	var closest_distance = INF

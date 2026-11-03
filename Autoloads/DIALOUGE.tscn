@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://cighbufvpxapt"]
 
 [ext_resource type="PackedScene" uid="uid://ddjodc2p80frd" path="res://Dialouge/dialogue_box.tscn" id="1_kbwly"]
+[ext_resource type="Script" uid="uid://cjmstaypw2561" path="res://Autoloads/dialouge.gd" id="1_ydmob"]
 [ext_resource type="Script" uid="uid://d1ic2nsfhrwro" path="res://Dialouge/dialogue_player.gd" id="2_i5blm"]
 
-[node name="Dialouge" type="Node2D" unique_id=1317725260]
+[node name="Dialouge" type="CanvasLayer" unique_id=928797108]
+script = ExtResource("1_ydmob")
 
-[node name="DialogueBox" parent="." unique_id=544790272 instance=ExtResource("1_kbwly")]
+[node name="Box" parent="." unique_id=544790272 instance=ExtResource("1_kbwly")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Prompt" type="Label" parent="." unique_id=1754300791]
 visible = false
@@ -19,12 +26,14 @@ autowrap_mode = 3
 
 [node name="ChoiceScroll" type="ScrollContainer" parent="." unique_id=1106498108]
 visible = false
-anchors_preset = 12
+anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -60.0
 grow_horizontal = 2
 grow_vertical = 0
+follow_focus = true
 
 [node name="Choices" type="VBoxContainer" parent="ChoiceScroll" unique_id=472904823]
 layout_mode = 2

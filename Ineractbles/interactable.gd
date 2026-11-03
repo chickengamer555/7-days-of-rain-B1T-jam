@@ -3,4 +3,4 @@ extends Area2D
 @export var data: InteractbleData
 
 func interact():
-	print(data.id)
+	Dialouge.run_first_match(data.rules, data.id) # Start first convo alloweed 
