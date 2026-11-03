@@ -5,7 +5,6 @@ const NPC_SCENE = preload("res://data/Npcs/NPC.tscn") # Load npc scene
 
 func _ready():
 		Clock.phase_changed.connect(refresh_npcs) #update npcs each phase
-		$Player.position = $Spots.get_node("spot 1").position
 		refresh_npcs()
 
 func refresh_npcs(): # Removes every npc then puts each one at the spot the shcedule says they should be in

@@ -13,13 +13,13 @@ func _ready():
 		add_child(walker)
 		box.hide()
 
-func _unhandled_input(event):
-		if not event.is_action_pressed("Interact"):
-				return
-		if not talking:
-				start_talking()
-		elif walker.available_choices().is_empty():
-				stop_talking() # Nothing left so close
+#func _unhandled_input(event):
+		#if not event.is_action_pressed("Interact"):
+				#return
+		#if not talking:
+				#start_talking()
+		#elif walker.available_choices().is_empty():
+				#stop_talking() # Nothing left so close
 
 func start_talking():
 		var tree = pick_tree()

@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
 size = Vector2(126, 127)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xx7b"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1016449922 groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_4ntmi")
@@ -20,3 +22,11 @@ texture = ExtResource("1_l8h54")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1616005194]
 zoom = Vector2(0.2, 0.2)
+
+[node name="Sensor" type="Area2D" parent="." unique_id=1126030353]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sensor" unique_id=1186980012]
+scale = Vector2(14, 14)
+shape = SubResource("CircleShape2D_7xx7b")

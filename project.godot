@@ -72,6 +72,11 @@ Fast_foward={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Player body Tile maps and Walls"
+2d_render/layer_2="Player sensor + NPC and Interactble areas"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
