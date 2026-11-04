@@ -1,15 +1,49 @@
 [gd_scene format=3 uid="uid://bg7h7uxj0d0tp"]
 
-[node name="Hud" type="CanvasLayer" unique_id=786916839]
+[ext_resource type="Script" uid="uid://bq33jn2muoia5" path="res://HUD/hud.gd" id="1_f31rt"]
+[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="2_b7ubu"]
 
-[node name="ClockIcon" type="TextureRect" parent="." unique_id=1521390552]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f31rt"]
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+
+[node name="Hud" type="CanvasLayer" unique_id=786916839]
+script = ExtResource("1_f31rt")
+
+[node name="ClockFace" type="Node2D" parent="." unique_id=1716147070]
+
+[node name="Base" type="Sprite2D" parent="ClockFace" unique_id=1767762996]
+
+[node name="HourHand" type="Sprite2D" parent="ClockFace" unique_id=1799232454]
+
+[node name="MinuteHand" type="Sprite2D" parent="ClockFace" unique_id=888249326]
 
 [node name="DayLabel" type="Label" parent="." unique_id=1391676162]
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="NewEntryIcon" type="TextureRect" parent="." unique_id=291051747]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_b7ubu")
+expand_mode = 1
+
+[node name="NewEntryTimer" type="Timer" parent="." unique_id=345778449]
+
+[node name="LedgerScreen" type="Panel" parent="." unique_id=1072489921]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f31rt")
+
+[node name="Scroll" type="ScrollContainer" parent="LedgerScreen" unique_id=1656677815]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+
+[node name="Lines" type="VBoxContainer" parent="LedgerScreen/Scroll" unique_id=1382388703]
+custom_minimum_size = Vector2(240, 160)
+layout_mode = 2

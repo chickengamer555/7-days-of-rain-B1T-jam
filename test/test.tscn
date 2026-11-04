@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="9_v2t6q"]
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="10_vvaop"]
 [ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="11_ibfm0"]
+[ext_resource type="PackedScene" uid="uid://bg7h7uxj0d0tp" path="res://HUD/HUD.tscn" id="11_v2t6q"]
 
 [sub_resource type="Resource" id="Resource_h5ro5"]
 script = ExtResource("11_ibfm0")
@@ -70,3 +71,5 @@ position = Vector2(-1307, -525)
 [node name="Interactable" parent="." unique_id=62630446 instance=ExtResource("9_v2t6q")]
 position = Vector2(-222, -249)
 data = SubResource("Resource_h5ro5")
+
+[node name="Hud" parent="." unique_id=786916839 instance=ExtResource("11_v2t6q")]

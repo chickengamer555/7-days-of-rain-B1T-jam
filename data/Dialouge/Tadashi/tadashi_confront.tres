@@ -19,18 +19,11 @@ text = "Ok ill help!"
 effect = SubResource("Resource_p1aeb")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
-[sub_resource type="Resource" id="Resource_aoiv7"]
-script = ExtResource("2_0s0xi")
-label = "Show him the book"
-next_id = "agrees"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
 [sub_resource type="Resource" id="Resource_0s0xi"]
 script = ExtResource("1_t3cyd")
 id = "start"
 speaker = "Tadashi"
 text = "What do you want?"
-choices = Array[ExtResource("2_0s0xi")]([SubResource("Resource_aoiv7")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [resource]
