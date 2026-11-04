@@ -10,7 +10,10 @@ func run_first_match(rules, id):
 	for rule in rules: # go through rulles 
 		if rule.condition == null or rule.condition.is_met(): #is it allowed?
 			speaker_id = id # Note who it is
-			start(rule.tree) # Play the convo
+			if not rule.random_lines.is_empty(): # Does it have random line if so pick one at random if not play convo
+				start(make_line_tree(rule.random_lines.pick_random(), id)) 
+			else:
+				start(rule.tree) # Play the convo
 			return # stop so only first match
 
 func start(tree): # The func that begins a conversation 
@@ -76,3 +79,13 @@ func end():
 func _unhandled_input(event):
 	if active and event.is_action_pressed("Interact"):
 		$Box.advance()
+
+func make_line_tree(text, id):
+	var node = DialogueNode.new() # make the line
+	node.id = "start" # gib id
+	node.speaker = id.capitalize() # name in box 
+	node.text = text # words
+	var tree = DialogueTree.new() # make the ree
+	tree.start_id = "start" # Start on line
+	tree.nodes.append(node) #put line in tree
+	return tree

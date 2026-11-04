@@ -1,30 +1,13 @@
 [gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bsle7vqddyrc8"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_6mdjr"]
-[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_idt7p"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_po5mu"]
-[ext_resource type="Resource" uid="uid://ubyjnjdbv781" path="res://data/Dialouge/Tadashi/tadashi_confront.tres" id="3_idt7p"]
-[ext_resource type="Resource" uid="uid://bfhj7djt0p3f6" path="res://data/Dialouge/Tadashi/tadashi_idle.tres" id="4_nqqh8"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="5_5auiw"]
 [ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="7_7fu7r"]
 
-[sub_resource type="Resource" id="Resource_7ofpc"]
-script = ExtResource("2_idt7p")
-needs_flags = Array[String](["has_cost_book"])
-from_day = 4
-to_day = 4
-to_phase = 0
-metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_aoiv7"]
+[sub_resource type="Resource" id="Resource_4ntmi"]
 script = ExtResource("1_6mdjr")
-condition = SubResource("Resource_7ofpc")
-tree = ExtResource("3_idt7p")
-metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
-[sub_resource type="Resource" id="Resource_7fu7r"]
-script = ExtResource("1_6mdjr")
-tree = ExtResource("4_nqqh8")
+random_lines = Array[String](["Random line 1", "Random line 2"])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_kgdm3"]
@@ -44,7 +27,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("2_po5mu")
 id = "tadashi"
 display_name = "Tadashi"
-rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_aoiv7"), SubResource("Resource_7fu7r")])
+rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_4ntmi")])
 sprite = ExtResource("7_7fu7r")
 schedule = Array[ExtResource("5_5auiw")]([SubResource("Resource_kgdm3"), SubResource("Resource_nr7i4")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
