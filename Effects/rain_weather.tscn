@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dfy1k0s5m8x3a"]
+
+[ext_resource type="Script" uid="uid://d2msd0ojkjpcm" path="res://Effects/rain_weather.gd" id="1_weathergd"]
+[ext_resource type="Shader" uid="uid://c5hbawur7whcd" path="res://Shaders/rain_stroke.gdshader" id="2_rainshader"]
+[ext_resource type="Script" uid="uid://bt0l0pwe6cnmq" path="res://Effects/rain_canvas.gd" id="3_raincanvas"]
+[ext_resource type="Shader" uid="uid://c6jo5iau7yi4b" path="res://Shaders/palette_limiter.gdshader" id="4_paletteshader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rain"]
+shader = ExtResource("2_rainshader")
+shader_parameter/paper_color = Color(0.776471, 0.729412, 0.67451, 1)
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_palette"]
+shader = ExtResource("4_paletteshader")
+shader_parameter/paper_color = Color(0.776471, 0.729412, 0.67451, 1)
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+shader_parameter/invert_colors = false
+shader_parameter/threshold = 0.45
+shader_parameter/dither_intensity = 0.0
+
+[node name="RainWeather" type="CanvasLayer"]
+layer = 80
+script = ExtResource("1_weathergd")
+
+[node name="RainCanvas" type="Control" parent="."]
+material = SubResource("ShaderMaterial_rain")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_raincanvas")
+
+[node name="PaletteLimiter" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_palette")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ThunderTimer" type="Timer" parent="."]
+one_shot = true
