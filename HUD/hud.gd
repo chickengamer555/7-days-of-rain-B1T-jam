@@ -12,10 +12,10 @@ func _ready() -> void:
 
 func update_clock(): # Tween animation for clock hands spinning 
 	var target = Clock.phase * TAU / 4
-	if target < $ClockFace/Hourhand.rotation:
-		$ClockFace/Hourhand.rotation -= TAU
+	if target < $ClockFace/HourHand.rotation:
+		$ClockFace/HourHand.rotation -= TAU
 	var tween = create_tween().set_parallel()
-	tween.tween_property($ClockFace/Hourhand, "rotation", target, 0.5)
+	tween.tween_property($ClockFace/HourHand, "rotation", target, 0.5)
 	tween.tween_property($ClockFace/MinuteHand, "rotation", TAU, 0.5).from(0.0)
 	$DayLabel.text = str(Clock.day)
 

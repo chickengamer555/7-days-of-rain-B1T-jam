@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddjodc2p80frd"]
 
-[ext_resource type="Script" uid="uid://bkjhw8nxnow3o" path="res://Dialouge/typewriter_dialogue.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkjhw8nxnow3o" path="res://Dialouge-Prewritten/typewriter_dialogue.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_box"]
 bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)

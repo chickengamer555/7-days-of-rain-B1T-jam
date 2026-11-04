@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EndingData" format=3 uid="uid://dvevxf65vxlhd"]
+
+[ext_resource type="Script" uid="uid://h7xtbup0mh7i" path="res://data/classes/ending_data.gd" id="1_5a7lo"]
+
+[resource]
+script = ExtResource("1_5a7lo")
+id = " flood"
+card_text = "normal"
+metadata/_custom_type_script = "uid://h7xtbup0mh7i"

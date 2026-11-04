@@ -43,3 +43,10 @@ func advance_phase():
 
 func stamp():
 	return (day - 1) * 4 + phase # Turns our day and phase into 1 number
+
+func reset():
+	day = 1
+	phase = 0
+	elapsed = 0.0
+	running = true
+	phase_changed.emit 

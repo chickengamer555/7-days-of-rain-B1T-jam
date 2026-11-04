@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cighbufvpxapt"]
 
-[ext_resource type="PackedScene" uid="uid://ddjodc2p80frd" path="res://Dialouge/dialogue_box.tscn" id="1_kbwly"]
+[ext_resource type="PackedScene" uid="uid://ddjodc2p80frd" path="res://Dialouge-Prewritten/dialogue_box.tscn" id="1_kbwly"]
 [ext_resource type="Script" uid="uid://cjmstaypw2561" path="res://Autoloads/dialouge.gd" id="1_ydmob"]
-[ext_resource type="Script" uid="uid://d1ic2nsfhrwro" path="res://Dialouge/dialogue_player.gd" id="2_i5blm"]
+[ext_resource type="Script" uid="uid://d1ic2nsfhrwro" path="res://Dialouge-Prewritten/dialogue_player.gd" id="2_i5blm"]
 
 [node name="Dialouge" type="CanvasLayer" unique_id=928797108]
 script = ExtResource("1_ydmob")
