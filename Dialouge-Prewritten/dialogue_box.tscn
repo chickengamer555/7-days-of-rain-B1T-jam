@@ -1,18 +1,10 @@
 [gd_scene format=3 uid="uid://ddjodc2p80frd"]
 
 [ext_resource type="Script" uid="uid://bkjhw8nxnow3o" path="res://Dialouge-Prewritten/typewriter_dialogue.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://6q6uv66bjc17" path="res://Assets/UI/Dialougebox.png" id="2_0ei51"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_box"]
-bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqdes"]
+texture = ExtResource("2_0ei51")
 
 [node name="DialogueBox" type="Control" unique_id=1688858085]
 layout_mode = 3
@@ -31,7 +23,7 @@ offset_right = -0.022003174
 offset_bottom = 0.06500244
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_box")
+theme_override_styles/panel = SubResource("StyleBoxTexture_cqdes")
 
 [node name="DialogueContainer" type="VBoxContainer" parent="BackgroundPanel" unique_id=1672648597]
 layout_mode = 1
