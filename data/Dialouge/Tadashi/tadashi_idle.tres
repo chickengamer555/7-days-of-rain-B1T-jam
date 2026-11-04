@@ -5,6 +5,11 @@
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="3_0v8xq"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="3_p2i2b"]
 
+[sub_resource type="Resource" id="Resource_tw4s5"]
+script = ExtResource("2_0v8xq")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_v2t6q"]
 script = ExtResource("3_0v8xq")
 add_ledger = Array[String](["wowie_zowie"])
@@ -15,11 +20,19 @@ script = ExtResource("1_m1o6t")
 id = "start"
 speaker = "tadashi"
 text = "Tadashi fall back line"
+choices = Array[ExtResource("2_0v8xq")]([SubResource("Resource_tw4s5")])
 effect = SubResource("Resource_v2t6q")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_0v8xq"]
+script = ExtResource("1_m1o6t")
+id = "2"
+speaker = "Tadashi"
+text = "Whats up man"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [resource]
 script = ExtResource("3_p2i2b")
 start_id = "start"
-nodes = Array[ExtResource("1_m1o6t")]([SubResource("Resource_x58ub")])
+nodes = Array[ExtResource("1_m1o6t")]([SubResource("Resource_x58ub"), SubResource("Resource_0v8xq")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"

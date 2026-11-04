@@ -2,13 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bkjhw8nxnow3o" path="res://Dialouge-Prewritten/typewriter_dialogue.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://6q6uv66bjc17" path="res://Assets/UI/Dialougebox.png" id="2_0ei51"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="3_htdm5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqdes"]
 texture = ExtResource("2_0ei51")
 
 [node name="DialogueBox" type="Control" unique_id=1688858085]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1")
 
 [node name="BackgroundPanel" type="Panel" parent="." unique_id=1695287328]
@@ -41,9 +46,10 @@ grow_vertical = 2
 unique_name_in_owner = true
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_position = Vector2(3.008, 8.885)
+offset_transform_position = Vector2(1.444, 11)
 theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_htdm5")
+theme_override_font_sizes/font_size = 7
 text = "Tadashi"
 
 [node name="DialogueTextLabel" type="Label" parent="BackgroundPanel/DialogueContainer" unique_id=434545990]

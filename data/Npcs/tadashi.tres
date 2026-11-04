@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bsle7vqddyrc8"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_6mdjr"]
+[ext_resource type="Resource" uid="uid://bfhj7djt0p3f6" path="res://data/Dialouge/Tadashi/tadashi_idle.tres" id="2_nqqh8"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_po5mu"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="5_5auiw"]
 [ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="7_7fu7r"]
 
-[sub_resource type="Resource" id="Resource_4ntmi"]
+[sub_resource type="Resource" id="Resource_hitqa"]
 script = ExtResource("1_6mdjr")
-random_lines = Array[String](["Random line 1", "Random line 2"])
+tree = ExtResource("2_nqqh8")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_kgdm3"]
@@ -27,7 +28,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("2_po5mu")
 id = "tadashi"
 display_name = "Tadashi"
-rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_4ntmi")])
+rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_hitqa")])
 sprite = ExtResource("7_7fu7r")
 schedule = Array[ExtResource("5_5auiw")]([SubResource("Resource_kgdm3"), SubResource("Resource_nr7i4")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
