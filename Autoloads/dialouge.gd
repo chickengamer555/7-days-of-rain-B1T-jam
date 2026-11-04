@@ -101,11 +101,11 @@ func pick_line(rule): # The func that picks the random line
 	for line in rule.random_lines: # go through all lines
 		if line not in used_lines: # Not used yet?
 			fresh.append(line) # add to list
-		if fresh.is_empty(): 
-			used_lines = [] # if there are no new lines then forgor them
-			fresh = rule.random_line.dulicate() # List again time
-			if fresh.size() > 1: # mor ethat one lines??
-				fresh.erase(picked[rule]) # erase last one
+	if fresh.is_empty(): 
+		used_lines = [] # if there are no new lines then forgor them
+		fresh = rule.random_lines.duplicate() # List again time
+		if fresh.size() > 1: # mor ethat one lines??
+			fresh.erase(picked[rule]) # erase last one
 	var line = fresh.pick_random() # pic  one 
 	used_lines.append(line) # mark as said 
 	used[rule] = used_lines
