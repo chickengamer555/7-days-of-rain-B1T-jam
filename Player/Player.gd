@@ -2,10 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 300.0
 
-@onready var interaction_detector: Area2D = get_node_or_null("InteractionDetector")
 
-var nearby_interactables: Array[Interactable] = []
-var closest_interactable: Interactable = null
 
 func _ready() -> void:
 	pass
@@ -18,12 +15,9 @@ func get_input() -> void:
 	velocity = input_direction * speed
 
 
-func is_dialogue_active() -> bool:
-	var dm = get_node_or_null("/root/DialogueManager")
-	return dm != null and dm.talking
 
 func _physics_process(delta: float) -> void:
-	if not Clock.running or is_dialogue_active():
+	if not Clock.running:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return

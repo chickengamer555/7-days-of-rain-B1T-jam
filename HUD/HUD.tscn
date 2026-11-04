@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bg7h7uxj0d0tp"]
+
+[node name="Hud" type="CanvasLayer" unique_id=786916839]
+
+[node name="ClockIcon" type="TextureRect" parent="." unique_id=1521390552]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DayLabel" type="Label" parent="." unique_id=1391676162]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="NewEntryIcon" type="TextureRect" parent="." unique_id=291051747]
+offset_right = 40.0
+offset_bottom = 40.0
