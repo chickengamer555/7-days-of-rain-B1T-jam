@@ -17,6 +17,11 @@ script = ExtResource("11_ibfm0")
 id = "has_cost_book"
 metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
 
+[sub_resource type="Resource" id="Resource_klxhy"]
+script = ExtResource("11_ibfm0")
+id = "Ume"
+metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
+
 [node name="test" type="Node2D" unique_id=1734866862]
 position = Vector2(28, -105)
 script = ExtResource("2_aeque")
@@ -66,6 +71,9 @@ position = Vector2(-671, -905)
 [node name="spot 2" type="Marker2D" parent="Spots" unique_id=1793227087]
 position = Vector2(-1307, -525)
 
+[node name="Ume" type="Marker2D" parent="Spots" unique_id=449676028]
+position = Vector2(-847, -546)
+
 [node name="NPCs" type="Node2D" parent="." unique_id=1684505752]
 
 [node name="Interactable" parent="." unique_id=62630446 instance=ExtResource("9_v2t6q")]
@@ -73,3 +81,7 @@ position = Vector2(-222, -249)
 data = SubResource("Resource_h5ro5")
 
 [node name="Hud" parent="." unique_id=786916839 instance=ExtResource("11_v2t6q")]
+
+[node name="Interactable2" parent="." unique_id=992148980 instance=ExtResource("9_v2t6q")]
+position = Vector2(-704, -146)
+data = SubResource("Resource_klxhy")
