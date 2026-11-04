@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://dnpwfsnvyjfne"]
 
-[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge/dialogue_node.gd" id="1_73tbe"]
-[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge/dialogue_choice.gd" id="2_vdost"]
-[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge/dialogue_tree.gd" id="2_ydcgo"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="1_73tbe"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="2_vdost"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="2_ydcgo"]
 
 [sub_resource type="Resource" id="Resource_73tbe"]
 script = ExtResource("1_73tbe")

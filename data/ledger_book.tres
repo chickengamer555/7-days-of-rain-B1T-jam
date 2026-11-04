@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LedgerBook" format=3 uid="uid://cchbst4riua2a"]
+
+[ext_resource type="Script" uid="uid://ib2f3n4nd276" path="res://data/classes/ledger_entry.gd" id="1_pw64t"]
+[ext_resource type="Script" uid="uid://xvhhp5ymwk2g" path="res://data/classes/ledger_book.gd" id="2_uryxi"]
+
+[sub_resource type="Resource" id="Resource_vvaop"]
+script = ExtResource("1_pw64t")
+id = "wowie_zowie"
+text = "Wowie Zowie! The ledger works!"
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[resource]
+script = ExtResource("2_uryxi")
+entries = Array[ExtResource("1_pw64t")]([SubResource("Resource_vvaop")])
+metadata/_custom_type_script = "uid://xvhhp5ymwk2g"

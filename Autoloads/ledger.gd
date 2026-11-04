@@ -1,6 +1,7 @@
 extends Node
 
 var known = {} # Whats known in the ledger
+var save_file
 
 signal entry_learned(id)
 
@@ -16,8 +17,14 @@ func knows_all(list):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	save_file = VersionedSaveFile.new("user://ledger.sav", 1) # point at save 
+	var data = save_file.read() # read the file 
+	if save_file.last_status == VersionedSaveFile.Status.LOADED: # did it load 
+		known = data["known"] # Use the saved entry 
 
+func save_game():
+	save_file.write({"known": known})
+	save_game
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
