@@ -8,6 +8,10 @@ func _ready():
 		Dialouge.conversation_ended.connect(refresh_npcs) # update npcs after each convo
 		refresh_npcs()
 
+func _unhandled_input(event: InputEvent) -> void:
+		if event.is_action_pressed("ui_cancel"):
+				get_tree().change_scene_to_file("res://UI/MainMenu/main_menu.tscn")
+
 func refresh_npcs(): # Removes every npc then puts each one at the spot the shcedule says they should be in
 		for child in $NPCs.get_children():
 				child.queue_free()

@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://cx6r0j7g4d1va"]
+
+[ext_resource type="Script" uid="uid://c5fllrqtcnk1y" path="res://UI/MainMenu/main_menu.gd" id="1_mainmenu"]
+[ext_resource type="Script" uid="uid://blqjhdb6a1y2t" path="res://UI/MainMenu/rain_bg.gd" id="2_rainbg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mainmenu")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.776471, 0.729412, 0.67451, 1)
+
+[node name="RainBG" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_rainbg")
+
+[node name="MainView" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="MainView"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 18.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "SEVEN DAYS OF RAIN"
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="MainView"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -26.0
+offset_right = 50.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="StartBtn" type="Button" parent="MainView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Start Game"
+
+[node name="SettingsBtn" type="Button" parent="MainView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Settings"
+
+[node name="ControlsBtn" type="Button" parent="MainView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Controls"
+
+[node name="QuitBtn" type="Button" parent="MainView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Quit"
+
+[node name="SettingsView" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="SettingsView"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="SettingsView"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -50.0
+offset_right = 80.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="VolRow" type="HBoxContainer" parent="SettingsView/VBox"]
+layout_mode = 2
+
+[node name="VolTitle" type="Label" parent="SettingsView/VBox/VolRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "Volume"
+
+[node name="VolLeft" type="Button" parent="SettingsView/VBox/VolRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="VolVal" type="Label" parent="SettingsView/VBox/VolRow"]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "100%"
+horizontal_alignment = 1
+
+[node name="VolRight" type="Button" parent="SettingsView/VBox/VolRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="WinRow" type="HBoxContainer" parent="SettingsView/VBox"]
+layout_mode = 2
+
+[node name="WinTitle" type="Label" parent="SettingsView/VBox/WinRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "Display"
+
+[node name="WinLeft" type="Button" parent="SettingsView/VBox/WinRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="WinVal" type="Label" parent="SettingsView/VBox/WinRow"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "Window"
+horizontal_alignment = 1
+
+[node name="WinRight" type="Button" parent="SettingsView/VBox/WinRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="FFRow" type="HBoxContainer" parent="SettingsView/VBox"]
+layout_mode = 2
+
+[node name="FFTitle" type="Label" parent="SettingsView/VBox/FFRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "Fast Fwd"
+
+[node name="FFLeft" type="Button" parent="SettingsView/VBox/FFRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="FFVal" type="Label" parent="SettingsView/VBox/FFRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "12x"
+horizontal_alignment = 1
+
+[node name="FFRight" type="Button" parent="SettingsView/VBox/FFRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="ResetDataBtn" type="Button" parent="SettingsView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Reset Ledger"
+
+[node name="SettingsBackBtn" type="Button" parent="SettingsView/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="ControlsView" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="ControlsView"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="Info" type="Label" parent="ControlsView"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -48.0
+offset_right = 105.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
+theme_override_font_sizes/font_size = 16
+text = "WASD : Walk
+E : Interact / Talk
+Q : Ledger
+Hold F : Fast Forward"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="ControlsBackBtn" type="Button" parent="ControlsView"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -24.0
+offset_right = 35.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+text = "Back"
