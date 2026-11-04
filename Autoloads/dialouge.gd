@@ -2,6 +2,9 @@ extends CanvasLayer
 
 var active = false # Is convo running
 var speaker_id = "" #whos talked to
+var picked = {}
+var picked_stamp = {} # phase it was picked in
+var used = {} # Line eahc rule used 
 
 signal choice_made(index)
 signal conversation_ended
@@ -11,7 +14,7 @@ func run_first_match(rules, id):
 		if rule.condition == null or rule.condition.is_met(): #is it allowed?
 			speaker_id = id # Note who it is
 			if not rule.random_lines.is_empty(): # Does it have random line if so pick one at random if not play convo
-				start(make_line_tree(rule.random_lines.pick_random(), id)) 
+							start(make_line_tree(pick_line(rule), id))
 			else:
 				start(rule.tree) # Play the convo
 			return # stop so only first match
@@ -89,3 +92,23 @@ func make_line_tree(text, id):
 	tree.start_id = "start" # Start on line
 	tree.nodes.append(node) #put line in tree
 	return tree
+
+func pick_line(rule): # The func that picks the random line
+	if picked_stamp.get(rule, -1) == Clock.stamp(): # Alreaydy picled?
+		return picked[rule] # Say it again
+	var used_lines = used.get(rule, [] ) #lines rule used
+	var fresh = [] # Unsued lines 
+	for line in rule.random_lines: # go through all lines
+		if line not in used_lines: # Not used yet?
+			fresh.append(line) # add to list
+		if fresh.is_empty(): 
+			used_lines = [] # if there are no new lines then forgor them
+			fresh = rule.random_line.dulicate() # List again time
+			if fresh.size() > 1: # mor ethat one lines??
+				fresh.erase(picked[rule]) # erase last one
+	var line = fresh.pick_random() # pic  one 
+	used_lines.append(line) # mark as said 
+	used[rule] = used_lines
+	picked[rule] = line
+	picked_stamp[rule] = Clock.stamp()
+	return line
