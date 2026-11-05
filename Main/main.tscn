@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://br4pe8oua816d"]
+
+[ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="1_k3v36"]
+[ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://Main/placeholder.gd" id="1_qvhan"]
+[ext_resource type="TileSet" uid="uid://b3q04mh68qve5" path="res://Assets/Tilemaps/paths.tres" id="4_eunhr"]
+[ext_resource type="TileSet" uid="uid://duy7uoftfof75" path="res://Assets/Tilemaps/rivers.tres" id="5_k3v36"]
+[ext_resource type="PackedScene" uid="uid://bg7h7uxj0d0tp" path="res://HUD/HUD.tscn" id="5_rj11h"]
+
+[node name="Main" type="Node2D" unique_id=661073907]
+script = ExtResource("1_qvhan")
+
+[node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
+position = Vector2(-549, -531)
+
+[node name="PlaceHolder" type="Node2D" parent="." unique_id=2009617848]
+
+[node name="Spots" type="Node2D" parent="." unique_id=1854963637]
+
+[node name="Hud" parent="." unique_id=786916839 instance=ExtResource("5_rj11h")]
+
+[node name="NPCs" type="Node2D" parent="." unique_id=873954492]
+
+[node name="Paths" type="TileMapLayer" parent="." unique_id=1131176822]
+tile_set = ExtResource("4_eunhr")
+
+[node name="Rivers" type="TileMapLayer" parent="." unique_id=251785101]
+tile_set = ExtResource("5_k3v36")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xc8hn5n5goux"]
 
 [ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="1_s3n3v"]
-[ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://test/placeholder.gd" id="2_aeque"]
+[ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://Main/placeholder.gd" id="2_aeque"]
 [ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="2_kgdm3"]
 [ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://test/clock_test.gd" id="3_aeque"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_f6u32"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b85g211kmspj4"
-path="res://.godot/imported/spr_normalpath.png-ff606699f07ee3f5801d20b581c9a758.ctex"
+path="res://.godot/imported/spr_normalpath.png-5369fb3c3e6275cd810a063c2f0d820c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spr_normalpath.png"
-dest_files=["res://.godot/imported/spr_normalpath.png-ff606699f07ee3f5801d20b581c9a758.ctex"]
+source_file="res://Assets/Tilemaps/spr_normalpath.png"
+dest_files=["res://.godot/imported/spr_normalpath.png-5369fb3c3e6275cd810a063c2f0d820c.ctex"]
 
 [params]
 
