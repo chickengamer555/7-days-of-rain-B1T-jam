@@ -45,10 +45,12 @@ texture = ExtResource("4_xbil2")
 0:0/next_alternative_id = 2
 0:0/0 = 0
 0:0/0/z_index = 1
+0:0/0/y_sort_origin = 16
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 35, -7, 34, 7, 34, 8, 35, 8, 40, -8, 40)
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -40, 8, -40, 8, -35, 7, -34, -7, -34, -8, -35)
 0:0/1 = 1
 0:0/1/transpose = true
+0:0/1/y_sort_origin = 16
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(35, -8, 40, -8, 40, 8, 35, 8, 34, 7, 34, -7)
 0:0/1/physics_layer_1/polygon_0/points = PackedVector2Array(-35, -8, -34, -7, -34, 7, -35, 8, -40, 8, -40, -8)
 
@@ -78,6 +80,7 @@ texture = ExtResource("7_odcco")
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
 0:0/0/z_index = -1
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(31, -11, 34, -13, 27, 10, 45, -11)
 
 [resource]
 physics_layer_0/collision_layer = 1
