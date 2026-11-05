@@ -68,6 +68,10 @@ texture = ExtResource("1_blrif")
 6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:7/0 = 0
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/next_alternative_id = 2
+2:2/0 = 0
+2:2/1 = 1
+2:2/1/modulate = Color(0.44671768, 0.1110272, 1.4439226e-07, 1)
 
 [resource]
 physics_layer_0/collision_layer = 1
