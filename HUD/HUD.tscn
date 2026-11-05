@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bq33jn2muoia5" path="res://HUD/hud.gd" id="1_f31rt"]
 [ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="2_b7ubu"]
+[ext_resource type="Texture2D" uid="uid://dt4gyh50war5d" path="res://Assets/UI/Ledger.png" id="3_ja1d4"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="4_amwvk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f31rt"]
-bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw64t"]
+texture = ExtResource("3_ja1d4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xx7b"]
+line_spacing = 2.0
+font = ExtResource("4_amwvk")
+font_size = 7
 
 [node name="Hud" type="CanvasLayer" unique_id=786916839]
 script = ExtResource("1_f31rt")
@@ -37,13 +44,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_f31rt")
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw64t")
 
 [node name="Scroll" type="ScrollContainer" parent="LedgerScreen" unique_id=1656677815]
 layout_mode = 0
-offset_right = 240.0
+offset_left = 16.0
+offset_right = 239.978
 offset_bottom = 160.0
+horizontal_scroll_mode = 0
 
 [node name="Lines" type="VBoxContainer" parent="LedgerScreen/Scroll" unique_id=1382388703]
-custom_minimum_size = Vector2(240, 160)
+custom_minimum_size = Vector2(224, 160)
 layout_mode = 2
+
+[node name="Ledger label" type="Label" parent="LedgerScreen" unique_id=1559024369]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 13.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("4_amwvk")
+theme_override_font_sizes/font_size = 7
+text = "SAKURAS    LEDGER"
+label_settings = SubResource("LabelSettings_7xx7b")
+autowrap_mode = 3
