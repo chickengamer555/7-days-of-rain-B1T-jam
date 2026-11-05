@@ -15,17 +15,16 @@ func _ready() -> void:
 	Clock.phase_changed.connect(update_clock)  # Move hands each face
 	Ledger.entry_learned.connect(flash_new_entry) #Flash when smth learned
 	$NewEntryTimer.timeout.connect($NewEntryIcon.hide) # zHide icon timer ends
-	$ClockFace/HourHand.rotation = Clock.phase * TAU / 4 # Point at phase no spin
 	$DayLabel.text = str(Clock.day) # Shows day
 
 func update_clock(): # Tween animation for clock hands spinning 
-	var target = Clock.phase * TAU / 4
-	if target < $ClockFace/HourHand.rotation:
-		$ClockFace/HourHand.rotation -= TAU
-	var tween = create_tween().set_parallel()
-	tween.tween_property($ClockFace/HourHand, "rotation", target, 0.5)
-	tween.tween_property($ClockFace/MinuteHand, "rotation", TAU, 0.5).from(0.0)
 	$DayLabel.text = str(Clock.day)
+
+func _process(delta):
+	var seconds = floor(Clock.elapsed)
+	var day_progress = (Clock.phase + seconds / Clock.SECONDS_PER_PHASE) / 4.0 # How far through  day
+	$ClockFace/MinuteHand.rotation = day_progress * TAU # Minute hand does a turn each day 
+	$ClockFace/HourHand.rotation = (Clock.day - 1 + day_progress) * TAU / 12 # Hour hand does full loop like real clock
 
 func flash_new_entry(id):
 	for entry in BOOK.entries:
