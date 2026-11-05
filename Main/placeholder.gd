@@ -21,4 +21,4 @@ func refresh_npcs(): # Removes every npc then puts each one at the spot the shce
 						var npc = NPC_SCENE.instantiate()
 						$NPCs.add_child(npc)
 						npc.setup(npc_data)
-						npc.position = $Spots.get_node(slot.spot).position
+						npc.global_position = $Spots.get_node(npc_data.id + "/" + slot.spot).global_position
