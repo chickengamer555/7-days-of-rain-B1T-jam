@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caycmm0cb7eyj"
-path="res://.godot/imported/itchbridge.png-9b4ba4eccb28bac5907d6a515433a62b.ctex"
+uid="uid://durtynl8fp7di"
+path="res://.godot/imported/itchstairs.png-97886303a9ee5e57aa3276d5f27c9fe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchbridge.png"
-dest_files=["res://.godot/imported/itchbridge.png-9b4ba4eccb28bac5907d6a515433a62b.ctex"]
+source_file="res://Assets/Tilemaps/itchstairs.png"
+dest_files=["res://.godot/imported/itchstairs.png-97886303a9ee5e57aa3276d5f27c9fe2.ctex"]
 
 [params]
 
