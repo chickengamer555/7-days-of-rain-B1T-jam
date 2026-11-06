@@ -15,17 +15,16 @@ func _ready() -> void:
 	Clock.phase_changed.connect(update_clock)  # Move hands each face
 	Ledger.entry_learned.connect(flash_new_entry) #Flash when smth learned
 	$NewEntryTimer.timeout.connect($NewEntryIcon.hide) # zHide icon timer ends
-	$ClockFace/HourHand.rotation = Clock.phase * TAU / 4 # Point at phase no spin
 	$DayLabel.text = str(Clock.day) # Shows day
 
 func update_clock(): # Tween animation for clock hands spinning 
-	var target = Clock.phase * TAU / 4
-	if target < $ClockFace/HourHand.rotation:
-		$ClockFace/HourHand.rotation -= TAU
-	var tween = create_tween().set_parallel()
-	tween.tween_property($ClockFace/HourHand, "rotation", target, 0.5)
-	tween.tween_property($ClockFace/MinuteHand, "rotation", TAU, 0.5).from(0.0)
 	$DayLabel.text = str(Clock.day)
+
+func _process(delta):
+	var seconds = floor(Clock.elapsed)
+	var day_progress = (Clock.phase + seconds / Clock.SECONDS_PER_PHASE) / 4.0 # How far through  day
+	$ClockFace/MinuteHand.rotation = day_progress * TAU # Minute hand does a turn each day 
+	$ClockFace/HourHand.rotation = (Clock.day - 1 + day_progress) * TAU / 12 # Hour hand does full loop like real clock
 
 func flash_new_entry(id):
 	for entry in BOOK.entries:
@@ -50,6 +49,7 @@ func open_ledger(): # Opens the ledgers checks which ones we know which ones we 
 	Clock.running = false
 	for child in $LedgerScreen/Scroll/Lines.get_children():
 		child.queue_free()
+	$LedgerScreen/Scroll/Lines.add_theme_constant_override("separation", 0) # entries stack 10px apart
 	for entry in BOOK.entries:
 		if Ledger.known.has(entry.id):
 			var learned = Ledger.known[entry.id]
@@ -71,7 +71,7 @@ func close_ledger(): # Closes the ledger simply
 
 func draw_ruling():
 	var page = $LedgerScreen/Scroll/Lines # page
-	var y = LINE_HEIGHT - 1 # First line at bottom of first row
+	var y = LINE_HEIGHT  # First line at bottom of first row
 	while y < page.size.y: #untill bottom of the page 
 		page.draw_rect(Rect2(0, y, page.size.x, 1), INK) # 1 pixel line
 		y += LINE_HEIGHT # down 1 row

@@ -85,14 +85,18 @@ layout_mode = 2
 
 [node name="Spots" type="Node2D" parent="." unique_id=1765391010]
 
-[node name="spot 1" type="Marker2D" parent="Spots" unique_id=441940488]
-position = Vector2(-671, -905)
+[node name="Ume" type="Node" parent="Spots" unique_id=839081103]
 
-[node name="spot 2" type="Marker2D" parent="Spots" unique_id=1793227087]
-position = Vector2(-1307, -525)
+[node name="Ume" type="Marker2D" parent="Spots/Ume" unique_id=449676028]
+position = Vector2(-819, -651)
 
-[node name="Ume" type="Marker2D" parent="Spots" unique_id=449676028]
-position = Vector2(-847, -546)
+[node name="tadashi" type="Node" parent="Spots" unique_id=133079954]
+
+[node name="spot 1" type="Marker2D" parent="Spots/tadashi" unique_id=441940488]
+position = Vector2(-643, -1010)
+
+[node name="spot 2" type="Marker2D" parent="Spots/tadashi" unique_id=1793227087]
+position = Vector2(-1279, -630)
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1684505752]
 

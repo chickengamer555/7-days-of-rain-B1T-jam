@@ -1,25 +1,37 @@
 [gd_scene format=3 uid="uid://di4xy37qbc6wq"]
 
 [ext_resource type="Script" uid="uid://60p1npopeo5x" path="res://Player/Player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="1_l8h54"]
+[ext_resource type="Shader" uid="uid://clu6l7yo7e361" path="res://Shaders/contrast_outline.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" uid="uid://g7p30mss0gl7" path="res://Player/player_down.png" id="3_down"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
-size = Vector2(126, 127)
+size = Vector2(9, 13)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_outline"]
+shader = ExtResource("2_shader")
+shader_parameter/paper_color = Color(0.776471, 0.729412, 0.67451, 1)
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+shader_parameter/outline_width = 1.0
+shader_parameter/outline_enabled = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xx7b"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1016449922 groups=["Player"]]
+y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=800626004]
-position = Vector2(0, -0.5)
-scale = Vector2(0.125, 0.25)
+position = Vector2(-0.5, 6.5)
 shape = SubResource("RectangleShape2D_7xx7b")
 
+[node name="BackBufferCopy" type="BackBufferCopy" parent="." unique_id=591823901]
+copy_mode = 2
+rect = Rect2(-16, -24, 32, 48)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=604862849]
-scale = Vector2(0.125, 0.25)
-texture = ExtResource("1_l8h54")
+material = SubResource("ShaderMaterial_outline")
+texture = ExtResource("3_down")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1616005194]
 

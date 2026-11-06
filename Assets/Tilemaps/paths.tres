@@ -1,6 +1,8 @@
 [gd_resource type="TileSet" format=3 uid="uid://b3q04mh68qve5"]
 
+[ext_resource type="Material" uid="uid://cg2uojqd6xpuw" path="res://Shaders/grass_material.tres" id="1_1dcns"]
 [ext_resource type="Texture2D" uid="uid://b85g211kmspj4" path="res://Assets/Tilemaps/spr_normalpath.png" id="1_csmn0"]
+[ext_resource type="Texture2D" uid="uid://dr3e3wpmy4ad" path="res://Assets/Tilemaps/mountain.png" id="3_1dcns"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llmk3"]
 texture = ExtResource("1_csmn0")
@@ -58,13 +60,17 @@ texture = ExtResource("1_csmn0")
 7:3/0 = 0
 0:4/next_alternative_id = 5
 0:4/0 = 0
+0:4/0/material = ExtResource("1_1dcns")
 0:4/1 = 1
 0:4/1/flip_h = true
+0:4/1/material = ExtResource("1_1dcns")
 1:4/next_alternative_id = 9
 1:4/0 = 0
+1:4/0/material = ExtResource("1_1dcns")
 1:4/1 = 1
 1:4/1/modulate = Color(1, 1, 1, 0)
 1:4/8 = 8
+1:4/8/material = ExtResource("1_1dcns")
 2:5/next_alternative_id = 5
 2:5/0 = 0
 2:5/1 = 1
@@ -76,6 +82,33 @@ texture = ExtResource("1_csmn0")
 2:5/4 = 4
 2:5/4/modulate = Color(0.55016255, 0.19924614, 0, 1)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2c0i0"]
+texture = ExtResource("3_1dcns")
+0:0/0 = 0
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/1 = 1
+1:0/1/flip_h = true
+2:0/0 = 0
+0:1/0 = 0
+1:1/next_alternative_id = 4
+1:1/0 = 0
+1:1/1 = 1
+1:1/1/flip_h = true
+1:1/1/flip_v = true
+1:1/2 = 2
+1:1/2/flip_h = true
+1:1/3 = 3
+1:1/3/flip_v = true
+2:1/0 = 0
+0:2/0 = 0
+1:2/next_alternative_id = 2
+1:2/0 = 0
+1:2/1 = 1
+1:2/1/flip_h = true
+2:2/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_llmk3")
+sources/2 = SubResource("TileSetAtlasSource_2c0i0")

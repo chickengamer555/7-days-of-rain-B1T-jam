@@ -49,4 +49,4 @@ func reset():
 	phase = 0
 	elapsed = 0.0
 	running = true
-	phase_changed.emit 
+	phase_changed.emit() 
