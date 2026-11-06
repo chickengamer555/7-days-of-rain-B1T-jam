@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ed3svgon73p1"
-path="res://.godot/imported/itchboat2a.png-c57cc4b291db8959ed05470c72d12886.ctex"
+path="res://.godot/imported/itchboat2a.png-04e9f5fc40f96b3e7ead128ae284a23a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/Town assets/itchboat2a.png"
-dest_files=["res://.godot/imported/itchboat2a.png-c57cc4b291db8959ed05470c72d12886.ctex"]
+source_file="res://Assets/player/itchboat2a.png"
+dest_files=["res://.godot/imported/itchboat2a.png-04e9f5fc40f96b3e7ead128ae284a23a.ctex"]
 
 [params]
 

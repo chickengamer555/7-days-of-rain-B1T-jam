@@ -110,6 +110,8 @@ Fast_foward={
 
 2d_render/layer_1="Player body Tile maps and Walls"
 2d_render/layer_2="Player sensor + NPC and Interactble areas"
+2d_physics/layer_3="water"
+2d_physics/layer_4="shore"
 
 [physics]
 
