@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhkg1b0bj178d"
-path="res://.godot/imported/itchtea.png-10f4ef795511e64fba063947d86c7c2d.ctex"
+uid="uid://bgofwvvbeaqic"
+path="res://.godot/imported/itchteaa.png-70081c86c033d8405b0fd69193177d3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/Town assets/itchtea.png"
-dest_files=["res://.godot/imported/itchtea.png-10f4ef795511e64fba063947d86c7c2d.ctex"]
+source_file="res://Assets/Tilemaps/Town assets/itchteaa.png"
+dest_files=["res://.godot/imported/itchteaa.png-70081c86c033d8405b0fd69193177d3f.ctex"]
 
 [params]
 
