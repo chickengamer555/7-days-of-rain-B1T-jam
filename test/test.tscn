@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://test/clock_test.gd" id="3_aeque"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_f6u32"]
 [ext_resource type="Resource" uid="uid://djdh224wfirm5" path="res://Dialouge-Prewritten/characters and dialogues/characters/Ume.tres" id="4_vvaop"]
-[ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/tadashi.tres" id="5_5jhup"]
+[ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/Tadashi/Tadashi.tres" id="5_5jhup"]
 [ext_resource type="Script" uid="uid://bf4cxcshmclos" path="res://test/talk_test.gd" id="6_v2t6q"]
 [ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="9_v2t6q"]
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="10_vvaop"]
