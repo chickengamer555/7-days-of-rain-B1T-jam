@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://di4xy37qbc6wq"]
 
 [ext_resource type="Script" uid="uid://60p1npopeo5x" path="res://Player/Player.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://ed3svgon73p1" path="res://Assets/player/itchboat2a.png" id="2_k53q1"]
 [ext_resource type="Shader" uid="uid://clu6l7yo7e361" path="res://Shaders/contrast_outline.gdshader" id="2_shader"]
 [ext_resource type="Texture2D" uid="uid://g7p30mss0gl7" path="res://Player/player_down.png" id="3_down"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="4_gwnis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
 size = Vector2(9, 13)
@@ -16,10 +18,18 @@ shader_parameter/outline_enabled = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xx7b"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xx7b"]
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+expand_margin_left = 1.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1016449922 groups=["Player"]]
 y_sort_enabled = true
+collision_layer = 5
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_4ntmi")
+tex_boat = ExtResource("2_k53q1")
+boat_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=800626004]
 position = Vector2(-0.5, 6.5)
@@ -43,3 +53,22 @@ collision_mask = 2
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sensor" unique_id=1186980012]
 scale = Vector2(14, 14)
 shape = SubResource("CircleShape2D_7xx7b")
+
+[node name="InteractPrompt" type="Label" parent="." unique_id=863437942]
+visible = false
+z_index = 100
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -4.0
+offset_top = -30.0
+offset_right = 4.0
+offset_bottom = -19.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("4_gwnis")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_7xx7b")
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
