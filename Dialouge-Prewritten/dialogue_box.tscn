@@ -50,7 +50,7 @@ offset_transform_position = Vector2(1, 11)
 theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
 theme_override_fonts/font = ExtResource("3_htdm5")
 theme_override_font_sizes/font_size = 7
-text = "Tadashi"
+text = "Kenji the ferry man"
 
 [node name="DialogueTextLabel" type="Label" parent="BackgroundPanel/DialogueContainer" unique_id=434545990]
 unique_name_in_owner = true

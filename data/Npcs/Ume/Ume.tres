@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bt5bcclmodiox"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_435tf"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_gg7fu"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_y2el8"]
+
+[resource]
+script = ExtResource("3_y2el8")
+id = "ume"
+display_name = "Ume"
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

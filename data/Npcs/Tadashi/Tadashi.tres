@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bsle7vqddyrc8"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_6mdjr"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_po5mu"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="5_5auiw"]
+
+[resource]
+script = ExtResource("2_po5mu")
+id = "tadashi"
+display_name = "Tadashi"
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
