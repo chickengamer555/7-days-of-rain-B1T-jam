@@ -1,12 +1,22 @@
 extends CharacterBody2D
 
-@export var speed: float = 300.0
+const GRASS_MATERIAL = preload("res://Shaders/grass_material.tres")
+const TRAIL_SIZE: int = 32 # How many cells it rmebers
+const TILE_SIZE: int = 16
+const TILE_STEP: int=8
 
+var trail := PackedVector3Array() # list sent to the shader
+var trail_index: int = 0 # Which slot write to next
+var last_cell := Vector2(INF, INF) # cell the feet were in last frame
+var grass_clock: float = 0.0 # Timer for when grass comes back up
+var is_moving: bool = false # am i mid step 
+var target_position: Vector2 = Vector2.ZERO #where am i heading
+
+@export var tiles_per_second: float = 5.0
 @export_group("Textures")
 @export var tex_down: Texture2D = preload("res://Player/player_down.png")
 @export var tex_side: Texture2D = preload("res://Player/player_side.png")
 @export var tex_up: Texture2D = preload("res://Player/player_up.png")
-
 @export_group("Procedural Animation (Bobbing)")
 @export var bob_speed: float = 14.0
 @export var bob_amount: float = 2.0
@@ -26,38 +36,61 @@ var base_sprite_scale: Vector2 = Vector2.ONE
 @onready var sensor: Area2D = $Sensor
 
 func _ready() -> void:
+	trail.resize(TRAIL_SIZE) # Make the 32 slots
+	trail.fill(Vector3(0, 0, -1000.0)) # Mark themas stepped on 
+	global_position = global_position.snapped(Vector2(TILE_SIZE, TILE_SIZE)) #round to nearest 16
+	global_position = global_position.snapped(Vector2(TILE_STEP, TILE_STEP)) 
+	target_position = global_position
 	if sprite:
 		base_sprite_pos = sprite.position
 		base_sprite_scale = sprite.scale
 		_update_facing(Facing.DOWN)
 
-func get_input() -> void:
-	if not Clock.running:
-		velocity = Vector2.ZERO
-		return	
-	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+func get_input() -> Vector2:
+	var x := Input.get_axis("left", "right") # -1, O or 1
+	var y := Input.get_axis("up", "down")
+	return Vector2(signf(x), signf(y))
+	if x != 0:
+		return Vector2(signf(x), 0)
+	if y != 0:
+		return Vector2(0, signf(y))
+	return Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
+	grass_clock += delta # Count the grass timer
+	_flatten_grass() # latten the grass
+	if is_moving:
+		global_position = global_position.move_toward(target_position, tiles_per_second * TILE_SIZE * delta)
+		if global_position != target_position:
+			_animate_walking(delta)
+			return
+		is_moving = false
 	if not Clock.running:
-		velocity = Vector2.ZERO
 		_animate_idle(delta)
-		move_and_slide()
 		return
-		
-	get_input()
-	
-	if velocity != Vector2.ZERO:
-		_determine_facing(velocity)
-		_animate_walking(delta)
-	else:
+	var dir := get_input()
+	if dir == Vector2.ZERO:
 		_animate_idle(delta)
-		
-	move_and_slide()
+		return 
+	_determine_facing(dir)
+	var target := global_position + dir * TILE_STEP
+	if dir.x != 0:
+		target.x = snappedf(target.x, TILE_STEP)
+	if dir.y != 0:
+		target.y = snappedf(target.y, TILE_STEP)
+	var motion := target - global_position
+	var hit := KinematicCollision2D.new() # only go as far as wall
+	if test_move(global_transform, motion, hit):
+		motion = hit.get_travel()
+		if motion.length() < 0.5:   # already touching it
+			_animate_idle(delta)
+			return
+	target_position = global_position + motion
+	is_moving = true
 
 func _determine_facing(dir: Vector2) -> void:
 	var prev_facing = current_facing
-	if abs(dir.x) > abs(dir.y) * 0.7:
+	if dir.y == 0:
 		if dir.x > 0:
 			current_facing = Facing.RIGHT
 		else:
@@ -135,3 +168,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	if closest != null:
 		closest.interact()
 		get_viewport().set_input_as_handled()
+
+func _flatten_grass() -> void: # Flatten that damn gras
+	var feet := global_position + Vector2(0, 9) # where feet are (the 9 is offset)
+	var cell := (feet / TILE_SIZE).floor() # WHich cell it is
+	if cell != last_cell: # Have you walked into new cell?
+		trail_index = (trail_index + 1) % TRAIL_SIZE # Move to next spot and oldest step gets overwritten
+		last_cell = cell # Rember the cell 
+	trail[trail_index] = Vector3(cell.x, cell.y, grass_clock) # Stamp cell with time
+	GRASS_MATERIAL.set_shader_parameter("trail", trail) # send list of to the shader
+	GRASS_MATERIAL.set_shader_parameter("current_time", grass_clock) # Send time also to the shader 

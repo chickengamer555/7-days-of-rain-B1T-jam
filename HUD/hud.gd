@@ -49,6 +49,7 @@ func open_ledger(): # Opens the ledgers checks which ones we know which ones we 
 	Clock.running = false
 	for child in $LedgerScreen/Scroll/Lines.get_children():
 		child.queue_free()
+	$LedgerScreen/Scroll/Lines.add_theme_constant_override("separation", 0) # entries stack 10px apart
 	for entry in BOOK.entries:
 		if Ledger.known.has(entry.id):
 			var learned = Ledger.known[entry.id]
@@ -70,7 +71,7 @@ func close_ledger(): # Closes the ledger simply
 
 func draw_ruling():
 	var page = $LedgerScreen/Scroll/Lines # page
-	var y = LINE_HEIGHT - 1 # First line at bottom of first row
+	var y = LINE_HEIGHT  # First line at bottom of first row
 	while y < page.size.y: #untill bottom of the page 
 		page.draw_rect(Rect2(0, y, page.size.x, 1), INK) # 1 pixel line
 		y += LINE_HEIGHT # down 1 row

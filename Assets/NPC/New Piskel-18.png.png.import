@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcd06rim6uu48"
-path="res://.godot/imported/itchheads.png-411541553caefb72539e2c47f6d8ca39.ctex"
+uid="uid://bw2f0u12fns71"
+path="res://.godot/imported/New Piskel-18.png.png-0e83e21f42025ac34b6d755a779d7eab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchheads.png"
-dest_files=["res://.godot/imported/itchheads.png-411541553caefb72539e2c47f6d8ca39.ctex"]
+source_file="res://Assets/NPC/New Piskel-18.png.png"
+dest_files=["res://.godot/imported/New Piskel-18.png.png-0e83e21f42025ac34b6d755a779d7eab.ctex"]
 
 [params]
 

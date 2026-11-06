@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu2kb23cctlln"
-path="res://.godot/imported/itchhut.png-aae6ca93a35085cfbe89a66168451c9a.ctex"
+uid="uid://bcd06rim6uu48"
+path="res://.godot/imported/itchheads.png-a76910cd485ace2506a9661ca632aced.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchhut.png"
-dest_files=["res://.godot/imported/itchhut.png-aae6ca93a35085cfbe89a66168451c9a.ctex"]
+source_file="res://Assets/Tilemaps/Town assets/itchheads.png"
+dest_files=["res://.godot/imported/itchheads.png-a76910cd485ace2506a9661ca632aced.ctex"]
 
 [params]
 

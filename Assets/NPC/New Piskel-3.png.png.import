@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c10pboxo1dch5"
-path="res://.godot/imported/itchhouse1.png-66e68c50152d02f3976d922b696eabcd.ctex"
+uid="uid://dh1nmp1nw5rpd"
+path="res://.godot/imported/New Piskel-3.png.png-723e0dfc9b2a845f9ae1f7a8a5c15949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchhouse1.png"
-dest_files=["res://.godot/imported/itchhouse1.png-66e68c50152d02f3976d922b696eabcd.ctex"]
+source_file="res://Assets/NPC/New Piskel-3.png.png"
+dest_files=["res://.godot/imported/New Piskel-3.png.png-723e0dfc9b2a845f9ae1f7a8a5c15949.ctex"]
 
 [params]
 
