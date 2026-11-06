@@ -3,19 +3,13 @@
 [ext_resource type="Script" uid="uid://ib2f3n4nd276" path="res://data/classes/ledger_entry.gd" id="1_pw64t"]
 [ext_resource type="Script" uid="uid://xvhhp5ymwk2g" path="res://data/classes/ledger_book.gd" id="2_uryxi"]
 
-[sub_resource type="Resource" id="Resource_vvaop"]
+[sub_resource type="Resource" id="Resource_uryxi"]
 script = ExtResource("1_pw64t")
-id = "wowie_zowie"
-text = "Wowie Zowie! The ledger works!"
-metadata/_custom_type_script = "uid://ib2f3n4nd276"
-
-[sub_resource type="Resource" id="Resource_hictm"]
-script = ExtResource("1_pw64t")
-id = "UmeRainWater"
-text = "Mama mia! she uses rain water!!! Mama mia! she uses rain water!!! Mama mia! she uses rain water!!! Mama mia! she uses rain water!!! Mama mia! she uses rain water!!! Mama mia! she uses rain water!!! q"
+id = "The Flood "
+text = "A flood happened 40 years ago and killed 31 villagers"
 metadata/_custom_type_script = "uid://ib2f3n4nd276"
 
 [resource]
 script = ExtResource("2_uryxi")
-entries = Array[ExtResource("1_pw64t")]([SubResource("Resource_vvaop"), SubResource("Resource_hictm")])
+entries = Array[ExtResource("1_pw64t")]([SubResource("Resource_uryxi")])
 metadata/_custom_type_script = "uid://xvhhp5ymwk2g"

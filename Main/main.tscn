@@ -2,15 +2,27 @@
 
 [ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="1_k3v36"]
 [ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://Main/placeholder.gd" id="1_qvhan"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="2_0gq1e"]
+[ext_resource type="Resource" uid="uid://ceyr5rf1hsel4" path="res://data/Npcs/Genshin/Genshin.tres" id="3_wbdht"]
 [ext_resource type="TileSet" uid="uid://b3q04mh68qve5" path="res://Assets/Tilemaps/paths.tres" id="4_eunhr"]
 [ext_resource type="TileSet" uid="uid://cm80xpbqosai8" path="res://Assets/Tilemaps/Town assets.tres" id="4_liyct"]
+[ext_resource type="Resource" uid="uid://djdh224wfirm5" path="res://data/Npcs/Ume/Ume.tres" id="4_puekb"]
 [ext_resource type="TileSet" uid="uid://oxry3gxgidyc" path="res://Assets/Tilemaps/collision.tres" id="5_ib3t1"]
 [ext_resource type="TileSet" uid="uid://duy7uoftfof75" path="res://Assets/Tilemaps/rivers.tres" id="5_k3v36"]
 [ext_resource type="PackedScene" uid="uid://bg7h7uxj0d0tp" path="res://HUD/HUD.tscn" id="5_rj11h"]
+[ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/Tadashi/Tadashi.tres" id="5_xi84t"]
+[ext_resource type="Resource" uid="uid://dr6awdyc2igcg" path="res://data/Npcs/Kenji/Kenji.tres" id="6_j4inf"]
+[ext_resource type="Resource" uid="uid://d1v1kmio35f0t" path="res://data/Npcs/Mio/Mio.tres" id="7_nf7xu"]
+[ext_resource type="Resource" uid="uid://drlfb3a11j5be" path="res://data/Npcs/Okabe/Okabe.tres" id="8_1nqbc"]
+[ext_resource type="Resource" uid="uid://3pqnqvpwrbok" path="res://data/Npcs/Sato/Sato.tres" id="9_xw814"]
+[ext_resource type="Resource" uid="uid://d3t2lfstbqpyy" path="res://data/Npcs/Chiyo/Chiyo.tres" id="10_g147q"]
+[ext_resource type="Resource" uid="uid://dkdqtiw3qenpv" path="res://data/Npcs/Tomo/Tomo.tres" id="11_t85yq"]
+[ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
 
 [node name="Main" type="Node2D" unique_id=661073907]
 y_sort_enabled = true
 script = ExtResource("1_qvhan")
+npcs = Array[ExtResource("2_0gq1e")]([ExtResource("3_wbdht"), ExtResource("4_puekb"), ExtResource("5_xi84t"), ExtResource("6_j4inf"), ExtResource("7_nf7xu"), ExtResource("8_1nqbc"), ExtResource("9_xw814"), ExtResource("10_g147q"), ExtResource("11_t85yq"), ExtResource("12_y88hr")])
 
 [node name="Paths" type="TileMapLayer" parent="." unique_id=1131176822]
 z_index = -1
@@ -35,12 +47,22 @@ tile_set = ExtResource("5_ib3t1")
 
 [node name="Spots" type="Node2D" parent="." unique_id=1854963637]
 
+[node name="Genshin" type="Node" parent="Spots" unique_id=209934354]
+
+[node name="Shrine" type="Marker2D" parent="Spots/Genshin" unique_id=2104282789]
+position = Vector2(27, -278)
+
+[node name="Ume" type="Node" parent="Spots" unique_id=1950361893]
+
+[node name="Tea house" type="Marker2D" parent="Spots/Ume" unique_id=1931285988]
+position = Vector2(-37, 33)
+
 [node name="Hud" parent="." unique_id=786916839 instance=ExtResource("5_rj11h")]
 
 [node name="NPCs" type="Node2D" parent="." unique_id=873954492]
 
 [node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
-position = Vector2(-396, -5)
+position = Vector2(44, 155)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1956985897]
 visible = false
