@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bcn5x72qmd7aq" path="res://Assets/Tilemaps/Town assets/itchgate.png" id="4_xbil2"]
 [ext_resource type="Texture2D" uid="uid://dh6df1yyyfyjf" path="res://Assets/Tilemaps/Town assets/itchdock.png" id="5_vx0w6"]
 [ext_resource type="Texture2D" uid="uid://c8107nnf70hd0" path="res://Assets/Tilemaps/Town assets/itchdike.png" id="6_bie7o"]
-[ext_resource type="Texture2D" uid="uid://bcd06rim6uu48" path="res://Assets/Tilemaps/Town assets/itchheads.png" id="6_kuagh"]
 [ext_resource type="Texture2D" uid="uid://c10pboxo1dch5" path="res://Assets/Tilemaps/Town assets/itchhouse1.png" id="7_klepb"]
 [ext_resource type="Texture2D" uid="uid://caycmm0cb7eyj" path="res://Assets/Tilemaps/Town assets/itchbridge.png" id="7_odcco"]
 [ext_resource type="Texture2D" uid="uid://bu2kb23cctlln" path="res://Assets/Tilemaps/Town assets/itchhut.png" id="8_xbil2"]
@@ -79,12 +78,6 @@ texture = ExtResource("7_odcco")
 0:0/0/z_index = -1
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(31, -11, 34, -13, 27, 10, 45, -11)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx0w6"]
-texture = ExtResource("6_kuagh")
-0:0/size_in_atlas = Vector2i(9, 9)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-64, -64)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bie7o"]
 texture = ExtResource("7_klepb")
 2:0/0 = 0
@@ -123,7 +116,6 @@ sources/3 = SubResource("TileSetAtlasSource_dh8k6")
 sources/4 = SubResource("TileSetAtlasSource_v3va3")
 sources/5 = SubResource("TileSetAtlasSource_f1fx8")
 sources/6 = SubResource("TileSetAtlasSource_u1i5v")
-sources/7 = SubResource("TileSetAtlasSource_vx0w6")
 sources/8 = SubResource("TileSetAtlasSource_bie7o")
 sources/9 = SubResource("TileSetAtlasSource_odcco")
 sources/0 = SubResource("TileSetAtlasSource_klepb")
