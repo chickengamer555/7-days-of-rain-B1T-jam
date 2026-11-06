@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c10pboxo1dch5" path="res://Assets/Tilemaps/Town assets/itchhouse1.png" id="7_klepb"]
 [ext_resource type="Texture2D" uid="uid://caycmm0cb7eyj" path="res://Assets/Tilemaps/Town assets/itchbridge.png" id="7_odcco"]
 [ext_resource type="Texture2D" uid="uid://bu2kb23cctlln" path="res://Assets/Tilemaps/Town assets/itchhut.png" id="8_xbil2"]
+[ext_resource type="Texture2D" uid="uid://dyq52h4b8gyei" path="res://Assets/Tilemaps/Town assets/bench.png" id="11_odcco"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klepb"]
 texture = ExtResource("1_kuagh")
@@ -123,6 +124,21 @@ texture = ExtResource("7_odcco")
 0:0/0/z_index = -1
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(31, -11, 34, -13, 27, 10, 45, -11)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vh3k"]
+texture = ExtResource("11_odcco")
+0:0/size_in_atlas = Vector2i(2, 1)
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-8, 0)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, 4, -7, -8, 2, -8, 2, 2, 2, -8, 4, -8, 11, -8, 22, -8, 23, -6, 23, -3, 23, 2, 3, 2, 13.170717, 2, 14.123471, 2, 21, 2, 23, 2, 23, 4, 22, 5, 19, 5, 19, 8, 15, 8, 15, 5, 1, 5, 1, 8, -3, 8, -3, 5, -6, 5)
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/transpose = true
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -11, -5, -11, -5, -14, -4, -15, 7, -15, 8, -14, 8, 14, 7, 15, -4, 15, -5, 14, -5, 11, -8, 11, -8, 7, -5, 7, -5, -7, -8, -7)
+0:0/2 = 2
+0:0/2/transpose = true
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -14, -7, -15, 4, -15, 5, -14, 5, -11, 8, -11, 8, -7, 5, -7, 5, 7, 8, 7, 8, 11, 5, 11, 5, 14, 4, 15, -7, 15, -8, 14, -8, 11, -8, 7, -8, -7)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bie7o"]
 texture = ExtResource("7_klepb")
 2:0/0 = 0
@@ -168,3 +184,4 @@ sources/10 = SubResource("TileSetAtlasSource_xbil2")
 sources/11 = SubResource("TileSetAtlasSource_vx0w6")
 sources/2 = SubResource("TileSetAtlasSource_p8256")
 sources/1 = SubResource("TileSetAtlasSource_rp6ih")
+sources/7 = SubResource("TileSetAtlasSource_1vh3k")
