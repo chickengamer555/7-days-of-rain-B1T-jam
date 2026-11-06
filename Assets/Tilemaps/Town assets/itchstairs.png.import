@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://durtynl8fp7di"
-path="res://.godot/imported/itchstairs.png-97886303a9ee5e57aa3276d5f27c9fe2.ctex"
+path="res://.godot/imported/itchstairs.png-8151e68a7f96bb0eeea859cbabc5f4ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchstairs.png"
-dest_files=["res://.godot/imported/itchstairs.png-97886303a9ee5e57aa3276d5f27c9fe2.ctex"]
+source_file="res://Assets/Tilemaps/Town assets/itchstairs.png"
+dest_files=["res://.godot/imported/itchstairs.png-8151e68a7f96bb0eeea859cbabc5f4ad.ctex"]
 
 [params]
 

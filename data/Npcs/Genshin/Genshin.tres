@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://ceyr5rf1hsel4"]
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://da22lnple47cb"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_qdc14"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_e23w1"]
