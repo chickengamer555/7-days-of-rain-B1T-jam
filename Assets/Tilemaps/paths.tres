@@ -1,5 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://b3q04mh68qve5"]
 
+[ext_resource type="Material" uid="uid://cg2uojqd6xpuw" path="res://Shaders/grass_material.tres" id="1_1dcns"]
 [ext_resource type="Texture2D" uid="uid://b85g211kmspj4" path="res://Assets/Tilemaps/spr_normalpath.png" id="1_csmn0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llmk3"]
@@ -58,13 +59,17 @@ texture = ExtResource("1_csmn0")
 7:3/0 = 0
 0:4/next_alternative_id = 5
 0:4/0 = 0
+0:4/0/material = ExtResource("1_1dcns")
 0:4/1 = 1
 0:4/1/flip_h = true
+0:4/1/material = ExtResource("1_1dcns")
 1:4/next_alternative_id = 9
 1:4/0 = 0
+1:4/0/material = ExtResource("1_1dcns")
 1:4/1 = 1
 1:4/1/modulate = Color(1, 1, 1, 0)
 1:4/8 = 8
+1:4/8/material = ExtResource("1_1dcns")
 2:5/next_alternative_id = 5
 2:5/0 = 0
 2:5/1 = 1

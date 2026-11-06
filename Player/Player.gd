@@ -1,15 +1,22 @@
 extends CharacterBody2D
 
+const GRASS_MATERIAL = preload("res://Shaders/grass_material.tres")
+const TRAIL_SIZE: int = 32 # How many cells it rmebers
 const TILE_SIZE: int = 16
 const TILE_STEP: int=8
-@export var tiles_per_second: float = 5.0
+
+var trail := PackedVector3Array() # list sent to the shader
+var trail_index: int = 0 # Which slot write to next
+var last_cell := Vector2(INF, INF) # cell the feet were in last frame
+var grass_clock: float = 0.0 # Timer for when grass comes back up
 var is_moving: bool = false # am i mid step 
 var target_position: Vector2 = Vector2.ZERO #where am i heading
+
+@export var tiles_per_second: float = 5.0
 @export_group("Textures")
 @export var tex_down: Texture2D = preload("res://Player/player_down.png")
 @export var tex_side: Texture2D = preload("res://Player/player_side.png")
 @export var tex_up: Texture2D = preload("res://Player/player_up.png")
-
 @export_group("Procedural Animation (Bobbing)")
 @export var bob_speed: float = 14.0
 @export var bob_amount: float = 2.0
@@ -29,6 +36,8 @@ var base_sprite_scale: Vector2 = Vector2.ONE
 @onready var sensor: Area2D = $Sensor
 
 func _ready() -> void:
+	trail.resize(TRAIL_SIZE) # Make the 32 slots
+	trail.fill(Vector3(0, 0, -1000.0)) # Mark themas stepped on 
 	global_position = global_position.snapped(Vector2(TILE_SIZE, TILE_SIZE)) #round to nearest 16
 	global_position = global_position.snapped(Vector2(TILE_STEP, TILE_STEP)) 
 	target_position = global_position
@@ -48,6 +57,8 @@ func get_input() -> Vector2:
 	return Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
+	grass_clock += delta # Count the grass timer
+	_flatten_grass() # latten the grass
 	if is_moving:
 		global_position = global_position.move_toward(target_position, tiles_per_second * TILE_SIZE * delta)
 		if global_position != target_position:
@@ -158,4 +169,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		closest.interact()
 		get_viewport().set_input_as_handled()
 
-	
+func _flatten_grass() -> void: # Flatten that damn gras
+	var feet := global_position + Vector2(0, 9) # where feet are (the 9 is offset)
+	var cell := (feet / TILE_SIZE).floor() # WHich cell it is
+	if cell != last_cell: # Have you walked into new cell?
+		trail_index = (trail_index + 1) % TRAIL_SIZE # Move to next spot and oldest step gets overwritten
+		last_cell = cell # Rember the cell 
+	trail[trail_index] = Vector3(cell.x, cell.y, grass_clock) # Stamp cell with time
+	GRASS_MATERIAL.set_shader_parameter("trail", trail) # send list of to the shader
+	GRASS_MATERIAL.set_shader_parameter("current_time", grass_clock) # Send time also to the shader 

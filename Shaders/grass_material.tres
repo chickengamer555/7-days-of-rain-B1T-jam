@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cg2uojqd6xpuw"]
+
+[ext_resource type="Shader" uid="uid://bu5e88kvca2as" path="res://Shaders/grass_blow.gdshader" id="1_c0man"]
+
+[resource]
+shader = ExtResource("1_c0man")
+shader_parameter/tile_size = 16.0
+shader_parameter/wind_speed = 0.5
+shader_parameter/gust_width = 0.2
+shader_parameter/strength = 0.1
+shader_parameter/randomness = 0.5
+shader_parameter/max_bend = 1
