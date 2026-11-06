@@ -1,4 +1,4 @@
-shader_type canvas_item;
+shader_type canvas_item; /// Note premade then adapted 
 
 // Wind
 uniform float tile_size = 16.0;      // pixels per tile in the atlas
