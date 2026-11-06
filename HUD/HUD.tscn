@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bg7h7uxj0d0tp"]
 
 [ext_resource type="Script" uid="uid://bq33jn2muoia5" path="res://HUD/hud.gd" id="1_f31rt"]
-[ext_resource type="Texture2D" uid="uid://8ia57vbc23j3" path="res://icon.svg" id="2_b7ubu"]
 [ext_resource type="Texture2D" uid="uid://ctjrc7t4i7hlh" path="res://Assets/Clock/New Piskel (8)-3.png.png" id="2_lkt0t"]
 [ext_resource type="Texture2D" uid="uid://b38n73fd3yb01" path="res://Assets/Clock/New Piskel (8)-1.png.png" id="3_6i5cd"]
 [ext_resource type="Texture2D" uid="uid://dt4gyh50war5d" path="res://Assets/UI/Ledger.png" id="3_ja1d4"]
 [ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="4_amwvk"]
 [ext_resource type="Texture2D" uid="uid://ca72732fptx3r" path="res://Assets/Clock/New Piskel (8)-2.png (1).png" id="4_t1yhm"]
+[ext_resource type="Texture2D" uid="uid://cljpn6y3ksn5n" path="res://Assets/UI/pop up notification.png" id="6_lkt0t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkt0t"]
 bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -56,12 +56,18 @@ vertical_alignment = 1
 
 [node name="NewEntryIcon" type="TextureRect" parent="." unique_id=291051747]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_b7ubu")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+texture = ExtResource("6_lkt0t")
 expand_mode = 1
 
 [node name="NewEntryTimer" type="Timer" parent="." unique_id=345778449]
+wait_time = 2.5
 
 [node name="LedgerScreen" type="Panel" parent="." unique_id=1072489921]
 visible = false
