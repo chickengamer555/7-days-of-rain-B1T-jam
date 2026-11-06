@@ -6,6 +6,7 @@ const LINE_HEIGHT = 10
 const MARGIN = 12
 const INK = Color("#1e1c32")
 
+var mouse: Image = _make_cursor()
 var margin_style = StyleBoxEmpty.new() 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,6 +47,7 @@ func _unhandled_input(event): # Make sure the proper keys are pressed and handli
 		$LedgerScreen/Scroll.scroll_vertical += 20
 
 func open_ledger(): # Opens the ledgers checks which ones we know which ones we dont and adds the ones we do know to a list to displayit 
+	Input.set_custom_mouse_cursor(mouse, Input.CURSOR_ARROW, Vector2(21, 0))
 	Clock.running = false
 	for child in $LedgerScreen/Scroll/Lines.get_children():
 		child.queue_free()
@@ -66,6 +68,7 @@ func open_ledger(): # Opens the ledgers checks which ones we know which ones we 
 	$LedgerScreen.show()
 
 func close_ledger(): # Closes the ledger simply 
+	Input.set_custom_mouse_cursor(null)
 	$LedgerScreen.hide()
 	Clock.running = true
 
@@ -77,3 +80,8 @@ func draw_ruling():
 		y += LINE_HEIGHT # down 1 row
 	page.draw_rect(Rect2(MARGIN, 0, 1, page.size.y), INK)
 		
+func _make_cursor() -> Image: # Just couldnt be fucked to edit the mouse image so coded the crop
+	var img: Image = load("res://Assets/UI/New Piskel-1.png.png").get_image()  
+	img = img.get_region(Rect2i(6, 12, 16, 16))   
+	img.resize(48, 48, Image.INTERPOLATE_NEAREST) 
+	return img
