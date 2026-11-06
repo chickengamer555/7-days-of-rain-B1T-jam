@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://cm80xpbqosai8"]
 
 [ext_resource type="Texture2D" uid="uid://cj6skr5ntuxla" path="res://Assets/Tilemaps/Town assets/itchgatepost.png" id="1_kuagh"]
+[ext_resource type="Texture2D" uid="uid://bgofwvvbeaqic" path="res://Assets/Tilemaps/Town assets/itchteaa.png" id="2_kuagh"]
 [ext_resource type="Texture2D" uid="uid://bcn5x72qmd7aq" path="res://Assets/Tilemaps/Town assets/itchgate.png" id="4_xbil2"]
 [ext_resource type="Texture2D" uid="uid://dh6df1yyyfyjf" path="res://Assets/Tilemaps/Town assets/itchdock.png" id="5_vx0w6"]
 [ext_resource type="Texture2D" uid="uid://c8107nnf70hd0" path="res://Assets/Tilemaps/Town assets/itchdike.png" id="6_bie7o"]
@@ -23,6 +24,13 @@ texture = ExtResource("1_kuagh")
 0:0/3 = 3
 0:0/3/flip_v = true
 0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1, -8, -8, 8, -8, 8, -1, 7, 0, -7, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbil2"]
+texture = ExtResource("2_kuagh")
+0:0/size_in_atlas = Vector2i(4, 2)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-24, -8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 56, -8, 56, 24, -8, 24)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dh8k6"]
 texture = ExtResource("4_xbil2")
@@ -119,3 +127,4 @@ sources/6 = SubResource("TileSetAtlasSource_u1i5v")
 sources/8 = SubResource("TileSetAtlasSource_bie7o")
 sources/9 = SubResource("TileSetAtlasSource_odcco")
 sources/0 = SubResource("TileSetAtlasSource_klepb")
+sources/10 = SubResource("TileSetAtlasSource_xbil2")
