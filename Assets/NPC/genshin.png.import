@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bghuuo31jpc51"
-path="res://.godot/imported/New Piskel-4.png.png-d35f72c076281cf93ee6a223b78221e8.ctex"
+path="res://.godot/imported/genshin.png-f3a42d1f68930e631ec93000782a595c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NPC/New Piskel-4.png.png"
-dest_files=["res://.godot/imported/New Piskel-4.png.png-d35f72c076281cf93ee6a223b78221e8.ctex"]
+source_file="res://Assets/NPC/genshin.png"
+dest_files=["res://.godot/imported/genshin.png-f3a42d1f68930e631ec93000782a595c.ctex"]
 
 [params]
 
