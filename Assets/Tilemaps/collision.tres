@@ -4,7 +4,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4hcd"]
 texture = ExtResource("1_rbsyv")
-0:0/next_alternative_id = 5
+0:0/next_alternative_id = 7
 0:0/0 = 0
 0:0/1 = 1
 0:0/1/modulate = Color(0.84397864, 0, 0.21613455, 1)
@@ -15,6 +15,12 @@ texture = ExtResource("1_rbsyv")
 0:0/4 = 4
 0:0/4/modulate = Color(1, 1, 1, 0)
 0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(4, -8, 8, -8, 8, 8, -8, 8, 4, 8)
+0:0/5 = 5
+0:0/5/modulate = Color(1, 1, 1, 0)
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(1, -8, 8, -8, 8, -1, 1, -1)
+0:0/6 = 6
+0:0/6/modulate = Color(1, 1, 1, 0)
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4, -4, -4, -4, -1, -8, -1, -8, -4)
 
 [resource]
 physics_layer_0/collision_layer = 1
