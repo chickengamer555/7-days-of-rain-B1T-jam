@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="13_hictm"]
 [ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="14_kr6cc"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="15_258bh"]
+[ext_resource type="Script" path="res://Ineractbles/door.gd" id="16_door"]
 
 [sub_resource type="Resource" id="Resource_h5ro5"]
 script = ExtResource("11_ibfm0")
@@ -39,6 +40,9 @@ script = ExtResource("11_ibfm0")
 id = "UmeWater"
 rules = Array[ExtResource("10_vvaop")]([SubResource("Resource_yj84r")])
 metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(32, 32)
 
 [node name="test" type="Node2D" unique_id=1734866862]
 position = Vector2(28, -105)
@@ -106,3 +110,23 @@ data = SubResource("Resource_h5ro5")
 [node name="Interactable2" parent="." unique_id=992148980 instance=ExtResource("9_v2t6q")]
 position = Vector2(-704, -146)
 data = SubResource("Resource_klxhy")
+
+[node name="ExitDoor" type="Area2D" parent="."]
+position = Vector2(-549, -485)
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("16_door")
+door_type = 4
+is_return_door = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Label" type="Label" parent="ExitDoor"]
+offset_left = -60.0
+offset_top = -10.0
+offset_right = 60.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 14
+text = "[E] Exit Door"
+horizontal_alignment = 1

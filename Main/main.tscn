@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://d3t2lfstbqpyy" path="res://data/Npcs/Chiyo/Chiyo.tres" id="10_g147q"]
 [ext_resource type="Resource" uid="uid://dkdqtiw3qenpv" path="res://data/Npcs/Tomo/Tomo.tres" id="11_t85yq"]
 [ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
+[ext_resource type="PackedScene" path="res://Ineractbles/DoorArea.tscn" id="13_door"]
 
 [node name="Main" type="Node2D" unique_id=661073907]
 y_sort_enabled = true
@@ -60,6 +61,11 @@ position = Vector2(-37, 33)
 [node name="Hud" parent="." unique_id=786916839 instance=ExtResource("5_rj11h")]
 
 [node name="NPCs" type="Node2D" parent="." unique_id=873954492]
+
+[node name="HouseDoor" parent="." instance=ExtResource("13_door")]
+position = Vector2(-352, -48)
+door_type = 2
+target_scene = "res://test/test.tscn"
 
 [node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
 position = Vector2(44, 155)

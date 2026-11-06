@@ -72,7 +72,7 @@ func _show_view(active_view: Control) -> void:
 	controls_view.visible = (active_view == controls_view)
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://test/test.tscn")
+	get_tree().change_scene_to_file("res://Main/main.tscn")
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
