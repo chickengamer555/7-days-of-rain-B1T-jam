@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcn5x72qmd7aq"
-path="res://.godot/imported/itchgate.png-7b510a11c6db0d8c6ca9d2969d06427e.ctex"
+uid="uid://d1ff81pa4l44h"
+path="res://.godot/imported/itchboat2a.png-4a71215d18ec7c9a36973252cdd56113.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchgate.png"
-dest_files=["res://.godot/imported/itchgate.png-7b510a11c6db0d8c6ca9d2969d06427e.ctex"]
+source_file="res://Assets/Tilemaps/itchboat2a.png"
+dest_files=["res://.godot/imported/itchboat2a.png-4a71215d18ec7c9a36973252cdd56113.ctex"]
 
 [params]
 

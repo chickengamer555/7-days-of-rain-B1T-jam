@@ -4,8 +4,6 @@
 [ext_resource type="Script" uid="uid://coci71j4s2cxg" path="res://Main/placeholder.gd" id="2_aeque"]
 [ext_resource type="PackedScene" uid="uid://di4xy37qbc6wq" path="res://Player/player.tscn" id="2_kgdm3"]
 [ext_resource type="Script" uid="uid://bpmospghawpiw" path="res://test/clock_test.gd" id="3_aeque"]
-[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_f6u32"]
-[ext_resource type="Resource" uid="uid://djdh224wfirm5" path="res://Dialouge-Prewritten/characters and dialogues/characters/Ume.tres" id="4_vvaop"]
 [ext_resource type="Resource" uid="uid://bsle7vqddyrc8" path="res://data/Npcs/Tadashi/Tadashi.tres" id="5_5jhup"]
 [ext_resource type="Script" uid="uid://bf4cxcshmclos" path="res://test/talk_test.gd" id="6_v2t6q"]
 [ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="9_v2t6q"]
@@ -45,7 +43,6 @@ metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
 [node name="test" type="Node2D" unique_id=1734866862]
 position = Vector2(28, -105)
 script = ExtResource("2_aeque")
-npcs = Array[ExtResource("3_f6u32")]([ExtResource("5_5jhup"), ExtResource("4_vvaop")])
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1780990519]
 position = Vector2(0.00024414063, -1)
