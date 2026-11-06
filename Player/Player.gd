@@ -38,18 +38,37 @@ var base_sprite_scale: Vector2 = Vector2.ONE
 func _ready() -> void:
 	trail.resize(TRAIL_SIZE) # Make the 32 slots
 	trail.fill(Vector3(0, 0, -1000.0)) # Mark themas stepped on 
-	global_position = global_position.snapped(Vector2(TILE_SIZE, TILE_SIZE)) #round to nearest 16
+	if DynamicDoor.pending_spawn_position != Vector2.INF:
+		global_position = DynamicDoor.pending_spawn_position
+		DynamicDoor.pending_spawn_position = Vector2.INF
 	global_position = global_position.snapped(Vector2(TILE_STEP, TILE_STEP)) 
 	target_position = global_position
+	is_moving = false
 	if sprite:
 		base_sprite_pos = sprite.position
 		base_sprite_scale = sprite.scale
 		_update_facing(Facing.DOWN)
+	var clk = get_node_or_null("/root/Clock")
+	if clk:
+		clk.running = true
+
+func teleport_to(new_pos: Vector2) -> void:
+	global_position = new_pos.snapped(Vector2(TILE_STEP, TILE_STEP))
+	target_position = global_position
+	is_moving = false
+	velocity = Vector2.ZERO
+	if sprite:
+		sprite.position = base_sprite_pos
+		sprite.rotation = 0.0
+		sprite.scale = base_sprite_scale
+	var clk = get_node_or_null("/root/Clock")
+	if clk:
+		clk.running = true
+	_flatten_grass()
 
 func get_input() -> Vector2:
-	var x := Input.get_axis("left", "right") # -1, O or 1
+	var x := Input.get_axis("left", "right")
 	var y := Input.get_axis("up", "down")
-	return Vector2(signf(x), signf(y))
 	if x != 0:
 		return Vector2(signf(x), 0)
 	if y != 0:
@@ -61,9 +80,10 @@ func _physics_process(delta: float) -> void:
 	_flatten_grass() # latten the grass
 	if is_moving:
 		global_position = global_position.move_toward(target_position, tiles_per_second * TILE_SIZE * delta)
-		if global_position != target_position:
+		if global_position.distance_squared_to(target_position) > 0.1:
 			_animate_walking(delta)
 			return
+		global_position = target_position
 		is_moving = false
 	if not Clock.running:
 		_animate_idle(delta)

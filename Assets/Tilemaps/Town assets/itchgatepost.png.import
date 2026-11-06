@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bghuuo31jpc51"
-path="res://.godot/imported/New Piskel-4.png.png-d35f72c076281cf93ee6a223b78221e8.ctex"
+uid="uid://cj6skr5ntuxla"
+path="res://.godot/imported/itchgatepost.png-a1aecbb89a99c3ee265ae75eca4ba771.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NPC/New Piskel-4.png.png"
-dest_files=["res://.godot/imported/New Piskel-4.png.png-d35f72c076281cf93ee6a223b78221e8.ctex"]
+source_file="res://Assets/Tilemaps/Town assets/itchgatepost.png"
+dest_files=["res://.godot/imported/itchgatepost.png-a1aecbb89a99c3ee265ae75eca4ba771.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6df1yyyfyjf"
-path="res://.godot/imported/itchdock.png-121827e58f0a2fe8f2d99e24b521fd27.ctex"
+uid="uid://epboxik8q4g8"
+path="res://.godot/imported/itchfence.png-b0dac69ccee1a4af83094ac0e4d92fc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchdock.png"
-dest_files=["res://.godot/imported/itchdock.png-121827e58f0a2fe8f2d99e24b521fd27.ctex"]
+source_file="res://Assets/Tilemaps/itchfence.png"
+dest_files=["res://.godot/imported/itchfence.png-b0dac69ccee1a4af83094ac0e4d92fc6.ctex"]
 
 [params]
 

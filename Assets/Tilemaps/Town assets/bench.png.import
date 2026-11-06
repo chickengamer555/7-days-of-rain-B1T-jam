@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b70vf35kd118y"
-path="res://.godot/imported/itchmountile.png-8bce53eadffd2403d5311e9cb739d9ff.ctex"
+uid="uid://dyq52h4b8gyei"
+path="res://.godot/imported/bench.png-be7dfffcae959eaae7d594fcb9dcc889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchmountile.png"
-dest_files=["res://.godot/imported/itchmountile.png-8bce53eadffd2403d5311e9cb739d9ff.ctex"]
+source_file="res://Assets/Tilemaps/Town assets/bench.png"
+dest_files=["res://.godot/imported/bench.png-be7dfffcae959eaae7d594fcb9dcc889.ctex"]
 
 [params]
 

@@ -1,0 +1,133 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://da22lnple47cb"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_qdc14"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_e23w1"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_t40qh"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="3_4joq5"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_q8q0v"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_7vlo3"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="4_45rh3"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_y56be"]
+[ext_resource type="Texture2D" uid="uid://bghuuo31jpc51" path="res://Assets/NPC/genshin.png" id="8_4joq5"]
+
+[sub_resource type="Resource" id="Resource_t40qh"]
+script = ExtResource("2_t40qh")
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_7ke5q"]
+script = ExtResource("4_7vlo3")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_otlm3"]
+script = ExtResource("3_4joq5")
+id = "1"
+speaker = "Genshin"
+text = "40 years ago..."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_7ke5q")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_0p3g0"]
+script = ExtResource("4_7vlo3")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_nw4fp"]
+script = ExtResource("3_4joq5")
+id = "2"
+speaker = "Genshin"
+text = "Thirty one villagers were killed."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_0p3g0")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ivr67"]
+script = ExtResource("4_7vlo3")
+next_id = "4"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_45rh3"]
+script = ExtResource("3_4joq5")
+id = "3"
+speaker = "Genshin"
+text = "The old bell-ringer had died that spring..."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_ivr67")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_4joq5"]
+script = ExtResource("4_7vlo3")
+next_id = "5"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_7vlo3"]
+script = ExtResource("3_4joq5")
+id = "4"
+speaker = "Genshin"
+text = "And no one took the rope for a month."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_4joq5")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_w1k8i"]
+script = ExtResource("4_7vlo3")
+next_id = "6"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_wc16a"]
+script = ExtResource("3_4joq5")
+id = "5"
+speaker = "Genshin"
+text = "The river came in the gap."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_w1k8i")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ijxku"]
+script = ExtResource("4_7vlo3")
+next_id = "7"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_pw64t"]
+script = ExtResource("5_y56be")
+add_ledger = Array[String](["The Flood "])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_dchsd"]
+script = ExtResource("3_4joq5")
+id = "6"
+speaker = "Genshin"
+text = "..."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_ijxku")])
+effect = SubResource("Resource_pw64t")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_m7o50"]
+script = ExtResource("3_4joq5")
+id = "7"
+speaker = "Genshin"
+text = "Haruko..."
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_cq3l5"]
+script = ExtResource("4_45rh3")
+start_id = "1"
+nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_otlm3"), SubResource("Resource_nw4fp"), SubResource("Resource_45rh3"), SubResource("Resource_7vlo3"), SubResource("Resource_wc16a"), SubResource("Resource_dchsd"), SubResource("Resource_m7o50")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_q8q0v"]
+script = ExtResource("1_qdc14")
+condition = SubResource("Resource_t40qh")
+tree = SubResource("Resource_cq3l5")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_nr7i4"]
+script = ExtResource("2_e23w1")
+place = "the shrine"
+spot = "Shrine"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[resource]
+script = ExtResource("3_q8q0v")
+id = "Genshin"
+display_name = "Genshin"
+rules = Array[ExtResource("1_qdc14")]([SubResource("Resource_q8q0v")])
+sprite = ExtResource("8_4joq5")
+schedule = Array[ExtResource("2_e23w1")]([SubResource("Resource_nr7i4")])
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

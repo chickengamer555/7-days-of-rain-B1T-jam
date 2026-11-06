@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bt5bcclmodiox"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_435tf"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_garow"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_gg7fu"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="3_meevf"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_y2el8"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_fxr04"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_dhuoc"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_p5c2l"]
+[ext_resource type="Texture2D" uid="uid://baog0mokg4k8r" path="res://Assets/NPC/New Piskel-10.png.png" id="9_garow"]
+
+[sub_resource type="Resource" id="Resource_mw0s2"]
+script = ExtResource("2_garow")
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_4nkw2"]
+script = ExtResource("5_dhuoc")
+add_ledger = Array[String](["UmeRainWater"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_qlw3l"]
+script = ExtResource("3_meevf")
+id = "1"
+speaker = "Ume"
+text = "Yes i use rain water to boil tea."
+effect = SubResource("Resource_4nkw2")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_obop6"]
+script = ExtResource("3_meevf")
+id = "2"
+speaker = "Player"
+text = "isn't this bad?"
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_184d7"]
+script = ExtResource("6_p5c2l")
+start_id = "1"
+nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_qlw3l"), SubResource("Resource_obop6")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_cx4px"]
+script = ExtResource("1_435tf")
+condition = SubResource("Resource_mw0s2")
+tree = SubResource("Resource_184d7")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_v2t6q"]
+script = ExtResource("2_gg7fu")
+place = "Ume"
+spot = "Tea house"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[resource]
+script = ExtResource("3_y2el8")
+id = "Ume"
+display_name = "Ume"
+rules = Array[ExtResource("1_435tf")]([SubResource("Resource_cx4px")])
+sprite = ExtResource("9_garow")
+schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_v2t6q")])
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

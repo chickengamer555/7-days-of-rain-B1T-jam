@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c8door_area_template"]
+
+[ext_resource type="Script" path="res://Ineractbles/door.gd" id="1_door"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_door"]
+size = Vector2(16, 16)
+
+[node name="DoorArea" type="Area2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_door")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_door")

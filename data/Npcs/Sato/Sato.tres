@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://3pqnqvpwrbok"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_3i6my"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_lbxnx"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_padq5"]
+
+[resource]
+script = ExtResource("3_padq5")
+id = "sato"
+display_name = "Sato"
+metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

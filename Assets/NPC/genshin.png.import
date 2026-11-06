@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8107nnf70hd0"
-path="res://.godot/imported/itchdike.png-0efa1273513a2e177c87b80787b8a299.ctex"
+uid="uid://bghuuo31jpc51"
+path="res://.godot/imported/genshin.png-f3a42d1f68930e631ec93000782a595c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/itchdike.png"
-dest_files=["res://.godot/imported/itchdike.png-0efa1273513a2e177c87b80787b8a299.ctex"]
+source_file="res://Assets/NPC/genshin.png"
+dest_files=["res://.godot/imported/genshin.png-f3a42d1f68930e631ec93000782a595c.ctex"]
 
 [params]
 
