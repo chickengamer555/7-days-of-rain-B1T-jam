@@ -21,6 +21,7 @@ font = ExtResource("4_amwvk")
 font_size = 7
 
 [node name="Hud" type="CanvasLayer" unique_id=786916839]
+layer = 90
 script = ExtResource("1_f31rt")
 
 [node name="ClockFace" type="Node2D" parent="." unique_id=1716147070]

@@ -10,11 +10,10 @@ const PIXEL_FONT = preload("res://Assets/pixel_font.ttf")
 @onready var settings_view: Control = $SettingsView
 @onready var controls_view: Control = $ControlsView
 
-@onready var title_label: Label = $MainView/Title
-@onready var start_btn: Button = $MainView/VBox/StartBtn
-@onready var settings_btn: Button = $MainView/VBox/SettingsBtn
-@onready var controls_btn: Button = $MainView/VBox/ControlsBtn
-@onready var quit_btn: Button = $MainView/VBox/QuitBtn
+@onready var start_btn: Button = $MainView/StartBtn
+@onready var settings_btn: Button = $MainView/SettingsBtn
+@onready var controls_btn: Button = $MainView/ControlsBtn
+@onready var quit_btn: Button = $MainView/QuitBtn
 
 # Settings controls
 @onready var vol_left_btn: Button = $SettingsView/VBox/VolRow/VolLeft
@@ -40,15 +39,11 @@ const FF_SPEEDS: Array[int] = [6, 12, 18, 24]
 
 func _ready() -> void:
 	_load_settings()
-	_apply_1bit_styling(self)
-	
-	if OS.has_feature("web"):
-		quit_btn.visible = false
-		
 	start_btn.pressed.connect(_on_start_pressed)
 	settings_btn.pressed.connect(func(): _show_view(settings_view))
 	controls_btn.pressed.connect(func(): _show_view(controls_view))
 	quit_btn.pressed.connect(_on_quit_pressed)
+
 	
 	settings_back_btn.pressed.connect(func(): _show_view(main_view))
 	controls_back_btn.pressed.connect(func(): _show_view(main_view))
@@ -151,28 +146,10 @@ func _load_settings() -> void:
 
 # ----------------- 1-Bit Aesthetic Styling -----------------
 
-func _apply_1bit_styling(node: Node) -> void:
-	var style_normal = StyleBoxFlat.new()
-	style_normal.bg_color = PAPER_COLOR
-	style_normal.border_color = INK_COLOR
-	style_normal.set_border_width_all(1)
-	style_normal.set_corner_radius_all(0)
-	style_normal.content_margin_top = 1
-	style_normal.content_margin_bottom = 1
-	style_normal.content_margin_left = 3
-	style_normal.content_margin_right = 3
 
-	var style_hover = StyleBoxFlat.new()
-	style_hover.bg_color = INK_COLOR
-	style_hover.border_color = INK_COLOR
-	style_hover.set_border_width_all(1)
-	style_hover.set_corner_radius_all(0)
-	style_hover.content_margin_top = 1
-	style_hover.content_margin_bottom = 1
-	style_hover.content_margin_left = 3
-	style_hover.content_margin_right = 3
 
-	_style_recursive(node, style_normal, style_hover)
+
+
 
 func _style_recursive(parent: Node, normal: StyleBox, hover: StyleBox) -> void:
 	for child in parent.get_children():

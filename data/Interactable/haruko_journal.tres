@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://dhv6u1ynw60rr"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_cond"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="3_eff"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="4_node"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="5_choice"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_tree"]
+[ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="7_data"]
+
+[sub_resource type="Resource" id="Resource_cond_s3"]
+script = ExtResource("2_cond")
+needs_ledger = Array[String](["S3"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_choice_1"]
+script = ExtResource("5_choice")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_node_1"]
+script = ExtResource("4_node")
+id = "1"
+speaker = "Inner Room"
+text = "Remembering what Tomo said, you look behind the offering screen."
+choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_1")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_choice_2"]
+script = ExtResource("5_choice")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_node_2"]
+script = ExtResource("4_node")
+id = "2"
+speaker = "Haruko's Journal"
+text = "'The shrine stands because the village stands. We do not ring for glory, but to keep the water still.'"
+choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_2")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_journal"]
+script = ExtResource("3_eff")
+add_ledger = Array[String](["S4", "S5"])
+add_flags = Array[String](["read_journal"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_node_3"]
+script = ExtResource("4_node")
+id = "3"
+speaker = "Haruko's Journal"
+text = "The final page is dated six months ago: 'Grant them one more rain to see them through.'"
+effect = SubResource("Resource_eff_journal")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_tree_journal"]
+script = ExtResource("6_tree")
+start_id = "1"
+nodes = Array[ExtResource("4_node")]([SubResource("Resource_node_1"), SubResource("Resource_node_2"), SubResource("Resource_node_3")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_rule_journal"]
+script = ExtResource("1_rule")
+condition = SubResource("Resource_cond_s3")
+tree = SubResource("Resource_tree_journal")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_node_fallback"]
+script = ExtResource("4_node")
+id = "1"
+speaker = "Inner Altar"
+text = "A quiet alcove behind the shrine screen. The air smells of old incense and rain."
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_tree_fallback"]
+script = ExtResource("6_tree")
+start_id = "1"
+nodes = Array[ExtResource("4_node")]([SubResource("Resource_node_fallback")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_rule_fallback"]
+script = ExtResource("1_rule")
+tree = SubResource("Resource_tree_fallback")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[resource]
+script = ExtResource("7_data")
+id = "haruko_journal"
+display_name = "Haruko's Journal"
+rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_journal"), SubResource("Resource_rule_fallback")])
+metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"

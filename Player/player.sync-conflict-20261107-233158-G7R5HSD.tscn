@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://di4xy37qbc6wq"]
+[gd_scene format=3 uid="uid://37jqirjlfw77"]
 
 [ext_resource type="Script" uid="uid://60p1npopeo5x" path="res://Player/Player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://ed3svgon73p1" path="res://Assets/player/itchboat2a.png" id="2_k53q1"]

@@ -1,9 +1,166 @@
 [gd_scene format=3 uid="uid://cx6r0j7g4d1va"]
 
 [ext_resource type="Script" uid="uid://c5fllrqtcnk1y" path="res://UI/MainMenu/main_menu.gd" id="1_mainmenu"]
+[ext_resource type="Texture2D" uid="uid://d07faex4cyyd1" path="res://Assets/Title screen/New Piskel-1.png-1.png.png" id="2_e7mgr"]
 [ext_resource type="Script" uid="uid://blqjhdb6a1y2t" path="res://UI/MainMenu/rain_bg.gd" id="2_rainbg"]
+[ext_resource type="Texture2D" uid="uid://dibi500pclqg5" path="res://Assets/Title screen/New Piskel-1.png-2.png.png" id="3_87p85"]
+[ext_resource type="Texture2D" uid="uid://ce56cl6x76ht6" path="res://Assets/Title screen/New Piskel-1.png-3.png.png" id="4_dak1o"]
+[ext_resource type="Texture2D" uid="uid://bpi81kc3rbqjt" path="res://Assets/Title screen/New Piskel-1.png-4.png.png" id="5_fqq2g"]
+[ext_resource type="Texture2D" uid="uid://dm4uv77xfd5x7" path="res://Assets/Title screen/New Piskel-1.png-5.png.png" id="6_htmks"]
+[ext_resource type="Texture2D" uid="uid://bsptosfxu7oy8" path="res://Assets/Title screen/New Piskel-1.png-6.png.png" id="7_dpm0b"]
+[ext_resource type="Texture2D" uid="uid://3jx2gpkguxyx" path="res://Assets/Title screen/New Piskel-1.png-7.png.png" id="8_8fv8m"]
+[ext_resource type="Texture2D" uid="uid://di0rgr4s4eq1j" path="res://Assets/Title screen/New Piskel-1.png-8.png.png" id="9_cal6a"]
+[ext_resource type="Texture2D" uid="uid://by0cep5ts1uv2" path="res://Assets/Title screen/New Piskel-1.png-9.png.png" id="10_yu7o6"]
+[ext_resource type="Texture2D" uid="uid://dil3aqrdybuvm" path="res://Assets/Title screen/New Piskel-1.png-10.png.png" id="11_5oo4k"]
+[ext_resource type="Texture2D" uid="uid://du537evfwgsvm" path="res://Assets/Title screen/New Piskel-1.png-11.png.png" id="12_nmo8l"]
+[ext_resource type="Texture2D" uid="uid://cjb6gamfmxomh" path="res://Assets/Title screen/New Piskel-1.png-12.png.png" id="13_jxuvc"]
+[ext_resource type="Texture2D" uid="uid://cabivtmaar0qn" path="res://Assets/Title screen/New Piskel-1.png-13.png.png" id="14_v0vgm"]
+[ext_resource type="Texture2D" uid="uid://c42reygg0d2mh" path="res://Assets/Title screen/New Piskel-1.png-14.png.png" id="15_x4vpx"]
+[ext_resource type="Texture2D" uid="uid://cf3kxi7rtkyi" path="res://Assets/Title screen/New Piskel-1.png-15.png.png" id="16_n3y7y"]
+[ext_resource type="Texture2D" uid="uid://bum14aobj5lsb" path="res://Assets/Title screen/New Piskel-1.png-16.png.png" id="17_57eop"]
+[ext_resource type="Texture2D" uid="uid://ck7pa8aydnw8e" path="res://Assets/Title screen/New Piskel-1.png-17.png.png" id="18_10umk"]
+[ext_resource type="Texture2D" uid="uid://cdtuasrdearo3" path="res://Assets/Title screen/New Piskel-1.png-18.png.png" id="19_i2bxe"]
+[ext_resource type="Texture2D" uid="uid://b4071keutps4t" path="res://Assets/Title screen/New Piskel-1.png-19.png.png" id="20_wo8r1"]
+[ext_resource type="Texture2D" uid="uid://cm8td6myln06w" path="res://Assets/Title screen/New Piskel-1.png-20.png.png" id="21_xltsy"]
+[ext_resource type="Texture2D" uid="uid://cwb4hqyu2ny7r" path="res://Assets/Title screen/New Piskel-1.png-21.png.png" id="22_ijid8"]
+[ext_resource type="Texture2D" uid="uid://buy5jekklkpkd" path="res://Assets/Title screen/New Piskel-1.png-22.png.png" id="23_rdabn"]
+[ext_resource type="Texture2D" uid="uid://dhseuamf5bigu" path="res://Assets/Title screen/New Piskel-1.png-23.png.png" id="24_b8tma"]
+[ext_resource type="Texture2D" uid="uid://br720w8l16uwc" path="res://Assets/Title screen/New Piskel-1.png-24.png.png" id="25_b6148"]
+[ext_resource type="Texture2D" uid="uid://c53wungrgtole" path="res://Assets/Title screen/New Piskel-1.png-25.png.png" id="26_ayg73"]
+[ext_resource type="Texture2D" uid="uid://uloa86ruvqbo" path="res://Assets/Title screen/New Piskel-1.png-26.png.png" id="27_h5p7f"]
+[ext_resource type="Texture2D" uid="uid://dwhlx2hewjoat" path="res://Assets/Title screen/New Piskel-1.png-27.png.png" id="28_xuc0d"]
+[ext_resource type="Texture2D" uid="uid://c6h15s6mwtm7c" path="res://Assets/Title screen/New Piskel-1.png-28.png.png" id="29_wpxvv"]
+[ext_resource type="Texture2D" uid="uid://brpx1ofmptyv1" path="res://Assets/Title screen/New Piskel-1.png-29.png.png" id="30_acxni"]
+[ext_resource type="Texture2D" uid="uid://cs2rat6oi53vs" path="res://Assets/Title screen/New Piskel-1.png-30.png.png" id="31_o5ni4"]
+[ext_resource type="Texture2D" uid="uid://coos1i658pplb" path="res://Assets/Title screen/New Piskel-1.png-31.png.png" id="32_wvdm4"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="34_87p85"]
 
-[node name="MainMenu" type="Control"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xx7b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e7mgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_87p85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dak1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fqq2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_htmks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dpm0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8fv8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cal6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yu7o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5oo4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nmo8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jxuvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v0vgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x4vpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n3y7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_57eop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_10umk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_i2bxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wo8r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xltsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ijid8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rdabn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_b8tma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_b6148")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ayg73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_h5p7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_xuc0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpxvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_acxni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_o5ni4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wvdm4")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87p85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dak1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htmks"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqq2g"]
+
+[node name="MainMenu" type="Control" unique_id=1426859149]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,16 +169,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mainmenu")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.776471, 0.729412, 0.67451, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522051639]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_7xx7b")
+autoplay = "default"
+frame_progress = 0.8743902
+speed_scale = 2.0
 
-[node name="RainBG" type="Control" parent="."]
+[node name="RainBG" type="Control" parent="." unique_id=1429704880]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +185,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_rainbg")
 
-[node name="MainView" type="Control" parent="."]
+[node name="MainView" type="Control" parent="." unique_id=414326665]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,58 +193,99 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="MainView"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 18.0
-offset_bottom = 38.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
-theme_override_font_sizes/font_size = 16
-text = "SEVEN DAYS OF RAIN"
-horizontal_alignment = 1
-
-[node name="VBox" type="VBoxContainer" parent="MainView"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -26.0
-offset_right = 50.0
-offset_bottom = 68.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 4
-
-[node name="StartBtn" type="Button" parent="MainView/VBox"]
-custom_minimum_size = Vector2(0, 18)
-layout_mode = 2
+[node name="StartBtn" type="Button" parent="MainView" unique_id=2002667060]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 129.0
+offset_right = 75.0
+offset_bottom = 139.0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_focus_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_pressed_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_hover_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Start Game"
 
-[node name="SettingsBtn" type="Button" parent="MainView/VBox"]
-custom_minimum_size = Vector2(0, 18)
-layout_mode = 2
+[node name="SettingsBtn" type="Button" parent="MainView" unique_id=1246558733]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 129.0
+offset_right = 133.0
+offset_bottom = 139.0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_focus_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_pressed_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_hover_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Settings"
 
-[node name="ControlsBtn" type="Button" parent="MainView/VBox"]
-custom_minimum_size = Vector2(0, 18)
-layout_mode = 2
+[node name="ControlsBtn" type="Button" parent="MainView" unique_id=1057524618]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 129.0
+offset_right = 191.0
+offset_bottom = 139.0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_focus_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_pressed_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_hover_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Controls"
 
-[node name="QuitBtn" type="Button" parent="MainView/VBox"]
-custom_minimum_size = Vector2(0, 18)
-layout_mode = 2
+[node name="QuitBtn" type="Button" parent="MainView" unique_id=1875511904]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 129.0
+offset_right = 225.0
+offset_bottom = 139.0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_focus_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_pressed_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_hover_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Quit"
 
-[node name="SettingsView" type="Control" parent="."]
+[node name="SettingsView" type="Control" parent="." unique_id=1799818683]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -98,7 +294,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="SettingsView"]
+[node name="Title" type="Label" parent="SettingsView" unique_id=1590039289]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -110,7 +306,7 @@ theme_override_font_sizes/font_size = 16
 text = "SETTINGS"
 horizontal_alignment = 1
 
-[node name="VBox" type="VBoxContainer" parent="SettingsView"]
+[node name="VBox" type="VBoxContainer" parent="SettingsView" unique_id=1450538055]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -125,23 +321,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 4
 
-[node name="VolRow" type="HBoxContainer" parent="SettingsView/VBox"]
+[node name="VolRow" type="HBoxContainer" parent="SettingsView/VBox" unique_id=1437402466]
 layout_mode = 2
 
-[node name="VolTitle" type="Label" parent="SettingsView/VBox/VolRow"]
+[node name="VolTitle" type="Label" parent="SettingsView/VBox/VolRow" unique_id=694578937]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
 theme_override_font_sizes/font_size = 16
 text = "Volume"
 
-[node name="VolLeft" type="Button" parent="SettingsView/VBox/VolRow"]
+[node name="VolLeft" type="Button" parent="SettingsView/VBox/VolRow" unique_id=1823708211]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = "<"
 
-[node name="VolVal" type="Label" parent="SettingsView/VBox/VolRow"]
+[node name="VolVal" type="Label" parent="SettingsView/VBox/VolRow" unique_id=20914129]
 custom_minimum_size = Vector2(36, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
@@ -149,29 +345,29 @@ theme_override_font_sizes/font_size = 16
 text = "100%"
 horizontal_alignment = 1
 
-[node name="VolRight" type="Button" parent="SettingsView/VBox/VolRow"]
+[node name="VolRight" type="Button" parent="SettingsView/VBox/VolRow" unique_id=1362003771]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = ">"
 
-[node name="WinRow" type="HBoxContainer" parent="SettingsView/VBox"]
+[node name="WinRow" type="HBoxContainer" parent="SettingsView/VBox" unique_id=89379435]
 layout_mode = 2
 
-[node name="WinTitle" type="Label" parent="SettingsView/VBox/WinRow"]
+[node name="WinTitle" type="Label" parent="SettingsView/VBox/WinRow" unique_id=359320591]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
 theme_override_font_sizes/font_size = 16
 text = "Display"
 
-[node name="WinLeft" type="Button" parent="SettingsView/VBox/WinRow"]
+[node name="WinLeft" type="Button" parent="SettingsView/VBox/WinRow" unique_id=563392042]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = "<"
 
-[node name="WinVal" type="Label" parent="SettingsView/VBox/WinRow"]
+[node name="WinVal" type="Label" parent="SettingsView/VBox/WinRow" unique_id=195520262]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
@@ -179,29 +375,29 @@ theme_override_font_sizes/font_size = 16
 text = "Window"
 horizontal_alignment = 1
 
-[node name="WinRight" type="Button" parent="SettingsView/VBox/WinRow"]
+[node name="WinRight" type="Button" parent="SettingsView/VBox/WinRow" unique_id=1568594882]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = ">"
 
-[node name="FFRow" type="HBoxContainer" parent="SettingsView/VBox"]
+[node name="FFRow" type="HBoxContainer" parent="SettingsView/VBox" unique_id=268313727]
 layout_mode = 2
 
-[node name="FFTitle" type="Label" parent="SettingsView/VBox/FFRow"]
+[node name="FFTitle" type="Label" parent="SettingsView/VBox/FFRow" unique_id=66787242]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
 theme_override_font_sizes/font_size = 16
 text = "Fast Fwd"
 
-[node name="FFLeft" type="Button" parent="SettingsView/VBox/FFRow"]
+[node name="FFLeft" type="Button" parent="SettingsView/VBox/FFRow" unique_id=772847056]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = "<"
 
-[node name="FFVal" type="Label" parent="SettingsView/VBox/FFRow"]
+[node name="FFVal" type="Label" parent="SettingsView/VBox/FFRow" unique_id=1487643722]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
@@ -209,25 +405,25 @@ theme_override_font_sizes/font_size = 16
 text = "12x"
 horizontal_alignment = 1
 
-[node name="FFRight" type="Button" parent="SettingsView/VBox/FFRow"]
+[node name="FFRight" type="Button" parent="SettingsView/VBox/FFRow" unique_id=1677516075]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 focus_mode = 0
 text = ">"
 
-[node name="ResetDataBtn" type="Button" parent="SettingsView/VBox"]
+[node name="ResetDataBtn" type="Button" parent="SettingsView/VBox" unique_id=284425447]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 focus_mode = 0
 text = "Reset Ledger"
 
-[node name="SettingsBackBtn" type="Button" parent="SettingsView/VBox"]
+[node name="SettingsBackBtn" type="Button" parent="SettingsView/VBox" unique_id=479990319]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 focus_mode = 0
 text = "Back"
 
-[node name="ControlsView" type="Control" parent="."]
+[node name="ControlsView" type="Control" parent="." unique_id=85070334]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -236,7 +432,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="ControlsView"]
+[node name="Title" type="Label" parent="ControlsView" unique_id=935055489]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -248,7 +444,7 @@ theme_override_font_sizes/font_size = 16
 text = "CONTROLS"
 horizontal_alignment = 1
 
-[node name="Info" type="Label" parent="ControlsView"]
+[node name="Info" type="Label" parent="ControlsView" unique_id=686382825]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -267,10 +463,10 @@ text = "WASD : Walk
 E : Interact / Talk
 Q : Ledger
 Hold F : Fast Forward"
-autowrap_mode = 2
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="ControlsBackBtn" type="Button" parent="ControlsView"]
+[node name="ControlsBackBtn" type="Button" parent="ControlsView" unique_id=297646380]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

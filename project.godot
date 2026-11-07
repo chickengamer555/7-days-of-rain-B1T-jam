@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="7 Days of rain"
-run/main_scene="res://Main/main.tscn"
+run/main_scene="uid://cx6r0j7g4d1va"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
