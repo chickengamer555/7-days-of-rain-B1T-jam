@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://ib2f3n4nd276"
 [sub_resource type="Resource" id="Resource_2o2vm"]
 script = ExtResource("1_pw64t")
 id = "S1"
-text = "Haruko rang the shrine bell for forty years. The kami Shizu-hime holds the river back."
+text = "Haruko rang the shrine bell for 40 years. The kami Shizu-hime is holding the river back now."
 metadata/_custom_type_script = "uid://ib2f3n4nd276"
 
 [sub_resource type="Resource" id="Resource_jrcm6"]
