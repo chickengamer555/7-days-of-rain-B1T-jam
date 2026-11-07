@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://bkh2k2fnijesg" path="res://data/Npcs/npc.gd" id="1_7y2t7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
-size = Vector2(127, 127)
+size = Vector2(14, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jlmu"]
+size = Vector2(14, 7)
 
 [node name="Npc" type="Area2D" unique_id=1277688834]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_7y2t7")
@@ -13,5 +17,11 @@ script = ExtResource("1_7y2t7")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1174544576]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108813698]
-position = Vector2(-0.5, -0.5)
+position = Vector2(1, 2.5)
 shape = SubResource("RectangleShape2D_7xx7b")
+
+[node name="Body" type="StaticBody2D" parent="." unique_id=1869970533]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=729468202]
+position = Vector2(1, 9.5)
+shape = SubResource("RectangleShape2D_4jlmu")

@@ -39,7 +39,6 @@ const FF_SPEEDS: Array[int] = [6, 12, 18, 24]
 
 func _ready() -> void:
 	_load_settings()
-	start_btn.pressed.connect(_on_start_pressed)
 	settings_btn.pressed.connect(func(): _show_view(settings_view))
 	controls_btn.pressed.connect(func(): _show_view(controls_view))
 	quit_btn.pressed.connect(_on_quit_pressed)
@@ -60,14 +59,15 @@ func _ready() -> void:
 	reset_data_btn.pressed.connect(_on_reset_data_pressed)
 	
 	_show_view(main_view)
+	if Clock.saved_world != null: # a game is paused
+		start_btn.text = "Resume"
 
 func _show_view(active_view: Control) -> void:
 	main_view.visible = (active_view == main_view)
 	settings_view.visible = (active_view == settings_view)
 	controls_view.visible = (active_view == controls_view)
 
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Main/main.tscn")
+
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
@@ -170,3 +170,14 @@ func _style_recursive(parent: Node, normal: StyleBox, hover: StyleBox) -> void:
 			child.add_theme_font_size_override("font_size", 16)
 			child.add_theme_color_override("font_color", INK_COLOR)
 		_style_recursive(child, normal, hover)
+
+
+func _on_start_btn_pressed() -> void:
+	if Clock.saved_world != null:
+		var world = Clock.saved_world 
+		Clock.saved_world = null # Clear it for next itmne 
+		Clock.running = Clock.was_running # Put tome back to how it was 
+		get_tree().change_scene_to_node(world)  # get the saved game in
+	else:
+		Clock.reset() 
+		get_tree().change_scene_to_file("res://Main/main.tscn")
