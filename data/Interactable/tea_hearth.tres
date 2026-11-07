@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cx4tea_hearth"]
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cox1k002bc8qm"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
 [ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="2_node"]
@@ -35,7 +35,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_hearth"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_hearth")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]

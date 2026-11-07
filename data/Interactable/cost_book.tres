@@ -11,35 +11,11 @@
 [sub_resource type="Resource" id="Resource_cond_found"]
 script = ExtResource("2_cond")
 needs_ledger = Array[String](["E2"])
-needs_flags = Array[String]([])
-blocked_by_flags = Array[String]([])
-from_day = 1
-from_phase = 0
-to_day = 7
-to_phase = 3
-only_phases = Array[int]([])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_eff_e3"]
-script = ExtResource("3_eff")
-add_ledger = Array[String](["E3"])
-add_flags = Array[String](["has_cost_book"])
-ending_trigger = ""
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_choice_1"]
 script = ExtResource("5_choice")
 next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_2"]
-script = ExtResource("5_choice")
-next_id = "3"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_3"]
-script = ExtResource("5_choice")
-next_id = "4"
 metadata/_custom_type_script = "uid://bocbuuj64elde"
 
 [sub_resource type="Resource" id="Resource_node_1"]
@@ -50,6 +26,11 @@ text = "Knowing what Ume said, you pry up the loose workshop floorboard."
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_1")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_2"]
+script = ExtResource("5_choice")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_2"]
 script = ExtResource("4_node")
 id = "2"
@@ -58,6 +39,11 @@ text = "Hidden in the sawdust lies a moldering expense ledger from two years ago
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_3"]
+script = ExtResource("5_choice")
+next_id = "4"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_3"]
 script = ExtResource("4_node")
 id = "3"
@@ -65,6 +51,12 @@ speaker = "Cost Book"
 text = "Timber: paid. Bamboo: paid. Mud: paid. Stone facing: entry crossed out."
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_3")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_e3"]
+script = ExtResource("3_eff")
+add_ledger = Array[String](["E3"])
+add_flags = Array[String](["has_cost_book"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_node_4"]
 script = ExtResource("4_node")
@@ -84,7 +76,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 script = ExtResource("1_rule")
 condition = SubResource("Resource_cond_found")
 tree = SubResource("Resource_tree_found")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_node_fallback"]
@@ -103,7 +94,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_fallback"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_fallback")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]

@@ -28,17 +28,17 @@
 [ext_resource type="Shader" uid="uid://dd3fv0x5h8d88" path="res://Shaders/world_rain.gdshader" id="23_nf7xu"]
 [ext_resource type="Texture2D" uid="uid://bsio4syxrg3de" path="res://Assets/NPC/Shrine novice.png" id="28_y88hr"]
 [ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="29_interactable"]
-[ext_resource type="Resource" uid="uid://cx4shrine_bell" path="res://data/Interactable/shrine_bell.tres" id="30_bell"]
-[ext_resource type="Resource" uid="uid://cx4donation_box" path="res://data/Interactable/donation_box.tres" id="31_donation"]
+[ext_resource type="Resource" uid="uid://bd0k76uifghcr" path="res://data/Interactable/shrine_bell.tres" id="30_bell"]
+[ext_resource type="Resource" uid="uid://bpo2gbsq250ex" path="res://data/Interactable/donation_box.tres" id="31_donation"]
 [ext_resource type="Resource" uid="uid://c05j2gu1rif8s" path="res://data/Interactable/cost_book.tres" id="32_costbook"]
 [ext_resource type="Resource" uid="uid://bnckpv3e8uexu" path="res://data/Interactable/stair_stone.tres" id="33_stair"]
-[ext_resource type="Resource" uid="uid://cx4haruko_journal" path="res://data/Interactable/haruko_journal.tres" id="34_journal"]
-[ext_resource type="Resource" uid="uid://cx4flood_memorial" path="res://data/Interactable/flood_memorial.tres" id="35_memorial"]
-[ext_resource type="Resource" uid="uid://cx4river_stakes" path="res://data/Interactable/river_stakes.tres" id="36_stakes"]
-[ext_resource type="Resource" uid="uid://cx4cracked_dike" path="res://data/Interactable/cracked_dike.tres" id="37_dike"]
+[ext_resource type="Resource" uid="uid://dhv6u1ynw60rr" path="res://data/Interactable/haruko_journal.tres" id="34_journal"]
+[ext_resource type="Resource" uid="uid://cn1l7g1agc45u" path="res://data/Interactable/flood_memorial.tres" id="35_memorial"]
+[ext_resource type="Resource" uid="uid://c6nlfwgwxf5ta" path="res://data/Interactable/river_stakes.tres" id="36_stakes"]
+[ext_resource type="Resource" uid="uid://bg0rgr1upn8th" path="res://data/Interactable/cracked_dike.tres" id="37_dike"]
 [ext_resource type="Resource" uid="uid://cx4hourglass" path="res://data/Interactable/hourglass.tres" id="38_hourglass"]
-[ext_resource type="Resource" uid="uid://cx4tea_hearth" path="res://data/Interactable/tea_hearth.tres" id="39_hearth"]
-[ext_resource type="Resource" uid="uid://cx4halfway_hut" path="res://data/Interactable/halfway_hut.tres" id="40_hut"]
+[ext_resource type="Resource" uid="uid://cox1k002bc8qm" path="res://data/Interactable/tea_hearth.tres" id="39_hearth"]
+[ext_resource type="Resource" uid="uid://dpgotcjtanh4o" path="res://data/Interactable/halfway_hut.tres" id="40_hut"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nqbc"]
 shader = ExtResource("23_nf7xu")
@@ -205,47 +205,47 @@ text = "SHRINE AREA
 
 [node name="Interactables" type="Node2D" parent="." unique_id=1604491875]
 
-[node name="ShrineBell" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="ShrineBell" parent="Interactables" unique_id=1091875644 instance=ExtResource("29_interactable")]
 position = Vector2(91, -364)
 data = ExtResource("30_bell")
 
-[node name="DonationBox" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="DonationBox" parent="Interactables" unique_id=14789948 instance=ExtResource("29_interactable")]
 position = Vector2(-20, -411)
 data = ExtResource("31_donation")
 
-[node name="Hourglass" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="Hourglass" parent="Interactables" unique_id=1112760482 instance=ExtResource("29_interactable")]
 position = Vector2(60, -364)
 data = ExtResource("38_hourglass")
 
-[node name="HarukoJournal" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="HarukoJournal" parent="Interactables" unique_id=1601436647 instance=ExtResource("29_interactable")]
 position = Vector2(0, -425)
 data = ExtResource("34_journal")
 
-[node name="WestStairStones" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="WestStairStones" parent="Interactables" unique_id=956774908 instance=ExtResource("29_interactable")]
 position = Vector2(-60, -320)
 data = ExtResource("33_stair")
 
-[node name="FloodMemorial" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="FloodMemorial" parent="Interactables" unique_id=628633604 instance=ExtResource("29_interactable")]
 position = Vector2(380, 0)
 data = ExtResource("35_memorial")
 
-[node name="WorkshopFloorboard" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="WorkshopFloorboard" parent="Interactables" unique_id=692071151 instance=ExtResource("29_interactable")]
 position = Vector2(240, 20)
 data = ExtResource("32_costbook")
 
-[node name="TeaHearth" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="TeaHearth" parent="Interactables" unique_id=1215026900 instance=ExtResource("29_interactable")]
 position = Vector2(-50, 45)
 data = ExtResource("39_hearth")
 
-[node name="RiverStakes" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="RiverStakes" parent="Interactables" unique_id=102819920 instance=ExtResource("29_interactable")]
 position = Vector2(-10, 290)
 data = ExtResource("36_stakes")
 
-[node name="CrackedDike" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="CrackedDike" parent="Interactables" unique_id=1898436089 instance=ExtResource("29_interactable")]
 position = Vector2(120, 300)
 data = ExtResource("37_dike")
 
-[node name="TrailShelter" parent="Interactables" instance=ExtResource("29_interactable")]
+[node name="TrailShelter" parent="Interactables" unique_id=1561454823 instance=ExtResource("29_interactable")]
 position = Vector2(-100, -260)
 data = ExtResource("40_hut")
 

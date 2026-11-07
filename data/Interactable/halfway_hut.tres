@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cx4halfway_hut"]
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://dpgotcjtanh4o"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
 [ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_cond"]
@@ -10,31 +10,14 @@
 
 [sub_resource type="Resource" id="Resource_cond_day6"]
 script = ExtResource("2_cond")
-needs_ledger = Array[String]([])
-needs_flags = Array[String]([])
-blocked_by_flags = Array[String]([])
 from_day = 6
 from_phase = 2
 to_day = 6
-to_phase = 3
-only_phases = Array[int]([])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_eff_hut"]
-script = ExtResource("3_eff")
-add_ledger = Array[String]([])
-add_flags = Array[String](["found_mio_at_hut"])
-ending_trigger = ""
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_choice_1"]
 script = ExtResource("5_choice")
 next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_2"]
-script = ExtResource("5_choice")
-next_id = "3"
 metadata/_custom_type_script = "uid://bocbuuj64elde"
 
 [sub_resource type="Resource" id="Resource_node_1"]
@@ -45,6 +28,11 @@ text = "Guided by barking in the trees, you reach the crude timber shelter."
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_1")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_2"]
+script = ExtResource("5_choice")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_2"]
 script = ExtResource("4_node")
 id = "2"
@@ -52,6 +40,11 @@ speaker = "Trail Shelter"
 text = "Mio huddles under the eaves, shivering in her sodden coat with Kuro beside her."
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_hut"]
+script = ExtResource("3_eff")
+add_flags = Array[String](["found_mio_at_hut"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_node_3"]
 script = ExtResource("4_node")
@@ -71,7 +64,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 script = ExtResource("1_rule")
 condition = SubResource("Resource_cond_day6")
 tree = SubResource("Resource_tree_d6")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_node_fallback"]
@@ -90,7 +82,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_fallback"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_fallback")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]

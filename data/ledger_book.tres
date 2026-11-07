@@ -5,11 +5,125 @@
 
 [sub_resource type="Resource" id="Resource_uryxi"]
 script = ExtResource("1_pw64t")
-id = "The Flood "
-text = "A flood happened 40 years ago and killed 31 villagers"
+id = "A1"
+text = "A flood comes after dusk on Day 7."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_2o2vm"]
+script = ExtResource("1_pw64t")
+id = "S1"
+text = "Haruko rang the shrine bell for forty years. The kami Shizu-hime holds the river back."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_jrcm6"]
+script = ExtResource("1_pw64t")
+id = "S2"
+text = "Forty years ago the bell fell silent for a month and the river broke through."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_y3n7d"]
+script = ExtResource("1_pw64t")
+id = "S3"
+text = "Haruko's journal is in the shrine's inner room."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_j5sjm"]
+script = ExtResource("1_pw64t")
+id = "S4"
+text = "The shrine stands because the village stands."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_vb2ut"]
+script = ExtResource("1_pw64t")
+id = "S5"
+text = "Haruko's last page asks to see them through one more rain."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_726ml"]
+script = ExtResource("1_pw64t")
+id = "S6"
+text = "The release words are..."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_pw64t"]
+script = ExtResource("1_pw64t")
+id = "R1"
+text = "The dike is cracked at the Kuma bend."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_e13hl"]
+script = ExtResource("1_pw64t")
+id = "R2"
+text = "When the river reaches the sixth stake it reaches the cracks."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_17pmg"]
+script = ExtResource("1_pw64t")
+id = "E1"
+text = "Tadashi rebuilt the dike two years ago and it was meant to have a stone facing."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_gsrei"]
+script = ExtResource("1_pw64t")
+id = "E2"
+text = "The dike is only mud and bamboo."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_3agot"]
+script = ExtResource("1_pw64t")
+id = "E3"
+text = " Tadashi's cost book shows the stone was never ordered."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_clwi7"]
+script = ExtResource("1_pw64t")
+id = "E4"
+text = "Tadashi will mend the dike if given stone and Okabe's order by Day 5 dusk."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_l2cdt"]
+script = ExtResource("1_pw64t")
+id = "E5"
+text = "The old west stair holds a hundred flat stones."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_t4ubh"]
+script = ExtResource("1_pw64t")
+id = "V1"
+text = "Kenji means to leave on Day 5 at dusk. "
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_6621y"]
+script = ExtResource("1_pw64t")
+id = "V2"
+text = "Kenji only wants to warn his family in Shirakawa."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_uepih"]
+script = ExtResource("1_pw64t")
+id = "V3"
+text = "Okabe will order an evacuation if Sato and Chiyo speak for the river."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_w6m0r"]
+script = ExtResource("1_pw64t")
+id = "M1"
+text = "Mio believes her offering can stop the rain."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_4652q"]
+script = ExtResource("1_pw64t")
+id = "M2"
+text = "Mio will climb the mountain trail at dusk on Day 6."
+metadata/_custom_type_script = "uid://ib2f3n4nd276"
+
+[sub_resource type="Resource" id="Resource_kc4rc"]
+script = ExtResource("1_pw64t")
+id = "M3"
+text = "Mio will stay if she has a part in the bell."
 metadata/_custom_type_script = "uid://ib2f3n4nd276"
 
 [resource]
 script = ExtResource("2_uryxi")
-entries = Array[ExtResource("1_pw64t")]([SubResource("Resource_uryxi")])
+entries = Array[ExtResource("1_pw64t")]([SubResource("Resource_uryxi"), SubResource("Resource_2o2vm"), SubResource("Resource_jrcm6"), SubResource("Resource_y3n7d"), SubResource("Resource_j5sjm"), SubResource("Resource_vb2ut"), SubResource("Resource_726ml"), SubResource("Resource_pw64t"), SubResource("Resource_e13hl"), SubResource("Resource_17pmg"), SubResource("Resource_gsrei"), SubResource("Resource_3agot"), SubResource("Resource_clwi7"), SubResource("Resource_l2cdt"), SubResource("Resource_t4ubh"), SubResource("Resource_6621y"), SubResource("Resource_uepih"), SubResource("Resource_w6m0r"), SubResource("Resource_4652q"), SubResource("Resource_kc4rc")])
 metadata/_custom_type_script = "uid://xvhhp5ymwk2g"

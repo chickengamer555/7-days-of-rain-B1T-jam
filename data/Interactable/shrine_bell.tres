@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cx4shrine_bell"]
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://bd0k76uifghcr"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
 [ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_cond"]
@@ -12,34 +12,13 @@
 script = ExtResource("2_cond")
 needs_ledger = Array[String](["S6"])
 needs_flags = Array[String](["dike_repaired", "evacuation_ordered", "mio_safe"])
-blocked_by_flags = Array[String]([])
 from_day = 7
 from_phase = 2
-to_day = 7
-to_phase = 3
-only_phases = Array[int]([])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_eff_true_end"]
-script = ExtResource("3_eff")
-add_ledger = Array[String]([])
-add_flags = Array[String](["true_ending_triggered"])
-ending_trigger = "true_ending"
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_choice_te_1"]
 script = ExtResource("5_choice")
 next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_te_2"]
-script = ExtResource("5_choice")
-next_id = "3"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_te_3"]
-script = ExtResource("5_choice")
-next_id = "4"
 metadata/_custom_type_script = "uid://bocbuuj64elde"
 
 [sub_resource type="Resource" id="Resource_node_te_1"]
@@ -50,6 +29,11 @@ text = "The seventh dusk has come. The river roars in the distance, but the dike
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_te_1")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_te_2"]
+script = ExtResource("5_choice")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_te_2"]
 script = ExtResource("4_node")
 id = "2"
@@ -58,6 +42,11 @@ text = "Mio grasps the braided cord beside you. The village is safe on the heigh
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_te_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_te_3"]
+script = ExtResource("5_choice")
+next_id = "4"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_te_3"]
 script = ExtResource("4_node")
 id = "3"
@@ -65,6 +54,12 @@ speaker = "You"
 text = "Together, you ring the great bell and speak the words: 'We can stand now, thank you.'"
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_te_3")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_true_end"]
+script = ExtResource("3_eff")
+add_flags = Array[String](["true_ending_triggered"])
+ending_trigger = "true_ending"
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_node_te_4"]
 script = ExtResource("4_node")
@@ -84,15 +79,7 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 script = ExtResource("1_rule")
 condition = SubResource("Resource_cond_true_end")
 tree = SubResource("Resource_tree_true_end")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
-[sub_resource type="Resource" id="Resource_eff_reset"]
-script = ExtResource("3_eff")
-add_ledger = Array[String]([])
-add_flags = Array[String]([])
-ending_trigger = "early_reset"
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_choice_ring"]
 script = ExtResource("5_choice")
@@ -113,6 +100,11 @@ speaker = "Shrine Bell"
 text = "The sacred bronze bell of Hinoe Shrine. The braided cord rests in your hand."
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_ring"), SubResource("Resource_choice_leave")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_reset"]
+script = ExtResource("3_eff")
+ending_trigger = "early_reset"
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_node_ring_action"]
 script = ExtResource("4_node")
@@ -138,7 +130,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_normal"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_normal")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]

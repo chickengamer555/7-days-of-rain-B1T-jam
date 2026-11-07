@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cx4cracked_dike"]
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://bg0rgr1upn8th"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="2_eff"]
@@ -7,21 +7,9 @@
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="5_tree"]
 [ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="6_data"]
 
-[sub_resource type="Resource" id="Resource_eff_dike"]
-script = ExtResource("2_eff")
-add_ledger = Array[String](["E2"])
-add_flags = Array[String](["inspected_dike"])
-ending_trigger = ""
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
-
 [sub_resource type="Resource" id="Resource_choice_1"]
 script = ExtResource("4_choice")
 next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_choice_2"]
-script = ExtResource("4_choice")
-next_id = "3"
 metadata/_custom_type_script = "uid://bocbuuj64elde"
 
 [sub_resource type="Resource" id="Resource_node_1"]
@@ -32,6 +20,11 @@ text = "The earth dike at Kuma bend groans against the rising muddy torrent."
 choices = Array[ExtResource("4_choice")]([SubResource("Resource_choice_1")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_choice_2"]
+script = ExtResource("4_choice")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_node_2"]
 script = ExtResource("3_node")
 id = "2"
@@ -39,6 +32,12 @@ speaker = "Embankment"
 text = "Water seeps through widening cracks. Where dressed stone should be, only wet clay holds."
 choices = Array[ExtResource("4_choice")]([SubResource("Resource_choice_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_eff_dike"]
+script = ExtResource("2_eff")
+add_ledger = Array[String](["E2"])
+add_flags = Array[String](["inspected_dike"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_node_3"]
 script = ExtResource("3_node")
@@ -57,7 +56,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_dike"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_dike")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]

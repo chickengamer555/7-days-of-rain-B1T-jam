@@ -35,7 +35,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 [sub_resource type="Resource" id="Resource_rule_hourglass"]
 script = ExtResource("1_rule")
 tree = SubResource("Resource_tree_hourglass")
-random_lines = Array[String]([])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]
