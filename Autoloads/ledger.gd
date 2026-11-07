@@ -24,7 +24,6 @@ func _ready() -> void:
 
 func save_game():
 	save_file.write({"known": known})
-	save_game
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://cx4donation_box"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="2_node"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="3_choice"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="4_tree"]
+[ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="5_data"]
+
+[sub_resource type="Resource" id="Resource_choice_1"]
+script = ExtResource("3_choice")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_node_1"]
+script = ExtResource("2_node")
+id = "1"
+speaker = "Shrine"
+text = "The slatted cedar offering box stands at the foot of Hinoe Shrine."
+choices = Array[ExtResource("3_choice")]([SubResource("Resource_choice_1")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_node_2"]
+script = ExtResource("2_node")
+id = "2"
+speaker = "Offering Box"
+text = "A few copper coins rest inside. You clap twice and offer a quiet prayer to Shizu-hime."
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_tree_donation"]
+script = ExtResource("4_tree")
+start_id = "1"
+nodes = Array[ExtResource("2_node")]([SubResource("Resource_node_1"), SubResource("Resource_node_2")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_rule_donation"]
+script = ExtResource("1_rule")
+tree = SubResource("Resource_tree_donation")
+random_lines = Array[String]([])
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[resource]
+script = ExtResource("5_data")
+id = "donation_box"
+display_name = "Offering Box"
+rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_donation")])
+metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
