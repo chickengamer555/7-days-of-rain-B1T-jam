@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InteractbleData" format=3 uid="uid://c05j2gu1rif8s"]
+
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_sf5lr"]
+[ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="2_qhrw1"]
+
+[resource]
+script = ExtResource("2_qhrw1")
+id = "cost_book"
+metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"
