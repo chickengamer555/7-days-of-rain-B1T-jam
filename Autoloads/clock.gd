@@ -3,9 +3,11 @@ extends Node
 var day = 1
 var phase = 0 # 0 morning 1 noon 2 dusk 3 night
 var elapsed = 0.0 # Time into current phase
-var running = true # Will be false during dialouges to prevent movment 
+var running = false # Will be false during dialouges to prevent movment 
 var SECONDS_PER_PHASE = 15
 var FAST_FOWARD_SPEED = 12 # How much holding fast foward speeds time up
+var saved_world: Node = null # paused game while on title screen
+var was_running = false # was clock running when paused
 
 signal phase_changed #Npcs and hud will listen
 signal flood_arrived #Looping autload listens to this
