@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
 [ext_resource type="PackedScene" path="res://Ineractbles/DoorArea.tscn" id="13_door"]
 [ext_resource type="Texture2D" uid="uid://dknuauxfyrfl4" path="res://Assets/Tilemaps/itchshrineb.png" id="13_j4inf"]
+[ext_resource type="PackedScene" uid="uid://dfy1k0s5m8x3a" path="res://Effects/rain_weather.tscn" id="13_nf7xu"]
 [ext_resource type="PackedScene" uid="uid://c4n4seh3edmx8" path="res://Ineractbles/boat-dock/Boat.tscn" id="20_puekb"]
 [ext_resource type="PackedScene" uid="uid://bnbweue7t33ix" path="res://Ineractbles/boat-dock/dock.tscn" id="20_xi84t"]
 
@@ -27,6 +28,8 @@
 y_sort_enabled = true
 script = ExtResource("1_qvhan")
 npcs = Array[ExtResource("2_0gq1e")]([ExtResource("3_wbdht"), ExtResource("4_puekb"), ExtResource("5_xi84t"), ExtResource("6_j4inf"), ExtResource("7_nf7xu"), ExtResource("8_1nqbc"), ExtResource("9_xw814"), ExtResource("10_g147q"), ExtResource("11_t85yq"), ExtResource("12_y88hr")])
+
+[node name="RainWeather" parent="." unique_id=138712858 instance=ExtResource("13_nf7xu")]
 
 [node name="Itchshrineb" type="Sprite2D" parent="." unique_id=547345949]
 position = Vector2(8, -376)

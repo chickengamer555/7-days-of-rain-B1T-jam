@@ -18,11 +18,12 @@ shader_parameter/invert_colors = false
 shader_parameter/threshold = 0.45
 shader_parameter/dither_intensity = 0.0
 
-[node name="RainWeather" type="CanvasLayer"]
+[node name="RainWeather" type="CanvasLayer" unique_id=138712858]
 layer = 80
 script = ExtResource("1_weathergd")
+auto_thunder = false
 
-[node name="RainCanvas" type="Control" parent="."]
+[node name="RainCanvas" type="Control" parent="." unique_id=172239877]
 material = SubResource("ShaderMaterial_rain")
 layout_mode = 3
 anchors_preset = 15
@@ -33,7 +34,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("3_raincanvas")
 
-[node name="PaletteLimiter" type="ColorRect" parent="."]
+[node name="PaletteLimiter" type="ColorRect" parent="." unique_id=916439762]
 material = SubResource("ShaderMaterial_palette")
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,5 +43,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ThunderTimer" type="Timer" parent="."]
+[node name="ThunderTimer" type="Timer" parent="." unique_id=471131617]
 one_shot = true
