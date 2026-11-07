@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://b3q04mh68qve5"]
+[gd_resource type="TileSet" format=3 uid="uid://costa8qxolqq1"]
 
 [ext_resource type="Material" uid="uid://cg2uojqd6xpuw" path="res://Shaders/grass_material.tres" id="1_1dcns"]
 [ext_resource type="Texture2D" uid="uid://b85g211kmspj4" path="res://Assets/Tilemaps/spr_normalpath.png" id="1_csmn0"]

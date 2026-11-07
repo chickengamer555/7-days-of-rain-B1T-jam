@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://oxry3gxgidyc"]
+[gd_resource type="TileSet" format=3 uid="uid://gu1yfwqgjphc"]
 
 [ext_resource type="Texture2D" uid="uid://c8107nnf70hd0" path="res://Assets/Tilemaps/Town assets/itchdike.png" id="1_rbsyv"]
 [ext_resource type="Texture2D" uid="uid://bc8504jt2lmlj" path="res://Assets/Tilemaps/itchfencemap.png" id="2_a4hcd"]
