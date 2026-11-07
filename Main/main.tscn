@@ -20,13 +20,14 @@
 [ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
 [ext_resource type="PackedScene" path="res://Ineractbles/DoorArea.tscn" id="13_door"]
 [ext_resource type="PackedScene" uid="uid://dfy1k0s5m8x3a" path="res://Effects/rain_weather.tscn" id="13_nf7xu"]
-[ext_resource type="Texture2D" uid="uid://ciajuru7uengy" path="res://Assets/Tilemaps/itchdoga.png" id="17_1nqbc"]
-[ext_resource type="Texture2D" uid="uid://c5o0tat2uxms7" path="res://Assets/Tilemaps/itchbell1.png" id="19_xw814"]
+[ext_resource type="Texture2D" uid="uid://e53n0un3y07y" path="res://Assets/Tilemaps/itchdoga.png" id="17_1nqbc"]
+[ext_resource type="Texture2D" uid="uid://dkg80xv7m522l" path="res://Assets/Tilemaps/itchbell1.png" id="19_xw814"]
 [ext_resource type="Texture2D" uid="uid://coblwtdiuftf7" path="res://Assets/Tilemaps/box thing.png" id="20_g147q"]
 [ext_resource type="PackedScene" uid="uid://c4n4seh3edmx8" path="res://Ineractbles/boat-dock/Boat.tscn" id="20_puekb"]
 [ext_resource type="PackedScene" uid="uid://bnbweue7t33ix" path="res://Ineractbles/boat-dock/dock.tscn" id="20_xi84t"]
 [ext_resource type="Texture2D" uid="uid://ctymc62r4sd6" path="res://Assets/Tilemaps/donation_half.png" id="21_t85yq"]
 [ext_resource type="Shader" uid="uid://dd3fv0x5h8d88" path="res://Shaders/world_rain.gdshader" id="23_nf7xu"]
+[ext_resource type="Texture2D" uid="uid://bsio4syxrg3de" path="res://Assets/NPC/Shrine novice.png" id="28_y88hr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nqbc"]
 shader = ExtResource("23_nf7xu")
@@ -219,3 +220,7 @@ offset_left = -637.0
 offset_top = -602.0
 offset_right = 649.0
 offset_bottom = 559.0
+
+[node name="ShrineNovice" type="Sprite2D" parent="." unique_id=869939941]
+position = Vector2(27, -282)
+texture = ExtResource("28_y88hr")

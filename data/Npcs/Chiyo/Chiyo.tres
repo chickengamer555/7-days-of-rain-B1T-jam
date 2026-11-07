@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_mlhc1"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_sbq5i"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_s018l"]
+[ext_resource type="Texture2D" uid="uid://bq8sniv5cl0s8" path="res://Assets/NPC/Not tea grandma.png" id="4_bbdq1"]
 
 [resource]
 script = ExtResource("3_s018l")
 id = "chiyo"
 display_name = "Chiyo"
+sprite = ExtResource("4_bbdq1")
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_u7fii"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_4ioex"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_pd3pl"]
+[ext_resource type="Texture2D" uid="uid://b1yjo8erbrfxf" path="res://Assets/NPC/Kid.png" id="4_4ioex"]
 
 [resource]
 script = ExtResource("3_pd3pl")
 id = "mio"
 display_name = "Mio"
+sprite = ExtResource("4_4ioex")
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

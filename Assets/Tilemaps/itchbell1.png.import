@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq8sniv5cl0s8"
-path="res://.godot/imported/Not tea grandma.png-64c72ab4f6e7881010d7495413272cad.ctex"
+uid="uid://dkg80xv7m522l"
+path="res://.godot/imported/itchbell1.png-a5a64066cc2f6c39ca6f45ba636aac66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NPC/Not tea grandma.png"
-dest_files=["res://.godot/imported/Not tea grandma.png-64c72ab4f6e7881010d7495413272cad.ctex"]
+source_file="res://Assets/Tilemaps/itchbell1.png"
+dest_files=["res://.godot/imported/itchbell1.png-a5a64066cc2f6c39ca6f45ba636aac66.ctex"]
 
 [params]
 

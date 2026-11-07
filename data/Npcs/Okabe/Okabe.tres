@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_iaqb1"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_imjdj"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_7hlen"]
+[ext_resource type="Texture2D" uid="uid://c6m0vucqaohn8" path="res://Assets/NPC/Okabe.png" id="4_imjdj"]
 
 [resource]
 script = ExtResource("3_7hlen")
 id = "okabe"
 display_name = "Okabe"
+sprite = ExtResource("4_imjdj")
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
