@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_fxr04"]
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_dhuoc"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_p5c2l"]
-[ext_resource type="Texture2D" uid="uid://baog0mokg4k8r" path="res://Assets/NPC/New Piskel-10.png.png" id="9_garow"]
 
 [sub_resource type="Resource" id="Resource_mw0s2"]
 script = ExtResource("2_garow")
@@ -52,11 +51,14 @@ place = "Ume"
 spot = "Tea house"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
+[sub_resource type="Resource" id="Resource_0a3yr"]
+metadata/__load_path__ = "res://Assets/NPC/New Piskel-10.png.png"
+
 [resource]
 script = ExtResource("3_y2el8")
 id = "Ume"
 display_name = "Ume"
 rules = Array[ExtResource("1_435tf")]([SubResource("Resource_cx4px")])
-sprite = ExtResource("9_garow")
+sprite = SubResource("Resource_0a3yr")
 schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_v2t6q")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

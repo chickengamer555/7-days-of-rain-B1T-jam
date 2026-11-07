@@ -17,6 +17,7 @@ shader_parameter/outline_width = 1.0
 shader_parameter/outline_enabled = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xx7b"]
+radius = 13.254787
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xx7b"]
 bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -46,7 +47,7 @@ texture = ExtResource("3_down")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1616005194]
 
 [node name="Sensor" type="Area2D" parent="." unique_id=1126030353]
-scale = Vector2(0.214, 0.214)
+scale = Vector2(0.097, 0.099)
 collision_layer = 0
 collision_mask = 2
 

@@ -3,7 +3,6 @@
 [ext_resource type="Material" uid="uid://cg2uojqd6xpuw" path="res://Shaders/grass_material.tres" id="1_1dcns"]
 [ext_resource type="Texture2D" uid="uid://b85g211kmspj4" path="res://Assets/Tilemaps/spr_normalpath.png" id="1_csmn0"]
 [ext_resource type="Texture2D" uid="uid://dr3e3wpmy4ad" path="res://Assets/Tilemaps/mountain.png" id="3_1dcns"]
-[ext_resource type="Texture2D" uid="uid://c46331uj5gymx" path="res://Assets/Tilemaps/Town assets/itchshrine.png" id="3_2c0i0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llmk3"]
 texture = ExtResource("1_csmn0")
@@ -109,13 +108,6 @@ texture = ExtResource("1_csmn0")
 2:5/4 = 4
 2:5/4/modulate = Color(0.55016255, 0.19924614, 0, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7rfh"]
-texture = ExtResource("3_2c0i0")
-0:0/size_in_atlas = Vector2i(13, 13)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-96, -96)
-0:0/0/z_index = -1
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2c0i0"]
 texture = ExtResource("3_1dcns")
 0:0/0 = 0
@@ -148,4 +140,3 @@ physics_layer_1/collision_layer = 8
 physics_layer_1/collision_mask = 8
 sources/0 = SubResource("TileSetAtlasSource_llmk3")
 sources/2 = SubResource("TileSetAtlasSource_2c0i0")
-sources/1 = SubResource("TileSetAtlasSource_a7rfh")

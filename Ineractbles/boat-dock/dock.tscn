@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dh0ft7q5llaym" path="res://Ineractbles/boat-dock/dock.gd" id="1_ysbvq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
-size = Vector2(64, 20)
+size = Vector2(35, 20)
 
 [node name="Dock" type="Area2D" unique_id=54627220]
 collision_layer = 2
@@ -11,7 +11,7 @@ collision_mask = 2
 script = ExtResource("1_ysbvq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1841490246]
-position = Vector2(22, 0)
+position = Vector2(7.5, 0)
 shape = SubResource("RectangleShape2D_7xx7b")
 
 [node name="StepOff" type="Marker2D" parent="." unique_id=1869551401]
