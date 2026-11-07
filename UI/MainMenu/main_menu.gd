@@ -4,7 +4,7 @@ const SETTINGS_FILE: String = "user://settings.json"
 const PAPER_COLOR: Color = Color("#c6baac")
 const INK_COLOR: Color = Color("#1e1c32")
 
-const PIXEL_FONT = preload("res://Assets/pixel_font.ttf")
+const PIXEL_FONT = preload("res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf")
 
 @onready var main_view: Control = $MainView
 @onready var settings_view: Control = $SettingsView
@@ -42,21 +42,23 @@ func _ready() -> void:
 	settings_btn.pressed.connect(func(): _show_view(settings_view))
 	controls_btn.pressed.connect(func(): _show_view(controls_view))
 	quit_btn.pressed.connect(_on_quit_pressed)
-
-	
 	settings_back_btn.pressed.connect(func(): _show_view(main_view))
-	controls_back_btn.pressed.connect(func(): _show_view(main_view))
-	
+	var normal = StyleBoxEmpty.new()
+	var hover = StyleBoxFlat.new()
+	hover.draw_center = false
+	hover.border_color = INK_COLOR
+	hover.set_border_width_all(2)
+	hover.set_content_margin_all(0)
+	_style_recursive(settings_view, normal, hover)
+	_style_recursive(settings_view, normal, hover)
 	vol_left_btn.pressed.connect(func(): _change_volume(-25))
 	vol_right_btn.pressed.connect(func(): _change_volume(25))
-	
 	win_left_btn.pressed.connect(_toggle_fullscreen)
 	win_right_btn.pressed.connect(_toggle_fullscreen)
-	
 	ff_left_btn.pressed.connect(func(): _change_ff_speed(-1))
 	ff_right_btn.pressed.connect(func(): _change_ff_speed(1))
-	
 	reset_data_btn.pressed.connect(_on_reset_data_pressed)
+	
 	
 	_show_view(main_view)
 	if Clock.saved_world != null: # a game is paused
@@ -115,7 +117,7 @@ func _apply_ff_speed() -> void:
 func _on_reset_data_pressed() -> void:
 	Ledger.known.clear()
 	reset_data_btn.text = "Cleared!"
-
+	Ledger.save_game()
 func _save_settings() -> void:
 	var data = {
 		"volume_level": volume_level,
@@ -156,18 +158,18 @@ func _style_recursive(parent: Node, normal: StyleBox, hover: StyleBox) -> void:
 		if child is Button:
 			child.focus_mode = Control.FOCUS_NONE # Only mouse interaction, no arrow keys
 			child.add_theme_font_override("font", PIXEL_FONT)
-			child.add_theme_font_size_override("font_size", 16)
+			child.add_theme_font_size_override("font_size", 7)
 			child.add_theme_stylebox_override("normal", normal)
 			child.add_theme_stylebox_override("hover", hover)
 			child.add_theme_stylebox_override("pressed", hover)
 			child.add_theme_stylebox_override("focus", normal)
 			child.add_theme_color_override("font_color", INK_COLOR)
-			child.add_theme_color_override("font_hover_color", PAPER_COLOR)
-			child.add_theme_color_override("font_pressed_color", PAPER_COLOR)
+			child.add_theme_color_override("font_hover_color", INK_COLOR)
+			child.add_theme_color_override("font_pressed_color", INK_COLOR)
 			child.add_theme_color_override("font_focus_color", INK_COLOR)
 		elif child is Label:
 			child.add_theme_font_override("font", PIXEL_FONT)
-			child.add_theme_font_size_override("font_size", 16)
+			child.add_theme_font_size_override("font_size", 7)
 			child.add_theme_color_override("font_color", INK_COLOR)
 		_style_recursive(child, normal, hover)
 
@@ -181,3 +183,7 @@ func _on_start_btn_pressed() -> void:
 	else:
 		Clock.reset() 
 		get_tree().change_scene_to_file("res://Main/main.tscn")
+
+
+func _on_controls_back_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/MainMenu/main_menu.tscn")
