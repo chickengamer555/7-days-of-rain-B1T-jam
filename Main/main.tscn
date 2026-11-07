@@ -19,10 +19,23 @@
 [ext_resource type="Resource" uid="uid://dkdqtiw3qenpv" path="res://data/Npcs/Tomo/Tomo.tres" id="11_t85yq"]
 [ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
 [ext_resource type="PackedScene" path="res://Ineractbles/DoorArea.tscn" id="13_door"]
-[ext_resource type="Texture2D" uid="uid://dknuauxfyrfl4" path="res://Assets/Tilemaps/itchshrineb.png" id="13_j4inf"]
 [ext_resource type="PackedScene" uid="uid://dfy1k0s5m8x3a" path="res://Effects/rain_weather.tscn" id="13_nf7xu"]
 [ext_resource type="PackedScene" uid="uid://c4n4seh3edmx8" path="res://Ineractbles/boat-dock/Boat.tscn" id="20_puekb"]
 [ext_resource type="PackedScene" uid="uid://bnbweue7t33ix" path="res://Ineractbles/boat-dock/dock.tscn" id="20_xi84t"]
+[ext_resource type="Shader" uid="uid://dd3fv0x5h8d88" path="res://Shaders/world_rain.gdshader" id="23_nf7xu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1nqbc"]
+shader = ExtResource("23_nf7xu")
+shader_parameter/paper_color = Color(0.776, 0.729, 0.675, 1)
+shader_parameter/ink_color = Color(0.118, 0.11, 0.196, 1)
+shader_parameter/cell = 14.0
+shader_parameter/density = 0.50000002375
+shader_parameter/cycle = 1.0
+shader_parameter/fall_distance = 35.0
+shader_parameter/fall_time = 0.2
+shader_parameter/drop_length = 4.0
+shader_parameter/splash_time = 0.4
+shader_parameter/max_radius = 3.0
 
 [node name="Main" type="Node2D" unique_id=661073907]
 y_sort_enabled = true
@@ -30,10 +43,6 @@ script = ExtResource("1_qvhan")
 npcs = Array[ExtResource("2_0gq1e")]([ExtResource("3_wbdht"), ExtResource("4_puekb"), ExtResource("5_xi84t"), ExtResource("6_j4inf"), ExtResource("7_nf7xu"), ExtResource("8_1nqbc"), ExtResource("9_xw814"), ExtResource("10_g147q"), ExtResource("11_t85yq"), ExtResource("12_y88hr")])
 
 [node name="RainWeather" parent="." unique_id=138712858 instance=ExtResource("13_nf7xu")]
-
-[node name="Itchshrineb" type="Sprite2D" parent="." unique_id=547345949]
-position = Vector2(8, -376)
-texture = ExtResource("13_j4inf")
 
 [node name="Paths" type="TileMapLayer" parent="." unique_id=1131176822]
 z_index = -3
@@ -47,7 +56,7 @@ tile_set = ExtResource("5_k3v36")
 
 [node name="Town assets" type="TileMapLayer" parent="." unique_id=1560523082]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAXABIABgAAAAAAAADo////AwAAAAEAAADw/xYABQAAAAAAAwDx/xUABQAAAAAAAQDy/xQABQAAAAAAAgD0/xQABQAAAAAAAgD0/xUABQAAAAAAAwD0/xYABQAAAAAAAADx/xIABQAAAAAAAADw/xMABQAAAAAAAgDv/xQABQAAAAAAAQDv/xEABQAAAAAAAgDu/xIABQAAAAAAAgDt/xMABQAAAAAAAADt/xAABQAAAAAAAADs/xEABQAAAAAAAQDr/xIABQAAAAAAAwDs/w4ABQAAAAAAAADr/w8ABQAAAAAAAwDq/xAABQAAAAAAAgDq/w0ABQAAAAAAAwDp/w4ABQAAAAAAAwDo/w8ABQAAAAAAAQD6//v/CAAAAAAAAADw//v/CAAAAAAAAADt//v/CAAAAAAAAADp//v/CAAAAAAAAAAQAPv/CAAAAAAAAAAUAPv/CAAAAAAAAAARAAYACAAAAAAAAAAMAAYACAAAAAAAAAAHAAYACAAAAAAAAAAHAAMACAAAAAAAAQAKAAMACAAAAAAAAQDw/+r/CQAAAAAAAADo//z/AAAAAAAAAADo/wIAAAAAAAAAAwD//wwAAAAAAAAAAQAFAAwAAAAAAAAAAgDo//3/AwAAAAAAAADo/wEAAwAAAAQAAAACAAwAAwAAAAEAAQAAAAwAAwAAAAAAAQAEAAwAAwAAAAQAAQAHAPn/CwACAAIAAADz//n/CwACAAIAAAD7/wIACgAAAAAAAAD3/xQABAAAAAAAAAD5/xMAAgAAAAAAAAAOAAIAAQAAAAAAAAANAPz/BwAAAAAAAAAGABAABwAAAAAAAAAAAA8ABwAAAAAAAAAZAP//DAAAAAAAAADl//z/AAAAAAAAAADl/wIAAAAAAAAAAwDl////AwAAAAEAAADl//3/AwAAAAAAAADl/wEAAwAAAAQAAADi//z/AAAAAAAAAADi/wIAAAAAAAAAAwDf//z/AAAAAAAAAADf/wIAAAAAAAAAAwDc//z/AAAAAAAAAADc/wIAAAAAAAAAAwDi////AwAAAAEAAADf////AwAAAAEAAADc////AwAAAAEAAADi/wEAAwAAAAQAAADf/wEAAwAAAAQAAADc/wEAAwAAAAQAAADf//3/AwAAAAAAAADc//3/AwAAAAAAAADi//3/AwAAAAAAAADo//7/AwAAAAEAAADl//7/AwAAAAEAAADi//7/AwAAAAEAAADf//7/AwAAAAEAAADc//7/AwAAAAEAAADc/wAAAwAAAAMAAADf/wAAAwAAAAMAAADi/wAAAwAAAAMAAADl/wAAAwAAAAMAAADo/wAAAwAAAAMAAAABAAwAAwAAAAEAAQADAAwAAwAAAAMAAQD///X/AwAAAAAAAQADAPX/AwAAAAQAAQABAPX/AwAAAAIAAQAAAPX/AwAAAAEAAQACAPX/AwAAAAMAAQD+//X/AAAAAAAAAQAEAPX/AAAAAAAAAgAEAPL/AAAAAAAAAgD+//L/AAAAAAAAAQD///L/AwAAAAAAAQAAAPL/AwAAAAEAAQABAPL/AwAAAAIAAQACAPL/AwAAAAMAAQADAPL/AwAAAAQAAQADAO//AwAAAAQAAQD+/+//AAAAAAAAAQAEAO//AAAAAAAAAgD//+//AwAAAAAAAQAAAO//AwAAAAEAAQABAO//AwAAAAIAAQACAO//AwAAAAMAAQD//+z/DgAEAAoAAAAAAOz/DgAFAAoAAAAAAO3/DgAFAAsAAAD//+3/DgAEAAsAAAD+/+3/DgADAAsAAAD+/+7/DgADAAwAAAD//+7/DgAEAAwAAAAAAO7/DgAFAAwAAAA=")
+tile_map_data = PackedByteArray("AAAXABIABgAAAAAAAADo////AwAAAAEAAADw/xYABQAAAAAAAwDx/xUABQAAAAAAAQDy/xQABQAAAAAAAgD0/xQABQAAAAAAAgD0/xUABQAAAAAAAwD0/xYABQAAAAAAAADx/xIABQAAAAAAAADw/xMABQAAAAAAAgDv/xQABQAAAAAAAQDv/xEABQAAAAAAAgDu/xIABQAAAAAAAgDt/xMABQAAAAAAAADt/xAABQAAAAAAAADs/xEABQAAAAAAAQDr/xIABQAAAAAAAwDs/w4ABQAAAAAAAADr/w8ABQAAAAAAAwDq/xAABQAAAAAAAgDq/w0ABQAAAAAAAwDp/w4ABQAAAAAAAwDo/w8ABQAAAAAAAQD6//v/CAAAAAAAAADw//v/CAAAAAAAAADt//v/CAAAAAAAAADp//v/CAAAAAAAAAAQAPv/CAAAAAAAAAAUAPv/CAAAAAAAAAARAAYACAAAAAAAAAAMAAYACAAAAAAAAAAHAAYACAAAAAAAAAAHAAMACAAAAAAAAQAKAAMACAAAAAAAAQDw/+r/CQAAAAAAAADo//z/AAAAAAAAAADo/wIAAAAAAAAAAwD//wwAAAAAAAAAAQAFAAwAAAAAAAAAAgDo//3/AwAAAAAAAADo/wEAAwAAAAQAAAACAAwAAwAAAAEAAQAAAAwAAwAAAAAAAQAEAAwAAwAAAAQAAQAHAPn/CwACAAIAAADz//n/CwACAAIAAAD7/wIACgAAAAAAAAD3/xQABAAAAAAAAAD5/xMAAgAAAAAAAAAOAAIAAQAAAAAAAAANAPz/BwAAAAAAAAAGABAABwAAAAAAAAAAAA8ABwAAAAAAAAAZAP//DAAAAAAAAADl//z/AAAAAAAAAADl/wIAAAAAAAAAAwDl////AwAAAAEAAADl//3/AwAAAAAAAADl/wEAAwAAAAQAAADi//z/AAAAAAAAAADi/wIAAAAAAAAAAwDf//z/AAAAAAAAAADf/wIAAAAAAAAAAwDc//z/AAAAAAAAAADc/wIAAAAAAAAAAwDi////AwAAAAEAAADf////AwAAAAEAAADc////AwAAAAEAAADi/wEAAwAAAAQAAADf/wEAAwAAAAQAAADc/wEAAwAAAAQAAADf//3/AwAAAAAAAADc//3/AwAAAAAAAADi//3/AwAAAAAAAADo//7/AwAAAAEAAADl//7/AwAAAAEAAADi//7/AwAAAAEAAADf//7/AwAAAAEAAADc//7/AwAAAAEAAADc/wAAAwAAAAMAAADf/wAAAwAAAAMAAADi/wAAAwAAAAMAAADl/wAAAwAAAAMAAADo/wAAAwAAAAMAAAABAAwAAwAAAAEAAQADAAwAAwAAAAMAAQD///X/AwAAAAAAAQADAPX/AwAAAAQAAQABAPX/AwAAAAIAAQAAAPX/AwAAAAEAAQACAPX/AwAAAAMAAQD+//X/AAAAAAAAAQAEAPX/AAAAAAAAAgAEAPL/AAAAAAAAAgD+//L/AAAAAAAAAQD///L/AwAAAAAAAQAAAPL/AwAAAAEAAQABAPL/AwAAAAIAAQACAPL/AwAAAAMAAQADAPL/AwAAAAQAAQADAO//AwAAAAQAAQD+/+//AAAAAAAAAQAEAO//AAAAAAAAAgD//+//AwAAAAAAAQAAAO//AwAAAAEAAQABAO//AwAAAAIAAQACAO//AwAAAAMAAQA=")
 tile_set = ExtResource("4_liyct")
 
 [node name="Collisions" type="TileMapLayer" parent="." unique_id=1040663748]
@@ -172,3 +181,10 @@ position = Vector2(-130, 314)
 
 [node name="StepOff" type="Marker2D" parent="Interactables/boat-sock" unique_id=272514280]
 position = Vector2(-133, 337)
+
+[node name="Rain" type="ColorRect" parent="." unique_id=882345342]
+material = SubResource("ShaderMaterial_1nqbc")
+offset_left = -637.0
+offset_top = -602.0
+offset_right = 649.0
+offset_bottom = 559.0
