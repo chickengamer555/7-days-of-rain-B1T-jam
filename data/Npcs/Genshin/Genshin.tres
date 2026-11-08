@@ -26,12 +26,13 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_4joq5")
 id = "1"
 speaker = "Genshin"
+text = "Haruko rang the shrine bell through forty years of storms. The kami Shizu-hime hears the bell and holds the river back."
 effect = SubResource("Resource_05ahe")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_y3n7d"]
 script = ExtResource("4_45rh3")
-start_id = "0"
+start_id = "1"
 nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_j5sjm")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
@@ -53,7 +54,9 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_mugq5"]
 script = ExtResource("3_4joq5")
-id = "THIS IS THE IMPORTANT ONE"
+id = "1"
+speaker = "Genshin"
+text = "The shrine stands because the village stands. Take the stones from the old west stairs if they can save the dike."
 effect = SubResource("Resource_m7o50")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -83,7 +86,9 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_iox0s"]
 script = ExtResource("3_4joq5")
-id = "important"
+id = "1"
+speaker = "Genshin"
+text = "Mio wants to help? The bell rope is long enough for two. Tell her she may ring the evening chime with us."
 effect = SubResource("Resource_fqe6n")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -101,7 +106,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_s84me"]
 script = ExtResource("1_qdc14")
-random_lines = Array[String](["", ""])
+random_lines = Array[String](["The cedar incense keeps the shrine dry.", "Pray that the river stays within its banks."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]

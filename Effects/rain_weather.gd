@@ -13,6 +13,7 @@ const STROKE_VECTOR: Vector2 = Vector2(-1.0, 4.0)
 
 @export var rain_enabled: bool = true
 @export var auto_thunder: bool = true
+@export var corner_dither_enabled: bool = false # Disabled so pixel art remains crisp across all days
 
 @onready var rain_canvas: Control = $RainCanvas
 @onready var palette_rect: ColorRect = $PaletteLimiter
@@ -108,7 +109,10 @@ func _on_clock_phase_changed() -> void:
 	_update_day_dither()
 
 func _update_day_dither() -> void:
-	if palette_material == null or Clock == null:
+	if palette_material == null:
+		return
+	if not corner_dither_enabled or Clock == null:
+		palette_material.set_shader_parameter("dither_intensity", 0.0)
 		return
 	# Day 1: 0.0 -> Day 7: ~0.45 corner dither
 	var day_factor = clampf((float(Clock.day) - 1.0) / 6.0, 0.0, 1.0)

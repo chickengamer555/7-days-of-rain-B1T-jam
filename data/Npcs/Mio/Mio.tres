@@ -6,102 +6,43 @@
 [ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="3_fv784"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_pd3pl"]
 [ext_resource type="Texture2D" uid="uid://b1yjo8erbrfxf" path="res://Assets/NPC/Kid.png" id="4_4ioex"]
-[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_qwr6i"]
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_qp1cs"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_7qkr4"]
 
-[sub_resource type="Resource" id="Resource_1t52s"]
+[sub_resource type="Resource" id="Resource_cond_save_mio"]
 script = ExtResource("2_pd3pl")
-needs_flags = Array[String](["has_cost_book", "tadashi_agrees", "has_stones"])
-to_day = 5
+needs_flags = Array[String](["priest_lets_mio"])
+from_day = 6
+to_day = 6
 to_phase = 2
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_kbmxg"]
+[sub_resource type="Resource" id="Resource_eff_save_mio"]
 script = ExtResource("5_qp1cs")
-add_flags = Array[String](["dike_repaired"])
+add_flags = Array[String](["mio_safe"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
-[sub_resource type="Resource" id="Resource_l2hwj"]
+[sub_resource type="Resource" id="Resource_node_save_mio"]
 script = ExtResource("3_fv784")
-id = "important"
-effect = SubResource("Resource_kbmxg")
+id = "1"
+speaker = "Mio"
+text = "The priest said I can help ring the bell? Then I won't go up the mountain trail alone. I will stay here and wait with you."
+effect = SubResource("Resource_eff_save_mio")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
-[sub_resource type="Resource" id="Resource_pd3pl"]
+[sub_resource type="Resource" id="Resource_tree_save_mio"]
 script = ExtResource("6_7qkr4")
 start_id = "1"
-nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_l2hwj")])
+nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_node_save_mio")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
-[sub_resource type="Resource" id="Resource_x67wf"]
+[sub_resource type="Resource" id="Resource_rule_save_mio"]
 script = ExtResource("1_u7fii")
-condition = SubResource("Resource_1t52s")
-tree = SubResource("Resource_pd3pl")
+condition = SubResource("Resource_cond_save_mio")
+tree = SubResource("Resource_tree_save_mio")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_qwr6i"]
-script = ExtResource("2_pd3pl")
-needs_ledger = Array[String](["V3", "R2", "S2"])
-to_day = 6
-to_phase = 1
-metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_qp1cs"]
-script = ExtResource("5_qp1cs")
-add_flags = Array[String](["evacuation_ordered"])
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
-
-[sub_resource type="Resource" id="Resource_7qkr4"]
-script = ExtResource("3_fv784")
-id = "important "
-text = "Moves everone to shrine"
-effect = SubResource("Resource_qp1cs")
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_fv784"]
-script = ExtResource("6_7qkr4")
-start_id = "1"
-nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_7qkr4")])
-metadata/_custom_type_script = "uid://1m7x43xe4t0i"
-
-[sub_resource type="Resource" id="Resource_t5mw8"]
-script = ExtResource("1_u7fii")
-condition = SubResource("Resource_qwr6i")
-tree = SubResource("Resource_fv784")
-metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
-[sub_resource type="Resource" id="Resource_i4a6y"]
-script = ExtResource("2_pd3pl")
-needs_ledger = Array[String](["V2"])
-to_day = 5
-to_phase = 1
-metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_p44cx"]
-script = ExtResource("5_qp1cs")
-add_flags = Array[String](["kenji_stays"])
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
-
-[sub_resource type="Resource" id="Resource_ma225"]
-script = ExtResource("3_fv784")
-id = "imprtnar "
-effect = SubResource("Resource_p44cx")
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_ahheu"]
-script = ExtResource("6_7qkr4")
-start_id = "1"
-nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_ma225")])
-metadata/_custom_type_script = "uid://1m7x43xe4t0i"
-
-[sub_resource type="Resource" id="Resource_wdmpq"]
-script = ExtResource("1_u7fii")
-condition = SubResource("Resource_i4a6y")
-tree = SubResource("Resource_ahheu")
-metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
-[sub_resource type="Resource" id="Resource_f1aho"]
+[sub_resource type="Resource" id="Resource_cond_v3"]
 script = ExtResource("2_pd3pl")
 from_day = 2
 from_phase = 1
@@ -109,33 +50,34 @@ to_day = 2
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_vrhvj"]
+[sub_resource type="Resource" id="Resource_eff_v3"]
 script = ExtResource("5_qp1cs")
 add_ledger = Array[String](["V3"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
-[sub_resource type="Resource" id="Resource_nigqn"]
+[sub_resource type="Resource" id="Resource_node_v3"]
 script = ExtResource("3_fv784")
 id = "1"
-speaker = "says V3??"
-effect = SubResource("Resource_vrhvj")
+speaker = "Mio"
+text = "I heard Headman Okabe talking to the priestess. He said he will only order an evacuation if Sato and Chiyo both warn of danger."
+effect = SubResource("Resource_eff_v3")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
-[sub_resource type="Resource" id="Resource_gbm1g"]
+[sub_resource type="Resource" id="Resource_tree_v3"]
 script = ExtResource("6_7qkr4")
 start_id = "1"
-nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_nigqn")])
+nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_node_v3")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
-[sub_resource type="Resource" id="Resource_4y2bc"]
+[sub_resource type="Resource" id="Resource_rule_v3"]
 script = ExtResource("1_u7fii")
-condition = SubResource("Resource_f1aho")
-tree = SubResource("Resource_gbm1g")
+condition = SubResource("Resource_cond_v3")
+tree = SubResource("Resource_tree_v3")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_iaox5"]
+[sub_resource type="Resource" id="Resource_rule_fallback"]
 script = ExtResource("1_u7fii")
-random_lines = Array[String](["", ""])
+random_lines = Array[String](["The rain is getting louder.", "I hope grandmother doesn't catch cold."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
@@ -208,7 +150,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("3_pd3pl")
 id = "mio"
 display_name = "Mio"
-rules = Array[ExtResource("1_u7fii")]([SubResource("Resource_x67wf"), SubResource("Resource_t5mw8"), SubResource("Resource_wdmpq"), SubResource("Resource_4y2bc"), SubResource("Resource_iaox5")])
+rules = Array[ExtResource("1_u7fii")]([SubResource("Resource_rule_save_mio"), SubResource("Resource_rule_v3"), SubResource("Resource_rule_fallback")])
 sprite = ExtResource("4_4ioex")
 schedule = Array[ExtResource("2_4ioex")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy"), SubResource("Resource_nmgmr"), SubResource("Resource_ahvxl")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

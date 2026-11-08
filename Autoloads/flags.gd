@@ -1,10 +1,15 @@
 extends Node
 
+signal flag_added(tag)
 
 var tags = {} #Emtpy dicitonary well store tags in
 
 func add(tag):
 	tags[tag] = true #Stores tags we make
+	flag_added.emit(tag)
+
+func has(tag: String) -> bool:
+	return tags.has(tag)
 
 func has_all_tags(list):
 	return tags.has_all(list)

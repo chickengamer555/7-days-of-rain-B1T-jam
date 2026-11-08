@@ -1,55 +1,97 @@
 [gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://drlfb3a11j5be"]
 
-[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_iaqb1"]
-[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_imjdj"]
-[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_7hlen"]
-[ext_resource type="Texture2D" uid="uid://c6m0vucqaohn8" path="res://Assets/NPC/Okabe.png" id="4_imjdj"]
+[ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_rule"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_cond"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="3_eff"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="4_node"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="5_tree"]
+[ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="6_slot"]
+[ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="7_data"]
+[ext_resource type="Texture2D" uid="uid://c6m0vucqaohn8" path="res://Assets/NPC/Okabe.png" id="8_sprite"]
+
+[sub_resource type="Resource" id="Resource_cond_evac"]
+script = ExtResource("2_cond")
+needs_ledger = Array[String](["V3", "R2", "S2"])
+to_day = 6
+to_phase = 1
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_eff_evac"]
+script = ExtResource("3_eff")
+add_flags = Array[String](["evacuation_ordered"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_node_evac"]
+script = ExtResource("4_node")
+id = "1"
+speaker = "Okabe"
+text = "The river has swallowed the sixth stake, and forty years ago this exact rain washed the village away. Everyone, hear me! Pack what you can carry and evacuate to the high ground at the shrine!"
+effect = SubResource("Resource_eff_evac")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_tree_evac"]
+script = ExtResource("5_tree")
+start_id = "1"
+nodes = Array[ExtResource("4_node")]([SubResource("Resource_node_evac")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_rule_evac"]
+script = ExtResource("1_rule")
+condition = SubResource("Resource_cond_evac")
+tree = SubResource("Resource_tree_evac")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_rule_fallback"]
+script = ExtResource("1_rule")
+random_lines = Array[String](["The rain is heavy, but we have weathered storms before.", "We must stay calm until there is clear proof of danger."])
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 spot = "spot1"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_k16yo"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 2
 spot = "spot2"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_x5ol8"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 3
 spot = "spot3"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_hldga"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 4
 spot = "spot4"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_nj3rs"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 5
 spot = "spot5"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_hloft"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 6
 spot = "spot6"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [sub_resource type="Resource" id="Resource_laejy"]
-script = ExtResource("2_imjdj")
+script = ExtResource("6_slot")
 day = 7
 spot = "spot7"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [resource]
-script = ExtResource("3_7hlen")
+script = ExtResource("7_data")
 id = "okabe"
 display_name = "Okabe"
-sprite = ExtResource("4_imjdj")
-schedule = Array[ExtResource("2_imjdj")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
+rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_evac"), SubResource("Resource_rule_fallback")])
+sprite = ExtResource("8_sprite")
+schedule = Array[ExtResource("6_slot")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

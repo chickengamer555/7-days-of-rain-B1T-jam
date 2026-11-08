@@ -23,13 +23,15 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_xr3ve"]
 script = ExtResource("3_6784v")
-id = "important"
-speaker = "says S6"
+id = "1"
+speaker = "Chiyo"
+text = "You know about Haruko's prayer... The release words for Shizu-hime are: 'We can stand now, thank you.' Ring the bell and say them when the village is safe."
 effect = SubResource("Resource_k7kt1")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_acuwy"]
 script = ExtResource("6_qqfsi")
+start_id = "1"
 nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_xr3ve")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
@@ -53,8 +55,9 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_6784v"]
 script = ExtResource("3_6784v")
-id = "important "
-speaker = "says S2"
+id = "1"
+speaker = "Chiyo"
+text = "Forty years ago, the bell rope broke and no one rang it for a month. The river swallowed the lower houses."
 effect = SubResource("Resource_vrhvj")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -72,7 +75,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_f3stg"]
 script = ExtResource("1_mlhc1")
-random_lines = Array[String](["", ""])
+random_lines = Array[String](["I remember when the river ran clear.", "The water smells like mountain mud."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]

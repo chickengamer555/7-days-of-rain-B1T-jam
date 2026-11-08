@@ -23,12 +23,15 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_ekdxl"]
 script = ExtResource("3_meevf")
-id = "important"
+id = "1"
+speaker = "Ume"
+text = "Tadashi rebuilt the dike two years ago. The village elders paid him for a strong stone facing."
 effect = SubResource("Resource_eqjpc")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_y2el8"]
 script = ExtResource("6_p5c2l")
+start_id = "1"
 nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_ekdxl")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
@@ -52,12 +55,15 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_dhuoc"]
 script = ExtResource("3_meevf")
-id = "Important"
+id = "1"
+speaker = "Ume"
+text = "I watched them work back then. They only packed river mud and bamboo frames. I never saw a single cart of stone."
 effect = SubResource("Resource_p5c2l")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_fxr04"]
 script = ExtResource("6_p5c2l")
+start_id = "1"
 nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_dhuoc")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
@@ -82,7 +88,9 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_5gm8v"]
 script = ExtResource("3_meevf")
-id = "important"
+id = "1"
+speaker = "Ume"
+text = "Kenji came by for warm tea. He told me he intends to take his skiff and leave at dusk on Day 5."
 effect = SubResource("Resource_s2eiy")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -100,7 +108,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_hi71u"]
 script = ExtResource("1_435tf")
-random_lines = Array[String](["", ""])
+random_lines = Array[String](["Warm yourself by the hearth.", "A cup of hot roasted barley tea is good for damp bones."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]

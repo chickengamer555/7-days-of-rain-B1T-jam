@@ -25,7 +25,8 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 [sub_resource type="Resource" id="Resource_vrhvj"]
 script = ExtResource("3_7deqe")
 id = "1"
-speaker = "says M3"
+speaker = "Hanae"
+text = "Mio wants so desperately to help stop the rain. If the priest would only let her help ring the shrine bell, she wouldn't try to climb the mountain trail."
 effect = SubResource("Resource_ahvxl")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -56,7 +57,9 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
 [sub_resource type="Resource" id="Resource_mgjn5"]
 script = ExtResource("3_7deqe")
-speaker = "Says m1"
+id = "1"
+speaker = "Hanae"
+text = "Mio made a doll out of river reeds. She told me she will take it up the high mountain path to make an offering to the storm kami."
 effect = SubResource("Resource_4uulj")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -74,7 +77,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_7deqe"]
 script = ExtResource("1_5nl6p")
-random_lines = Array[String](["", ""])
+random_lines = Array[String](["I need to keep Mio inside. The mountain paths wash away so easily.", "Stay dry out there."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
