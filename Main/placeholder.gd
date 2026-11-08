@@ -9,7 +9,7 @@ func _ready():
 		refresh_npcs()
 
 func _unhandled_input(event: InputEvent) -> void:
-		if event.is_action_pressed("ui_cancel") and not Transition.busy:
+		if event.is_action_pressed("ui_cancel") and not Transition.busy and not Dialouge.active:
 				get_viewport().set_input_as_handled() # stop anything else reactimg to esc
 				Clock.was_running = Clock.running # rember if time is going 
 				Clock.running = false  #stop clock
