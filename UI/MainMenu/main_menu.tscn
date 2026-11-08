@@ -177,7 +177,6 @@ frame_progress = 0.8743902
 speed_scale = 2.0
 
 [node name="RainBG" type="Control" parent="." unique_id=1429704880]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
