@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="3_choice"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="4_tree"]
 [ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="5_data"]
+[ext_resource type="Texture2D" uid="uid://ccrkxe2yvuhi0" path="res://Assets/Interactable/New Piskel-2.png (2).png" id="6_a8ra1"]
 
 [sub_resource type="Resource" id="Resource_choice_1"]
 script = ExtResource("3_choice")
@@ -41,5 +42,6 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 script = ExtResource("5_data")
 id = "hourglass"
 display_name = "Shrine Hourglass"
+sprite = ExtResource("6_a8ra1")
 rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_hourglass")])
 metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"

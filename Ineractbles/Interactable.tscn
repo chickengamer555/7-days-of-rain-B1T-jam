@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://clrjtk06ipyjf" path="res://Ineractbles/interactable.gd" id="1_h5ro5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
-size = Vector2(16, 16)
+size = Vector2(11, 12)
 
 [node name="Interactable" type="Area2D" unique_id=62630446]
 collision_layer = 2
@@ -13,4 +13,5 @@ script = ExtResource("1_h5ro5")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=657532361]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218869613]
+position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_7xx7b")

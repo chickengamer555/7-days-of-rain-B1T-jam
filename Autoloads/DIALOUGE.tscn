@@ -8,6 +8,7 @@
 script = ExtResource("1_ydmob")
 
 [node name="Box" parent="." unique_id=544790272 instance=ExtResource("1_kbwly")]
+seconds_per_character = 0.03
 
 [node name="Prompt" type="Label" parent="." unique_id=1754300791]
 visible = false
