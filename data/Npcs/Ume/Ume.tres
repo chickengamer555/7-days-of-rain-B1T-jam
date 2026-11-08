@@ -16,6 +16,11 @@ to_day = 1
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("4_fxr04")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eqjpc"]
 script = ExtResource("5_dhuoc")
 add_ledger = Array[String](["E1"])
@@ -25,14 +30,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_meevf")
 id = "1"
 speaker = "Ume"
-text = "Tadashi rebuilt the dike two years ago. The village elders paid him for a strong stone facing."
+text = "Ohhh I remember that Tadashi boy rebuilt that dike two years ago."
+choices = Array[ExtResource("4_fxr04")]([SubResource("Resource_vrhvj")])
 effect = SubResource("Resource_eqjpc")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_jlcik"]
+script = ExtResource("3_meevf")
+id = "2"
+speaker = "Ume"
+text = "The village elders paid him for a strong stone facing. What a hunky man!"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_y2el8"]
 script = ExtResource("6_p5c2l")
 start_id = "1"
-nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_ekdxl")])
+nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_ekdxl"), SubResource("Resource_jlcik")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_garow"]
@@ -48,6 +61,11 @@ to_day = 2
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_iuwkg"]
+script = ExtResource("4_fxr04")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_p5c2l"]
 script = ExtResource("5_dhuoc")
 add_ledger = Array[String](["E2"])
@@ -57,14 +75,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_meevf")
 id = "1"
 speaker = "Ume"
-text = "I watched them work back then. They only packed river mud and bamboo frames. I never saw a single cart of stone."
+text = "I watched them work back then. They only packed river mud and bamboo frames. "
+choices = Array[ExtResource("4_fxr04")]([SubResource("Resource_iuwkg")])
 effect = SubResource("Resource_p5c2l")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ahvxl"]
+script = ExtResource("3_meevf")
+id = "2"
+speaker = "Ume"
+text = "Ohhh I never saw a single cart of stone. But I did see some glistening pecs. "
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_fxr04"]
 script = ExtResource("6_p5c2l")
 start_id = "1"
-nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_dhuoc")])
+nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_dhuoc"), SubResource("Resource_ahvxl")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_3ovq8"]
@@ -81,6 +107,11 @@ to_day = 2
 to_phase = 2
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_5tdey"]
+script = ExtResource("4_fxr04")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_s2eiy"]
 script = ExtResource("5_dhuoc")
 add_ledger = Array[String](["V1"])
@@ -90,14 +121,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_meevf")
 id = "1"
 speaker = "Ume"
-text = "Kenji came by for warm tea. He told me he intends to take his skiff and leave at dusk on Day 5."
+text = "Ohh that Kenji boy came by for hot tea to which I happily obliged (wink). "
+choices = Array[ExtResource("4_fxr04")]([SubResource("Resource_5tdey")])
 effect = SubResource("Resource_s2eiy")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_dxbay"]
+script = ExtResource("3_meevf")
+id = "2"
+speaker = "Ume"
+text = "He told me he \"intends to take his skiff and leave at dusk in 5 days\". Ohhh kenji."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_qmtur"]
 script = ExtResource("6_p5c2l")
 start_id = "1"
-nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_5gm8v")])
+nodes = Array[ExtResource("3_meevf")]([SubResource("Resource_5gm8v"), SubResource("Resource_dxbay")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_lrhib"]
@@ -128,7 +167,7 @@ day = 3
 spot = "spot3"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
-[sub_resource type="Resource" id="Resource_vrhvj"]
+[sub_resource type="Resource" id="Resource_egcld"]
 script = ExtResource("2_gg7fu")
 day = 4
 spot = "spot4"
@@ -158,5 +197,5 @@ id = "ume"
 display_name = "Ume"
 rules = Array[ExtResource("1_435tf")]([SubResource("Resource_garow"), SubResource("Resource_3ovq8"), SubResource("Resource_lrhib"), SubResource("Resource_hi71u")])
 sprite = ExtResource("9_garow")
-schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_vrhvj"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
+schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_egcld"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

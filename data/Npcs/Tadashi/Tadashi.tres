@@ -17,6 +17,11 @@ to_day = 5
 to_phase = 2
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("4_urk2b")
+next_id = "1"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eff_repair"]
 script = ExtResource("5_m8175")
 add_flags = Array[String](["dike_repaired"])
@@ -26,14 +31,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_vulmf")
 id = "1"
 speaker = "Tadashi"
-text = "With these granite slabs from the old stairs, we can face the entire mud dike! I will work all night to lay them. The dike will hold!"
+text = "I do say with these granite slabs from the old stairs, we can face the entire mud dike!"
+choices = Array[ExtResource("4_urk2b")]([SubResource("Resource_vrhvj")])
 effect = SubResource("Resource_eff_repair")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_gl1ko"]
+script = ExtResource("3_vulmf")
+id = "2"
+speaker = "Tadashi "
+text = "I will work all night to lay them. The dike will hold! TO VICTORY!!!!"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_repair"]
 script = ExtResource("6_gl1ko")
 start_id = "1"
-nodes = Array[ExtResource("3_vulmf")]([SubResource("Resource_node_repair")])
+nodes = Array[ExtResource("3_vulmf")]([SubResource("Resource_node_repair"), SubResource("Resource_gl1ko")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_rule_repair"]
@@ -50,7 +63,12 @@ to_day = 4
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_vrhvj"]
+[sub_resource type="Resource" id="Resource_vulmf"]
+script = ExtResource("4_urk2b")
+next_id = "1"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_m8175"]
 script = ExtResource("5_m8175")
 add_ledger = Array[String](["E4"])
 add_flags = Array[String](["tadashi_agrees"])
@@ -60,14 +78,21 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_vulmf")
 id = "1"
 speaker = "Tadashi"
-text = "You found my old ledger... Yes, I never ordered the stone. I'm sorry. If you bring me the flat stones from the west stair, I promise I will repair the dike."
-effect = SubResource("Resource_vrhvj")
+text = "Yo- you found my old ledger. GOMENASORRY yes IT'S TRUE I never ordered the stone."
+choices = Array[ExtResource("4_urk2b")]([SubResource("Resource_vulmf")])
+effect = SubResource("Resource_m8175")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ybga7"]
+script = ExtResource("3_vulmf")
+id = "2"
+speaker = "If you bring me the flat stones from the west stair, I swear I WILL REPAIR THE DIKES. "
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_gbm1g"]
 script = ExtResource("6_gl1ko")
 start_id = "1"
-nodes = Array[ExtResource("3_vulmf")]([SubResource("Resource_8klqp")])
+nodes = Array[ExtResource("3_vulmf")]([SubResource("Resource_8klqp"), SubResource("Resource_ybga7")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_byv7w"]
@@ -76,7 +101,7 @@ condition = SubResource("Resource_nigqn")
 tree = SubResource("Resource_gbm1g")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_vulmf"]
+[sub_resource type="Resource" id="Resource_f8esa"]
 script = ExtResource("1_6mdjr")
 random_lines = Array[String](["The water is pressing hard against the mud banks.", "I hope my cedar beams hold."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
@@ -126,7 +151,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("2_po5mu")
 id = "tadashi"
 display_name = "Tadashi"
-rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_rule_repair"), SubResource("Resource_byv7w"), SubResource("Resource_vulmf")])
+rules = Array[ExtResource("1_6mdjr")]([SubResource("Resource_rule_repair"), SubResource("Resource_byv7w"), SubResource("Resource_f8esa")])
 sprite = ExtResource("4_tldnq")
 schedule = Array[ExtResource("5_5auiw")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_urk2b"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
