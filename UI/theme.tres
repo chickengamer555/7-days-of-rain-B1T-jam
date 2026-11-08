@@ -1,0 +1,25 @@
+[gd_resource type="Theme" format=3 uid="uid://dqs860kevqotd"]
+
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="1_go05t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g014p"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4h8i5"]
+
+[resource]
+default_font = ExtResource("1_go05t")
+default_font_size = 7
+Button/colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+Button/colors/font_focus_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+Button/colors/font_hover_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+Button/fonts/font = ExtResource("1_go05t")
+Button/styles/focus = SubResource("StyleBoxFlat_g014p")
+Button/styles/hover = SubResource("StyleBoxFlat_g014p")
+Button/styles/normal = SubResource("StyleBoxEmpty_4h8i5")

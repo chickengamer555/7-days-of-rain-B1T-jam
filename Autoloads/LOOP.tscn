@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://h7xtbup0mh7i" path="res://data/classes/ending_data.gd" id="2_3n6a8"]
 [ext_resource type="Resource" uid="uid://dvevxf65vxlhd" path="res://data/endings/flood_card.tres" id="3_tak12"]
 [ext_resource type="Resource" uid="uid://da0aps77pahhr" path="res://data/endings/loop_card.tres" id="4_mwd36"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="5_mwd36"]
 
 [node name="Loop" type="CanvasLayer" unique_id=592457950]
 layer = 20
@@ -32,3 +33,5 @@ offset_right = 29.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_mwd36")
+theme_override_font_sizes/font_size = 7

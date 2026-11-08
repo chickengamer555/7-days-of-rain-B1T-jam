@@ -85,6 +85,7 @@ offset_left = 16.0
 offset_right = 239.978
 offset_bottom = 160.0
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
 
 [node name="Lines" type="VBoxContainer" parent="LedgerScreen/Scroll" unique_id=1382388703]
 custom_minimum_size = Vector2(224, 160)
