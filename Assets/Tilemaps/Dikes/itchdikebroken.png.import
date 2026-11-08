@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duv3igti4kqdn"
-path="res://.godot/imported/ume test sprite.png-faef5ebd3eca08c1acc20dbe36fe7ce8.ctex"
+uid="uid://nsvhugtvgwcp"
+path="res://.godot/imported/itchdikebroken.png-a388d57dbac8db840b58715c38c82431.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialouge-Prewritten/characters and dialogues/characters/ume test sprite.png"
-dest_files=["res://.godot/imported/ume test sprite.png-faef5ebd3eca08c1acc20dbe36fe7ce8.ctex"]
+source_file="res://Assets/Tilemaps/Dikes/itchdikebroken.png"
+dest_files=["res://.godot/imported/itchdikebroken.png-a388d57dbac8db840b58715c38c82431.ctex"]
 
 [params]
 

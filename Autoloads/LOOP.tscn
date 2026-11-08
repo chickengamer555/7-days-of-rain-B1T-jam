@@ -4,14 +4,16 @@
 [ext_resource type="Script" uid="uid://h7xtbup0mh7i" path="res://data/classes/ending_data.gd" id="2_3n6a8"]
 [ext_resource type="Resource" uid="uid://dvevxf65vxlhd" path="res://data/endings/flood_card.tres" id="3_tak12"]
 [ext_resource type="Resource" uid="uid://da0aps77pahhr" path="res://data/endings/loop_card.tres" id="4_mwd36"]
+[ext_resource type="Resource" uid="uid://b5s0k8r1reset" path="res://data/endings/early_reset_card.tres" id="5_early"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="6_font"]
 
 [node name="Loop" type="CanvasLayer" unique_id=592457950]
-layer = 20
-visible = false
+layer = 100
 script = ExtResource("1_28rpj")
-endings = Array[ExtResource("2_3n6a8")]([ExtResource("3_tak12"), ExtResource("4_mwd36")])
+endings = Array[ExtResource("2_3n6a8")]([ExtResource("3_tak12"), ExtResource("4_mwd36"), ExtResource("5_early")])
 
 [node name="Card" type="ColorRect" parent="." unique_id=2120351599]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,16 +21,43 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.7764706, 0.7294118, 0.6745098, 1)
 
-[node name="CardLabel" type="Label" parent="Card" unique_id=174941184]
+[node name="Margin" type="MarginContainer" parent="Card" unique_id=1419827361]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -29.0
-offset_top = -11.5
-offset_right = 29.0
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="Card/Margin" unique_id=1419827362]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="Card/Margin/VBox" unique_id=1419827363]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 7
+text = "— THE SEVENTH NIGHT —"
+horizontal_alignment = 1
+
+[node name="CardLabel" type="Label" parent="Card/Margin/VBox" unique_id=174941184]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 7
+theme_override_constants/line_spacing = 1
+autowrap_mode = 3
+
+[node name="PromptLabel" type="Label" parent="Card/Margin/VBox" unique_id=1419827364]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 7
+text = "[ Press E to begin Day 1 ]"
+horizontal_alignment = 1

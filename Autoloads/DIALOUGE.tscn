@@ -3,20 +3,50 @@
 [ext_resource type="PackedScene" uid="uid://ddjodc2p80frd" path="res://Dialouge-Prewritten/dialogue_box.tscn" id="1_kbwly"]
 [ext_resource type="Script" uid="uid://cjmstaypw2561" path="res://Autoloads/dialouge.gd" id="1_ydmob"]
 [ext_resource type="Script" uid="uid://d1ic2nsfhrwro" path="res://Dialouge-Prewritten/dialogue_player.gd" id="2_i5blm"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="3_4h8i5"]
+[ext_resource type="Texture2D" uid="uid://cknbn18xwjj3p" path="res://Assets/UI/Dialougebox2.png" id="4_g014p"]
+[ext_resource type="Theme" uid="uid://dqs860kevqotd" path="res://UI/theme.tres" id="4_orr0i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orr0i"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4h8i5"]
+texture = ExtResource("4_g014p")
+texture_margin_left = 8.0
+texture_margin_top = 5.0
+texture_margin_right = 8.0
+texture_margin_bottom = 4.0
 
 [node name="Dialouge" type="CanvasLayer" unique_id=928797108]
+layer = 95
 script = ExtResource("1_ydmob")
 
 [node name="Box" parent="." unique_id=544790272 instance=ExtResource("1_kbwly")]
+seconds_per_character = 0.03
 
 [node name="Prompt" type="Label" parent="." unique_id=1754300791]
 visible = false
-anchors_preset = 10
+anchors_preset = -1
+anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -0.5
-offset_right = 240.036
-offset_bottom = 23.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_bottom = -46.0
 grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("3_4h8i5")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_orr0i")
 autowrap_mode = 3
 
 [node name="ChoiceScroll" type="ScrollContainer" parent="." unique_id=1106498108]
@@ -25,14 +55,19 @@ anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
+offset_top = -46.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_orr0i")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4h8i5")
 follow_focus = true
+vertical_scroll_mode = 3
 
 [node name="Choices" type="VBoxContainer" parent="ChoiceScroll" unique_id=472904823]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("4_orr0i")
+theme_override_constants/separation = 0
 
 [node name="Walker" type="Node" parent="." unique_id=1777420321]
 script = ExtResource("2_i5blm")

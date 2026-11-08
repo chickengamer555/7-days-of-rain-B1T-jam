@@ -201,13 +201,14 @@ func _unhandled_input(event: InputEvent) -> void:
 				area.dock(self) # get of here
 				get_viewport().set_input_as_handled()
 				return 
-		return
 	var closest = null
 	var closest_distance = INF
 	if sensor:
 		for area in sensor.get_overlapping_areas():
 			if not area.has_method("interact"):
 				continue
+				if area == Boat:
+					continue
 			var distance = global_position.distance_squared_to(area.global_position)
 			if distance < closest_distance:
 				closest = area
@@ -232,7 +233,7 @@ func _update_prompt() -> void:
 		for area in sensor.get_overlapping_areas():
 			if boat and area is Dock: 
 				can_use = true
-			elif not boat and area.has_method("interact"):
+			elif area.has_method("interact") and area != boat:
 				can_use = true
 	prompt.visible = can_use
 
@@ -243,6 +244,8 @@ func board(b: Boat) -> void: # boat calls this
 	z_index = -2
 	teleport_to(b.global_position) # jump to boat
 	_update_facing(current_facing) # swap to boat sprite 
+	if Sound:
+		Sound.set_boat_state(true)
 
 func leave_boat(pos: Vector2) -> void:
 	boat = null # on foot 
@@ -250,6 +253,8 @@ func leave_boat(pos: Vector2) -> void:
 	z_index = 0
 	teleport_to(pos) # jump to pier
 	_update_facing(current_facing) # current facging 
+	if Sound:
+		Sound.set_boat_state(false) 
 
 func _get_step_speed(dir: Vector2, drifting: bool) -> float:
 	if not boat: #on foot?

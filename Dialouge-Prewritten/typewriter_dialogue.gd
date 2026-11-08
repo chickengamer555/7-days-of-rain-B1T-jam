@@ -63,6 +63,8 @@ func advance() -> void:
 		dialogue_text_label.visible_characters = char_index
 		_finish_line()
 	elif waiting_for_click:
+		if Sound:
+			Sound.play_button()
 		waiting_for_click = false
 		current_line_index += 1
 		_show_current_line()
@@ -83,16 +85,25 @@ func _show_current_line() -> void:
 	dialogue_text_label.visible_characters = 0
 	is_typing = true
 	_typewriter_timer.start()
+	if Sound:
+		if character_name_label.text != "":
+			Sound.play_dialogue()
+		Sound.play_typewriter()
 
 
 func _finish_line() -> void:
 	is_typing = false
 	_typewriter_timer.stop()
+	if Sound:
+		Sound.stop_typewriter()
 	waiting_for_click = true
 
 
 func _finish_dialogue() -> void:
 	_stop_typing()
+	if Sound:
+		Sound.stop_typewriter()
+		Sound.stop_dialogue()
 	visible = false
 	dialogue_finished.emit()
 
@@ -103,6 +114,8 @@ func _stop_typing() -> void:
 	waiting_for_click = false
 	if _typewriter_timer:
 		_typewriter_timer.stop()
+	if Sound:
+		Sound.stop_typewriter()
 
 
 func _apply_speed() -> void:

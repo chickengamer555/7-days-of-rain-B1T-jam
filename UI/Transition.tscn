@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ciy4w6624ql5w"]
+
+[ext_resource type="Shader" uid="uid://bg36iyl16yn63" path="res://Shaders/scene_wipe.gdshader" id="1_5k7as"]
+[ext_resource type="Script" uid="uid://db2shydcmefgf" path="res://UI/transition.gd" id="1_lpiu8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lpiu8"]
+shader = ExtResource("1_5k7as")
+shader_parameter/progress = 0.0
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+shader_parameter/screen_px = Vector2(240, 160)
+shader_parameter/wave_height = 2.0
+shader_parameter/wave_length = 30.0
+shader_parameter/wave_speed = 6.0
+shader_parameter/dither_rows = 7.0
+
+[node name="Transition" type="CanvasLayer" unique_id=447745155]
+process_mode = 3
+layer = 100
+script = ExtResource("1_lpiu8")
+duration = 1.0
+
+[node name="Ink" type="ColorRect" parent="." unique_id=1512370299]
+material = SubResource("ShaderMaterial_lpiu8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

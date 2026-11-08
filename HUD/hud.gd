@@ -47,6 +47,8 @@ func _unhandled_input(event): # Make sure the proper keys are pressed and handli
 		$LedgerScreen/Scroll.scroll_vertical += 20
 
 func open_ledger(): # Opens the ledgers checks which ones we know which ones we dont and adds the ones we do know to a list to displayit 
+	if Sound:
+		Sound.play_whoosh(-4.0, 1.35)
 	Input.set_custom_mouse_cursor(mouse, Input.CURSOR_ARROW, Vector2(21, 0))
 	Clock.running = false
 	for child in $LedgerScreen/Scroll/Lines.get_children():
@@ -68,6 +70,8 @@ func open_ledger(): # Opens the ledgers checks which ones we know which ones we 
 	$LedgerScreen.show()
 
 func close_ledger(): # Closes the ledger simply 
+	if Sound:
+		Sound.play_button()
 	Input.set_custom_mouse_cursor(null)
 	$LedgerScreen.hide()
 	Clock.running = true

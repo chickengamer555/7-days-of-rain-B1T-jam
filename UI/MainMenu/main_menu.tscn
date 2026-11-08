@@ -140,7 +140,7 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dak1o"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htmks"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87p85"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
@@ -159,6 +159,24 @@ shadow_color = Color(0, 0, 0, 0)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqq2g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htmks"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0)
+anti_aliasing = false
 
 [node name="MainMenu" type="Control" unique_id=1426859149]
 layout_mode = 3
@@ -208,12 +226,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Start Game"
 
 [node name="SettingsBtn" type="Button" parent="MainView" unique_id=1246558733]
@@ -231,12 +249,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Settings"
 
 [node name="ControlsBtn" type="Button" parent="MainView" unique_id=1057524618]
@@ -254,12 +272,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Controls"
 
 [node name="QuitBtn" type="Button" parent="MainView" unique_id=1875511904]
@@ -277,12 +295,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Quit"
 
 [node name="SettingsView" type="Control" parent="." unique_id=1799818683]
@@ -293,6 +311,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="SettingsView" unique_id=553110916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7764706, 0.7294118, 0.6745098, 1)
 
 [node name="Title" type="Label" parent="SettingsView" unique_id=1590039289]
 layout_mode = 1
@@ -432,6 +460,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BG" type="ColorRect" parent="ControlsView" unique_id=898575707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+
 [node name="Title" type="Label" parent="ControlsView" unique_id=935055489]
 layout_mode = 1
 anchors_preset = 10
@@ -440,7 +478,8 @@ offset_top = 10.0
 offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
 text = "CONTROLS"
 horizontal_alignment = 1
 
@@ -458,7 +497,8 @@ offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.117647, 0.109804, 0.196078, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
 text = "WASD : Walk
 E : Interact / Talk
 Q : Ledger
@@ -473,11 +513,28 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = -24.0
-offset_right = 35.0
-offset_bottom = -6.0
+offset_left = -17.0
+offset_top = -75.0
+offset_right = 17.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_colors/font_focus_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_colors/font_pressed_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Back"
+
+[connection signal="pressed" from="MainView/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="ControlsView/ControlsBackBtn" to="." method="_on_controls_back_btn_pressed"]

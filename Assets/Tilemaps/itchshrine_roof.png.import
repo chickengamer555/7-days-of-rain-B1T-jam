@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8107nnf70hd0"
-path="res://.godot/imported/itchdike.png-bb46a939ebfb9770385758aec3d298ee.ctex"
+uid="uid://c4ndmsmy1mf58"
+path="res://.godot/imported/itchshrine_roof.png-cec8ec5f35324c466d915856aea3e41f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemaps/Town assets/itchdike.png"
-dest_files=["res://.godot/imported/itchdike.png-bb46a939ebfb9770385758aec3d298ee.ctex"]
+source_file="res://Assets/Tilemaps/itchshrine_roof.png"
+dest_files=["res://.godot/imported/itchshrine_roof.png-cec8ec5f35324c466d915856aea3e41f.ctex"]
 
 [params]
 

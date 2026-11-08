@@ -29,13 +29,18 @@ metadata/_custom_type_script = "uid://bocbuuj64elde"
 script = ExtResource("3_node")
 id = "2"
 speaker = "Memorial"
-text = "'In memory of the thirty-one lost forty years ago, when the bell fell silent for a month.'"
+text = "'In memory of the thirty-one lost forty years ago.'"
 choices = Array[ExtResource("4_choice")]([SubResource("Resource_choice_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
+[sub_resource type="Resource" id="Resource_ndgaa"]
+script = ExtResource("4_choice")
+next_id = "4"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eff_memorial"]
 script = ExtResource("2_eff")
-add_ledger = Array[String](["The Flood "])
+add_ledger = Array[String](["S2"])
 add_flags = Array[String](["read_memorial"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
@@ -43,14 +48,35 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_node")
 id = "3"
 speaker = "Memorial"
-text = "Among the carved names is Kenji's father. Kenji was only a boy when it happened."
+text = "'There deaths took place when the bell fell silent for a month.'"
+choices = Array[ExtResource("4_choice")]([SubResource("Resource_ndgaa")])
 effect = SubResource("Resource_eff_memorial")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ojl1v"]
+script = ExtResource("4_choice")
+next_id = "5"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_8dfe0"]
+script = ExtResource("3_node")
+id = "4"
+speaker = "Memorial"
+text = "Among the carved names is Kenji's father. Kenji was only a boy when it happened."
+choices = Array[ExtResource("4_choice")]([SubResource("Resource_ojl1v")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_tvbof"]
+script = ExtResource("3_node")
+id = "5"
+speaker = "Memorial"
+text = "It also talks about 'Asterupnorth, the one who paved the village'"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_memorial"]
 script = ExtResource("5_tree")
 start_id = "1"
-nodes = Array[ExtResource("3_node")]([SubResource("Resource_node_1"), SubResource("Resource_node_2"), SubResource("Resource_node_3")])
+nodes = Array[ExtResource("3_node")]([SubResource("Resource_node_1"), SubResource("Resource_node_2"), SubResource("Resource_node_3"), SubResource("Resource_8dfe0"), SubResource("Resource_tvbof")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_rule_memorial"]

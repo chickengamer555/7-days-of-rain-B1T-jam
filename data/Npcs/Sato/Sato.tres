@@ -2,12 +2,85 @@
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_3i6my"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_lbxnx"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_twyyh"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="3_o5mcm"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_padq5"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_e8fap"]
 [ext_resource type="Texture2D" uid="uid://dolld1jr6m1tq" path="res://Assets/NPC/Fisherman.png" id="4_ehmva"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_5xmeh"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_uveua"]
+
+[sub_resource type="Resource" id="Resource_nmgmr"]
+script = ExtResource("2_twyyh")
+from_day = 4
+to_day = 4
+to_phase = 1
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_pwt6m"]
+script = ExtResource("5_5xmeh")
+add_ledger = Array[String](["R2"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_awr7y"]
+script = ExtResource("3_o5mcm")
+id = "important"
+speaker = "says r2?"
+effect = SubResource("Resource_pwt6m")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_g57nn"]
+script = ExtResource("6_uveua")
+start_id = "1"
+nodes = Array[ExtResource("3_o5mcm")]([SubResource("Resource_awr7y")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_hldga"]
+script = ExtResource("1_3i6my")
+condition = SubResource("Resource_nmgmr")
+tree = SubResource("Resource_g57nn")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_nigqn"]
+script = ExtResource("2_twyyh")
+from_day = 3
+to_day = 3
+to_phase = 1
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_twyyh"]
+script = ExtResource("5_5xmeh")
+add_ledger = Array[String](["R1"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_o5mcm"]
+script = ExtResource("3_o5mcm")
+id = "important "
+speaker = "says R1?"
+effect = SubResource("Resource_twyyh")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_e8fap"]
+script = ExtResource("6_uveua")
+start_id = "1"
+nodes = Array[ExtResource("3_o5mcm")]([SubResource("Resource_o5mcm")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_gbm1g"]
+script = ExtResource("1_3i6my")
+condition = SubResource("Resource_nigqn")
+tree = SubResource("Resource_e8fap")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_5xmeh"]
+script = ExtResource("1_3i6my")
+random_lines = Array[String](["", ""])
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]
 script = ExtResource("3_padq5")
 id = "sato"
 display_name = "Sato"
+rules = Array[ExtResource("1_3i6my")]([SubResource("Resource_hldga"), SubResource("Resource_gbm1g"), SubResource("Resource_5xmeh")])
 sprite = ExtResource("4_ehmva")
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

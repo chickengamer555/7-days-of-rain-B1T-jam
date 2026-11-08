@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://5oytw2exvx1q"]
+
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="1_ng644"]
+[ext_resource type="Script" uid="uid://b1p5c6oik4qge" path="res://UI/credits.gd" id="1_uuuvy"]
+
+[node name="Credits" type="Control" unique_id=1143112375]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uuuvy")
+credits_text = "MANAGEMENT
+Coordinators - PizzaDev, Chicken
+Team lead / Manager - Chicken
+Task management & tracking setup - Chicken
+GDD - PizzaDev
+Git management - Chicken
+Setup & tutorials - Chicken
+
+PROGRAMMING
+Player movement - Chicken, PizzaDev
+System framework:
+Day/time loop system - Chicken
+Dialogue system - Chicken
+Randomized dialogue system - Chicken
+NPC system - Chicken
+Interactables - Chicken
+Story flags & ledger - Chicken
+Save states - Chicken
+Branching endings - Chicken
+HUD & menus - Chicken
+Title screen - PizzaDev, Chicken
+Boat riding - Chicken
+
+ARTWORK
+Town assets:
+Path tileset - Asterupnorth
+River tileset - Asterupnorth
+Mountain tileset - Chicken
+  Rice paddy tileset - Chicken
+Fence tilemap - Chicken
+All housing & huts - Mack
+Bridge - Mack
+Dock - Mack
+Boats - Mack
+Dikes - Mack
+Dike crack variants - Chicken
+Shrine area - Mack, Chicken
+Torii gates - Mack, Chicken
+Staircase - Mack
+Flood memorial - Mack
+Shrine bell - Mack
+Dog - Mack, Alibi
+Doll - Alibi
+Interactable sprites - Chicken, Alibi	
+Characters (all NPCs & player) - Alibi
+Reverse colour bordering - Chicken
+Game icon - Alibi
+UI:
+Title screen art - Alibi
+Dialogue boxes - Chicken
+Labels & fonts - Chicken
+Ledger HUD - Chicken
+Ledger pop-up - Chicken
+Prompts - Chicken
+
+TECHNOLOGY & IMPLEMENTATION
+Player implementation & animation - Alibi, PizzaDev
+Shaders:
+Title screen rain - PizzaDev
+Colour limiter - PizzaDev
+Grass swaying & player stepping - Chicken
+River - Chicken
+Boat rocking - Chicken
+Town rain - Chicken
+Clock implementation & animation - Alibi, Chicken
+Hand cursor - Chicken, Alibi
+Tileset implementation - Chicken
+Map layout & creation (in engine) - Chicken
+Layering & Y-sorting - Chicken
+Collisions - Chicken
+Dike cracking - Chicken
+Title screen implementation - Chicken
+Settings - Chicken, PizzaDev
+Controls page - Chicken, PizzaDev
+
+AUDIO
+All SFX & music - Gaming House
+
+WRITING & DATA
+Story - PizzaDev
+NPC story dialogue - Jpman, Pizzadev
+NPC randomized dialogue - Jpman
+Interactable text - PizzaDev, Jpman, Chicken 
+Implementation into engine - Jpman, Chicken
+Data management in engine - Jpman, Chicken
+
+THIRD PARTY
+\"Old School Adventures\" font by Chequered Ink
+Made with Godot Engine"
+
+[node name="Backround" type="ColorRect" parent="." unique_id=400891297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+
+[node name="Text" type="Label" parent="." unique_id=1431708094]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.11764706, 0.10980392, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("1_ng644")
+theme_override_font_sizes/font_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

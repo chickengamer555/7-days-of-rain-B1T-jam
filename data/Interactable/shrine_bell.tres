@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="5_choice"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_tree"]
 [ext_resource type="Script" uid="uid://dnqtpl4ogoqlq" path="res://data/classes/INTERACTABLE_DATA.gd" id="7_data"]
+[ext_resource type="Texture2D" uid="uid://mkvf3td8yfp2" path="res://Assets/Interactable/Bellrope.png" id="8_yeh7d"]
 
 [sub_resource type="Resource" id="Resource_cond_true_end"]
 script = ExtResource("2_cond")
@@ -136,5 +137,6 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 script = ExtResource("7_data")
 id = "shrine_bell"
 display_name = "Shrine Bell"
+sprite = ExtResource("8_yeh7d")
 rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_true_end"), SubResource("Resource_rule_normal")])
 metadata/_custom_type_script = "uid://dnqtpl4ogoqlq"

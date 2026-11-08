@@ -56,6 +56,10 @@ func next_step(): # This whole block bassicly decides what comes next but checki
 		for index in allowed:
 			var button = Button.new()
 			button.text = node.choices[index].display_label()
+			button.pressed.connect(func():
+				if Sound:
+					Sound.play_button()
+			)
 			button.pressed.connect(choice_made.emit.bind(index))
 			$ChoiceScroll/Choices.add_child(button)
 		$Prompt.show()

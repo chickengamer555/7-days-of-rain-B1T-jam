@@ -4,6 +4,14 @@
 
 [resource]
 script = ExtResource("1_1dcci")
-id = " bell"
-card_text = "true ending"
+id = "true_ending"
+trigger = "true_ending"
+card_text = "On the seventh evening, the stone dike held.
+Everyone in the village is safe on the hill.
+
+You ring the bell with Mio and say:
+'We can stand now, thank you.'
+
+The rain stops and the sun comes out.
+The spirit can finally rest. You broke the loop."
 metadata/_custom_type_script = "uid://h7xtbup0mh7i"
