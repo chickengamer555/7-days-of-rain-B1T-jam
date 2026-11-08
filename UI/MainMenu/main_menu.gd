@@ -187,7 +187,7 @@ func _on_start_btn_pressed() -> void:
 
 
 func _on_controls_back_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://UI/MainMenu/main_menu.tscn")
+	Transition.swap(func(): _show_view(main_view))
 
 func _connect_button_sounds(parent: Node) -> void:
 	for child in parent.get_children():
@@ -199,4 +199,3 @@ func _connect_button_sounds(parent: Node) -> void:
 func _on_button_pressed() -> void:
 	if Sound:
 		Sound.play_button()
-	Transition.swap(func(): _show_view(main_view))

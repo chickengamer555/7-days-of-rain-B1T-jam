@@ -102,7 +102,7 @@ func resolve(trigger: String) -> void:
 			if weather:
 				weather.rain_enabled = true
 				weather.set_warm_palette(false)
-			get_tree().change_scene_to_file("res://UI/MainMenu/main_menu.tscn")
+			Transition.change_scene("res://UI/MainMenu/main_menu.tscn")
 			return
 
 	# Loopable reset:
@@ -110,7 +110,6 @@ func resolve(trigger: String) -> void:
 	Clock.reset()
 	if Sound:
 		Sound.play_whoosh(2.0, 0.7)
-	get_tree().reload_current_scene()
 	Transition.reload()
 
 func _unhandled_input(event: InputEvent) -> void:
