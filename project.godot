@@ -20,11 +20,11 @@ config/icon="res://icon.svg"
 Clock="*res://Autoloads/clock.gd"
 Flags="*res://Autoloads/flags.gd"
 Ledger="*res://Autoloads/ledger.gd"
-Dialouge="*res://Autoloads/dialouge.gd"
 Loop="*res://Autoloads/LOOP.tscn"
 Weather="*res://Effects/rain_weather.tscn"
 Sound="*res://Autoloads/sound.gd"
 Transition="*res://UI/Transition.tscn"
+Dialouge="*uid://cighbufvpxapt"
 
 [display]
 
