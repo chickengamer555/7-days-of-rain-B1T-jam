@@ -1,13 +1,84 @@
 [gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://d3t2lfstbqpyy"]
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_mlhc1"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="2_l2sr8"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_sbq5i"]
+[ext_resource type="Script" uid="uid://c3bdbn2jbepsa" path="res://Dialouge-Prewritten/dialogue_node.gd" id="3_6784v"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_s018l"]
 [ext_resource type="Texture2D" uid="uid://bq8sniv5cl0s8" path="res://Assets/NPC/Not tea grandma.png" id="4_bbdq1"]
+[ext_resource type="Script" uid="uid://bocbuuj64elde" path="res://Dialouge-Prewritten/dialogue_choice.gd" id="4_xf5eg"]
+[ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_f3stg"]
+[ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_qqfsi"]
+
+[sub_resource type="Resource" id="Resource_lc8le"]
+script = ExtResource("2_l2sr8")
+needs_ledger = Array[String](["S2", "S5"])
+from_day = 6
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_k7kt1"]
+script = ExtResource("5_f3stg")
+add_ledger = Array[String](["S6"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_xr3ve"]
+script = ExtResource("3_6784v")
+id = "important"
+speaker = "says S6"
+effect = SubResource("Resource_k7kt1")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_acuwy"]
+script = ExtResource("6_qqfsi")
+nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_xr3ve")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_uveua"]
+script = ExtResource("1_mlhc1")
+condition = SubResource("Resource_lc8le")
+tree = SubResource("Resource_acuwy")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_nigqn"]
+script = ExtResource("2_l2sr8")
+from_day = 2
+to_day = 2
+to_phase = 0
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("5_f3stg")
+add_ledger = Array[String](["S2"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_6784v"]
+script = ExtResource("3_6784v")
+id = "important "
+speaker = "says S2"
+effect = SubResource("Resource_vrhvj")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_gbm1g"]
+script = ExtResource("6_qqfsi")
+start_id = "1"
+nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_6784v")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_xf5eg"]
+script = ExtResource("1_mlhc1")
+condition = SubResource("Resource_nigqn")
+tree = SubResource("Resource_gbm1g")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_f3stg"]
+script = ExtResource("1_mlhc1")
+random_lines = Array[String](["", ""])
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [resource]
 script = ExtResource("3_s018l")
 id = "chiyo"
 display_name = "Chiyo"
+rules = Array[ExtResource("1_mlhc1")]([SubResource("Resource_uveua"), SubResource("Resource_xf5eg"), SubResource("Resource_f3stg")])
 sprite = ExtResource("4_bbdq1")
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

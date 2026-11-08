@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://dkdqtiw3qenpv" path="res://data/Npcs/Tomo/Tomo.tres" id="11_t85yq"]
 [ext_resource type="Resource" uid="uid://bcbf3mulsqoxt" path="res://data/Npcs/Kuro/Kuro.tres" id="12_y88hr"]
 [ext_resource type="PackedScene" uid="uid://dfy1k0s5m8x3a" path="res://Effects/rain_weather.tscn" id="13_nf7xu"]
+[ext_resource type="Resource" uid="uid://bhchtcd515v6" path="res://data/Npcs/Hanae.tres" id="13_nigqn"]
 [ext_resource type="Texture2D" uid="uid://e53n0un3y07y" path="res://Assets/Tilemaps/itchdoga.png" id="17_1nqbc"]
 [ext_resource type="Script" uid="uid://bi5fsbj67d5nh" path="res://Main/dike_crack.gd" id="17_8dfe0"]
 [ext_resource type="Texture2D" uid="uid://c4ndmsmy1mf58" path="res://Assets/Tilemaps/itchshrine_roof.png" id="18_8dfe0"]
@@ -170,7 +171,7 @@ shader_parameter/max_radius = 3.0
 [node name="Main" type="Node2D" unique_id=661073907]
 y_sort_enabled = true
 script = ExtResource("1_qvhan")
-npcs = Array[ExtResource("2_0gq1e")]([ExtResource("3_wbdht"), ExtResource("4_puekb"), ExtResource("5_xi84t"), ExtResource("6_j4inf"), ExtResource("7_nf7xu"), ExtResource("8_1nqbc"), ExtResource("9_xw814"), ExtResource("10_g147q"), ExtResource("11_t85yq"), ExtResource("12_y88hr")])
+npcs = Array[ExtResource("2_0gq1e")]([ExtResource("3_wbdht"), ExtResource("4_puekb"), ExtResource("5_xi84t"), ExtResource("6_j4inf"), ExtResource("7_nf7xu"), ExtResource("8_1nqbc"), ExtResource("9_xw814"), ExtResource("10_g147q"), ExtResource("11_t85yq"), ExtResource("12_y88hr"), ExtResource("13_nigqn")])
 
 [node name="RainWeather" parent="." unique_id=138712858 instance=ExtResource("13_nf7xu")]
 
@@ -278,7 +279,7 @@ position = Vector2(-37, 33)
 y_sort_enabled = true
 
 [node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
-position = Vector2(-126, 362)
+position = Vector2(-439, -14)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1956985897]
 visible = false

@@ -10,91 +10,98 @@
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_y56be"]
 [ext_resource type="Texture2D" uid="uid://bghuuo31jpc51" path="res://Assets/NPC/genshin.png" id="8_4joq5"]
 
-[sub_resource type="Resource" id="Resource_mugq5"]
+[sub_resource type="Resource" id="Resource_jrcm6"]
 script = ExtResource("2_t40qh")
+from_phase = 2
+to_day = 1
+to_phase = 2
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_gbm1g"]
-script = ExtResource("4_7vlo3")
-next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_slq0a"]
-script = ExtResource("3_4joq5")
-id = "1"
-speaker = "Priest Genshin"
-text = "The kami Shizu-Hime holds the river back."
-choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_gbm1g")])
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_wciyt"]
-script = ExtResource("4_7vlo3")
-next_id = "3"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_iox0s"]
-script = ExtResource("3_4joq5")
-id = "2"
-speaker = "Priest Genshin"
-text = "The previous bell ringer kept up with her."
-choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_wciyt")])
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_l1iv8"]
-script = ExtResource("4_7vlo3")
-next_id = "4"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_s84me"]
-script = ExtResource("3_4joq5")
-id = "3"
-speaker = "Priest Genshin"
-text = "So we eventually would be able to stand without her protection."
-choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_l1iv8")])
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_pw64t"]
-script = ExtResource("4_7vlo3")
-next_id = "5"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_a4don"]
+[sub_resource type="Resource" id="Resource_05ahe"]
 script = ExtResource("5_y56be")
 add_ledger = Array[String](["S1"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
-[sub_resource type="Resource" id="Resource_k16yo"]
+[sub_resource type="Resource" id="Resource_j5sjm"]
 script = ExtResource("3_4joq5")
-id = "4"
-speaker = "Priest Genshin"
-text = "..."
-choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_pw64t")])
-effect = SubResource("Resource_a4don")
+id = "1"
+speaker = "Genshin"
+effect = SubResource("Resource_05ahe")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_y3n7d"]
+script = ExtResource("4_45rh3")
+start_id = "0"
+nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_j5sjm")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_2o2vm"]
+script = ExtResource("1_qdc14")
+condition = SubResource("Resource_jrcm6")
+tree = SubResource("Resource_y3n7d")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_nigqn"]
+script = ExtResource("2_t40qh")
+needs_ledger = Array[String](["S4"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_m7o50"]
 script = ExtResource("5_y56be")
-add_ledger = Array[String](["S1"])
+add_flags = Array[String](["has_stones"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
-[sub_resource type="Resource" id="Resource_x5ol8"]
+[sub_resource type="Resource" id="Resource_mugq5"]
 script = ExtResource("3_4joq5")
-id = "5"
-speaker = "Priest Genshin"
-text = "Haruko..."
+id = "THIS IS THE IMPORTANT ONE"
 effect = SubResource("Resource_m7o50")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
-[sub_resource type="Resource" id="Resource_fqe6n"]
+[sub_resource type="Resource" id="Resource_y56be"]
 script = ExtResource("4_45rh3")
 start_id = "1"
-nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_slq0a"), SubResource("Resource_iox0s"), SubResource("Resource_s84me"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8")])
+nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_mugq5")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
-[sub_resource type="Resource" id="Resource_y56be"]
+[sub_resource type="Resource" id="Resource_gbm1g"]
 script = ExtResource("1_qdc14")
-condition = SubResource("Resource_mugq5")
-tree = SubResource("Resource_fqe6n")
+condition = SubResource("Resource_nigqn")
+tree = SubResource("Resource_y56be")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_wciyt"]
+script = ExtResource("2_t40qh")
+needs_ledger = Array[String](["M3"])
+from_day = 6
+to_day = 6
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_fqe6n"]
+script = ExtResource("5_y56be")
+add_flags = Array[String](["priest_lets_mio"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_iox0s"]
+script = ExtResource("3_4joq5")
+id = "important"
+effect = SubResource("Resource_fqe6n")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_l1iv8"]
+script = ExtResource("4_45rh3")
+start_id = "1"
+nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_iox0s")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_slq0a"]
+script = ExtResource("1_qdc14")
+condition = SubResource("Resource_wciyt")
+tree = SubResource("Resource_l1iv8")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
+[sub_resource type="Resource" id="Resource_s84me"]
+script = ExtResource("1_qdc14")
+random_lines = Array[String](["", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
@@ -107,7 +114,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("3_q8q0v")
 id = "Genshin"
 display_name = "Genshin"
-rules = Array[ExtResource("1_qdc14")]([SubResource("Resource_y56be")])
+rules = Array[ExtResource("1_qdc14")]([SubResource("Resource_2o2vm"), SubResource("Resource_gbm1g"), SubResource("Resource_slq0a"), SubResource("Resource_s84me")])
 sprite = ExtResource("8_4joq5")
 schedule = Array[ExtResource("2_e23w1")]([SubResource("Resource_nr7i4")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
