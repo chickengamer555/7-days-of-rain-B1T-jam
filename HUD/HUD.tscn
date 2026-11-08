@@ -22,7 +22,7 @@ font_size = 7
 font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
 
 [node name="Hud" type="CanvasLayer" unique_id=786916839]
-layer = 90
+layer = 101
 script = ExtResource("1_f31rt")
 
 [node name="ClockFace" type="Node2D" parent="." unique_id=1716147070]

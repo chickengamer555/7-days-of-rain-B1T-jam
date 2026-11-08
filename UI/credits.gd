@@ -20,4 +20,4 @@ func _process(delta):
 	var text_height = label.get_combined_minimum_size().y # height of text
 	if label.position.y + text_height < 0: # last line has left the top
 		set_process(false)
-		get_tree().change_scene_to_file(next_scene)
+		Transition.change_scene(next_scene)

@@ -39,7 +39,7 @@ func resolve(trigger):
 		$Card.hide()
 	Flags.clear()
 	Clock.reset()
-	get_tree().reload_current_scene()
+	Transition.reload()
 
 func _unhandled_input(event):
 	if card_up and event.is_action_pressed("Interact"):
