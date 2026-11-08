@@ -542,7 +542,7 @@ position = Vector2(35, -389)
 y_sort_enabled = true
 
 [node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
-position = Vector2(-139, 397)
+position = Vector2(-446, -6)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1956985897]
 visible = false
