@@ -59,6 +59,7 @@ func _ready() -> void:
 	ff_right_btn.pressed.connect(func(): _change_ff_speed(1))
 	reset_data_btn.pressed.connect(_on_reset_data_pressed)
 	
+	_connect_button_sounds(self)
 	
 	_show_view(main_view)
 	if Clock.saved_world != null: # a game is paused
@@ -187,3 +188,14 @@ func _on_start_btn_pressed() -> void:
 
 func _on_controls_back_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/MainMenu/main_menu.tscn")
+
+func _connect_button_sounds(parent: Node) -> void:
+	for child in parent.get_children():
+		if child is Button:
+			if not child.pressed.is_connected(_on_button_pressed):
+				child.pressed.connect(_on_button_pressed)
+		_connect_button_sounds(child)
+
+func _on_button_pressed() -> void:
+	if Sound:
+		Sound.play_button()

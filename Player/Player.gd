@@ -244,6 +244,8 @@ func board(b: Boat) -> void: # boat calls this
 	z_index = -2
 	teleport_to(b.global_position) # jump to boat
 	_update_facing(current_facing) # swap to boat sprite 
+	if Sound:
+		Sound.set_boat_state(true)
 
 func leave_boat(pos: Vector2) -> void:
 	boat = null # on foot 
@@ -251,6 +253,8 @@ func leave_boat(pos: Vector2) -> void:
 	z_index = 0
 	teleport_to(pos) # jump to pier
 	_update_facing(current_facing) # current facging 
+	if Sound:
+		Sound.set_boat_state(false) 
 
 func _get_step_speed(dir: Vector2, drifting: bool) -> float:
 	if not boat: #on foot?

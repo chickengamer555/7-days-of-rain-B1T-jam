@@ -32,6 +32,8 @@ func resolve(trigger):
 			matched = ending
 			break
 	if matched != null:
+		if Sound:
+			Sound.play_whoosh(-2.0, 0.9)
 		$Card/CardLabel.text = matched.card_text
 		$Card.show()
 		card_up = true
@@ -39,6 +41,8 @@ func resolve(trigger):
 		$Card.hide()
 	Flags.clear()
 	Clock.reset()
+	if Sound:
+		Sound.play_whoosh(2.0, 0.7)
 	get_tree().reload_current_scene()
 
 func _unhandled_input(event):

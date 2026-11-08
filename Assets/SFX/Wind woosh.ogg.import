@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5yny0xk3gkwg"
+path="res://.godot/imported/Wind woosh.ogg-a6e0ae21f24b533acdb7f7608197ccdb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Wind woosh.ogg"
+dest_files=["res://.godot/imported/Wind woosh.ogg-a6e0ae21f24b533acdb7f7608197ccdb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
