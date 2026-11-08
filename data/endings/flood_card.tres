@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_5a7lo")
-id = " flood"
-card_text = "normal"
+id = "flood"
+trigger = "flood"
+card_text = "On the seventh night, the river broke the mud dike.
+The water flooded the whole village.
+
+Up on the hill, the shrine bell rang in the dark.
+
+The promise is not finished yet.
+She is still waiting."
 metadata/_custom_type_script = "uid://h7xtbup0mh7i"
