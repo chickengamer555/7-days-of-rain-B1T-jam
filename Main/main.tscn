@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://c4n4seh3edmx8" path="res://Ineractbles/boat-dock/Boat.tscn" id="20_puekb"]
 [ext_resource type="PackedScene" uid="uid://bnbweue7t33ix" path="res://Ineractbles/boat-dock/dock.tscn" id="20_xi84t"]
 [ext_resource type="Texture2D" uid="uid://ctymc62r4sd6" path="res://Assets/Tilemaps/donation_half.png" id="21_t85yq"]
+[ext_resource type="Texture2D" uid="uid://by6po2687y6ho" path="res://Assets/Tilemaps/itchshrinec.png" id="25_vrhvj"]
 [ext_resource type="PackedScene" uid="uid://bbryqrg1mapm6" path="res://Ineractbles/Interactable.tscn" id="29_interactable"]
 [ext_resource type="Resource" uid="uid://bd0k76uifghcr" path="res://data/Interactable/shrine_bell.tres" id="30_bell"]
 [ext_resource type="Resource" uid="uid://bpo2gbsq250ex" path="res://data/Interactable/donation_box.tres" id="31_donation"]
@@ -41,6 +42,9 @@
 [ext_resource type="Resource" uid="uid://cox1k002bc8qm" path="res://data/Interactable/tea_hearth.tres" id="39_hearth"]
 [ext_resource type="Script" uid="uid://2mb3prtpkj8k" path="res://Main/town_rain.gd" id="40_gbm1g"]
 [ext_resource type="Resource" uid="uid://dpgotcjtanh4o" path="res://data/Interactable/halfway_hut.tres" id="40_hut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jlmu"]
+size = Vector2(57, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xx7b"]
 size = Vector2(4, 20)
@@ -214,6 +218,7 @@ tile_map_data = PackedByteArray("AAAbABcAAQACAAEAAAAbABgAAQACAAEAAAAaAAcAAQACAAE
 tile_set = ExtResource("5_ib3t1")
 
 [node name="ShrineAssets" type="Node2D" parent="." unique_id=1756116995]
+y_sort_enabled = true
 
 [node name="ItchshrineRoof" type="Sprite2D" parent="ShrineAssets" unique_id=714703593]
 z_index = 1
@@ -245,33 +250,291 @@ texture = ExtResource("20_g147q")
 position = Vector2(-20, -411)
 texture = ExtResource("21_t85yq")
 
+[node name="counter" type="Sprite2D" parent="ShrineAssets" unique_id=273038248]
+position = Vector2(24, -432)
+texture = ExtResource("25_vrhvj")
+centered = false
+offset = Vector2(-28, -12)
+region_enabled = true
+region_rect = Rect2(76, 36, 56, 23)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ShrineAssets/counter" unique_id=677454078]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShrineAssets/counter/StaticBody2D" unique_id=212238561]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_4jlmu")
+
 [node name="PlaceHolder" type="Node2D" parent="." unique_id=2009617848]
 
 [node name="Spots" type="Node2D" parent="." unique_id=1854963637]
 
-[node name="Genshin" type="Node" parent="Spots" unique_id=209934354]
+[node name="genshin" type="Node" parent="Spots" unique_id=209934354]
 
-[node name="Shrine" type="Marker2D" parent="Spots/Genshin" unique_id=2104282789]
-position = Vector2(23, -394)
+[node name="spot1" type="Marker2D" parent="Spots/genshin" unique_id=1953057072]
+position = Vector2(9, -295)
 
-[node name="Ume" type="Node" parent="Spots" unique_id=1950361893]
+[node name="spot2" type="Marker2D" parent="Spots/genshin" unique_id=1839025085]
+position = Vector2(1, -357)
 
-[node name="Tea house" type="Marker2D" parent="Spots/Ume" unique_id=1931285988]
-position = Vector2(-37, 33)
+[node name="spot3" type="Marker2D" parent="Spots/genshin" unique_id=1799608668]
+position = Vector2(34, -447)
 
-[node name="Chiyo" type="Node" parent="Spots" unique_id=1078218072]
+[node name="spot4" type="Marker2D" parent="Spots/genshin" unique_id=2082664144]
+position = Vector2(105, -301)
 
-[node name="Kenji" type="Node" parent="Spots" unique_id=1021818187]
+[node name="spot5" type="Marker2D" parent="Spots/genshin" unique_id=1485744296]
+position = Vector2(-47, -411)
 
-[node name="Kuro" type="Node" parent="Spots" unique_id=200502157]
+[node name="spot6" type="Marker2D" parent="Spots/genshin" unique_id=2115130055]
+position = Vector2(5, -449)
 
-[node name="Mio" type="Node" parent="Spots" unique_id=1095713172]
+[node name="spot7" type="Marker2D" parent="Spots/genshin" unique_id=1442217826]
+position = Vector2(48, -398)
 
-[node name="Okabe" type="Node" parent="Spots" unique_id=341210649]
+[node name="ume" type="Node" parent="Spots" unique_id=1950361893]
 
-[node name="Sato" type="Node" parent="Spots" unique_id=858013100]
+[node name="spot1" type="Marker2D" parent="Spots/ume" unique_id=139761839]
+position = Vector2(-56, 67)
 
-[node name="Tomo" type="Node" parent="Spots" unique_id=786136638]
+[node name="spot2" type="Marker2D" parent="Spots/ume" unique_id=1365715858]
+position = Vector2(-101, 48)
+
+[node name="spot3" type="Marker2D" parent="Spots/ume" unique_id=664818808]
+position = Vector2(13, 92)
+
+[node name="spot4" type="Marker2D" parent="Spots/ume" unique_id=1058325431]
+position = Vector2(15, 244)
+
+[node name="spot5" type="Marker2D" parent="Spots/ume" unique_id=961715101]
+position = Vector2(-104, 82)
+
+[node name="spot6" type="Marker2D" parent="Spots/ume" unique_id=217719055]
+position = Vector2(-56, 67)
+
+[node name="spot7" type="Marker2D" parent="Spots/ume" unique_id=585717235]
+position = Vector2(5, 55)
+
+[node name="chiyo" type="Node" parent="Spots" unique_id=1078218072]
+
+[node name="spot1" type="Marker2D" parent="Spots/chiyo" unique_id=807930891]
+position = Vector2(362, 7)
+
+[node name="spot2" type="Marker2D" parent="Spots/chiyo" unique_id=1097508541]
+position = Vector2(412, 33)
+
+[node name="spot3" type="Marker2D" parent="Spots/chiyo" unique_id=1808752145]
+position = Vector2(-289, 126)
+
+[node name="spot4" type="Marker2D" parent="Spots/chiyo" unique_id=913221570]
+position = Vector2(89, 29)
+
+[node name="spot5" type="Marker2D" parent="Spots/chiyo" unique_id=1483962768]
+position = Vector2(214, 0)
+
+[node name="spot6" type="Marker2D" parent="Spots/chiyo" unique_id=1095233518]
+position = Vector2(377, -19)
+
+[node name="spot7" type="Marker2D" parent="Spots/chiyo" unique_id=1170515161]
+position = Vector2(378, 34)
+
+[node name="kenji" type="Node" parent="Spots" unique_id=1021818187]
+
+[node name="spot1" type="Marker2D" parent="Spots/kenji" unique_id=1615429415]
+position = Vector2(-165, 344)
+
+[node name="spot2" type="Marker2D" parent="Spots/kenji" unique_id=1054236009]
+position = Vector2(-98, 307)
+
+[node name="spot3" type="Marker2D" parent="Spots/kenji" unique_id=607518966]
+position = Vector2(-105, 372)
+
+[node name="spot4" type="Marker2D" parent="Spots/kenji" unique_id=346711168]
+position = Vector2(-200, 341)
+
+[node name="spot5" type="Marker2D" parent="Spots/kenji" unique_id=96230764]
+position = Vector2(-358, -9)
+
+[node name="spot6" type="Marker2D" parent="Spots/kenji" unique_id=874612451]
+position = Vector2(-16, 362)
+
+[node name="spot7" type="Marker2D" parent="Spots/kenji" unique_id=1177302826]
+position = Vector2(-98, 307)
+
+[node name="leave" type="Marker2D" parent="Spots/kenji" unique_id=148408480]
+position = Vector2(-906, 7)
+
+[node name="kuro" type="Node" parent="Spots" unique_id=200502157]
+
+[node name="spot1" type="Marker2D" parent="Spots/kuro" unique_id=1604377593]
+position = Vector2(110, 18)
+
+[node name="spot2" type="Marker2D" parent="Spots/kuro" unique_id=413598291]
+position = Vector2(159, 170)
+
+[node name="spot3" type="Marker2D" parent="Spots/kuro" unique_id=1984416518]
+position = Vector2(-236, 156)
+
+[node name="spot4" type="Marker2D" parent="Spots/kuro" unique_id=2071330919]
+position = Vector2(151, 40)
+
+[node name="spot5" type="Marker2D" parent="Spots/kuro" unique_id=1700272665]
+position = Vector2(101, 43)
+
+[node name="spot6" type="Marker2D" parent="Spots/kuro" unique_id=1497576139]
+position = Vector2(-19, -100)
+
+[node name="spot7" type="Marker2D" parent="Spots/kuro" unique_id=2084290735]
+position = Vector2(98, -428)
+
+[node name="halfway" type="Marker2D" parent="Spots/kuro" unique_id=1677459893]
+position = Vector2(-247, -280)
+
+[node name="shrine" type="Marker2D" parent="Spots/kuro" unique_id=874056241]
+position = Vector2(30, -317)
+
+[node name="mio" type="Node" parent="Spots" unique_id=1095713172]
+
+[node name="spot1" type="Marker2D" parent="Spots/mio" unique_id=1647735440]
+position = Vector2(125, 37)
+
+[node name="spot2" type="Marker2D" parent="Spots/mio" unique_id=650322118]
+position = Vector2(191, 171)
+
+[node name="spot3" type="Marker2D" parent="Spots/mio" unique_id=563803943]
+position = Vector2(-264, 147)
+
+[node name="spot4" type="Marker2D" parent="Spots/mio" unique_id=2069150023]
+position = Vector2(125, 37)
+
+[node name="spot5" type="Marker2D" parent="Spots/mio" unique_id=303263233]
+position = Vector2(148, 13)
+
+[node name="spot6" type="Marker2D" parent="Spots/mio" unique_id=1870126682]
+position = Vector2(3, -144)
+
+[node name="spot7" type="Marker2D" parent="Spots/mio" unique_id=2051801881]
+position = Vector2(64, -432)
+
+[node name="halfway" type="Marker2D" parent="Spots/mio" unique_id=513881200]
+position = Vector2(-179, -270)
+
+[node name="shrine" type="Marker2D" parent="Spots/mio" unique_id=2072778223]
+position = Vector2(6, -338)
+
+[node name="okabe" type="Node" parent="Spots" unique_id=341210649]
+
+[node name="spot1" type="Marker2D" parent="Spots/okabe" unique_id=2135197833]
+position = Vector2(-131, -56)
+
+[node name="spot2" type="Marker2D" parent="Spots/okabe" unique_id=971061683]
+position = Vector2(111, -59)
+
+[node name="spot3" type="Marker2D" parent="Spots/okabe" unique_id=782423405]
+position = Vector2(170, -36)
+
+[node name="spot4" type="Marker2D" parent="Spots/okabe" unique_id=302812470]
+position = Vector2(-199, -37)
+
+[node name="spot5" type="Marker2D" parent="Spots/okabe" unique_id=553806266]
+position = Vector2(-170, -31)
+
+[node name="spot6" type="Marker2D" parent="Spots/okabe" unique_id=826469786]
+position = Vector2(190, -49)
+
+[node name="spot7" type="Marker2D" parent="Spots/okabe" unique_id=244733584]
+position = Vector2(-215, -85)
+
+[node name="sato" type="Node" parent="Spots" unique_id=858013100]
+
+[node name="spot1" type="Marker2D" parent="Spots/sato" unique_id=272060288]
+position = Vector2(311, 234)
+
+[node name="spot2" type="Marker2D" parent="Spots/sato" unique_id=634979447]
+position = Vector2(201, 252)
+
+[node name="spot3" type="Marker2D" parent="Spots/sato" unique_id=1485164563]
+position = Vector2(254, 257)
+
+[node name="spot4" type="Marker2D" parent="Spots/sato" unique_id=17859558]
+position = Vector2(279, 369)
+
+[node name="spot5" type="Marker2D" parent="Spots/sato" unique_id=1866816861]
+position = Vector2(391, 336)
+
+[node name="spot6" type="Marker2D" parent="Spots/sato" unique_id=916105349]
+position = Vector2(245, 234)
+
+[node name="spot7" type="Marker2D" parent="Spots/sato" unique_id=192395620]
+position = Vector2(370, 353)
+
+[node name="tomo" type="Node" parent="Spots" unique_id=786136638]
+
+[node name="spot1" type="Marker2D" parent="Spots/tomo" unique_id=555223212]
+position = Vector2(5, -449)
+
+[node name="spot2" type="Marker2D" parent="Spots/tomo" unique_id=1345594899]
+position = Vector2(97, -426)
+
+[node name="spot3" type="Marker2D" parent="Spots/tomo" unique_id=1903934618]
+position = Vector2(58, -282)
+
+[node name="spot4" type="Marker2D" parent="Spots/tomo" unique_id=589771042]
+position = Vector2(9, -295)
+
+[node name="spot5" type="Marker2D" parent="Spots/tomo" unique_id=239292001]
+position = Vector2(-22, -320)
+
+[node name="spot6" type="Marker2D" parent="Spots/tomo" unique_id=2046997052]
+position = Vector2(-3, -397)
+
+[node name="spot7" type="Marker2D" parent="Spots/tomo" unique_id=1173928992]
+position = Vector2(34, -447)
+
+[node name="tadashi" type="Node" parent="Spots" unique_id=1319492761]
+
+[node name="spot1" type="Marker2D" parent="Spots/tadashi" unique_id=1107090664]
+position = Vector2(262, 74)
+
+[node name="spot2" type="Marker2D" parent="Spots/tadashi" unique_id=541413345]
+position = Vector2(363, 264)
+
+[node name="spot3" type="Marker2D" parent="Spots/tadashi" unique_id=655180412]
+position = Vector2(361, 289)
+
+[node name="spot4" type="Marker2D" parent="Spots/tadashi" unique_id=1777410513]
+position = Vector2(262, 74)
+
+[node name="spot5" type="Marker2D" parent="Spots/tadashi" unique_id=2081361609]
+position = Vector2(226, 82)
+
+[node name="spot6" type="Marker2D" parent="Spots/tadashi" unique_id=1062624635]
+position = Vector2(363, 244)
+
+[node name="spot7" type="Marker2D" parent="Spots/tadashi" unique_id=788776834]
+position = Vector2(319, 44)
+
+[node name="hanae" type="Node" parent="Spots" unique_id=1431361879]
+
+[node name="spot1" type="Marker2D" parent="Spots/hanae" unique_id=1520272022]
+position = Vector2(74, 61)
+
+[node name="spot2" type="Marker2D" parent="Spots/hanae" unique_id=1814519421]
+position = Vector2(150, 40)
+
+[node name="spot3" type="Marker2D" parent="Spots/hanae" unique_id=1005012221]
+position = Vector2(121, -5)
+
+[node name="spot4" type="Marker2D" parent="Spots/hanae" unique_id=1623120989]
+position = Vector2(118, 47)
+
+[node name="spot5" type="Marker2D" parent="Spots/hanae" unique_id=539998400]
+position = Vector2(92, 2)
+
+[node name="spot6" type="Marker2D" parent="Spots/hanae" unique_id=1904934067]
+position = Vector2(15, -121)
+
+[node name="spot7" type="Marker2D" parent="Spots/hanae" unique_id=646646627]
+position = Vector2(35, -389)
 
 [node name="Hud" parent="." unique_id=786916839 instance=ExtResource("5_rj11h")]
 
@@ -279,7 +542,7 @@ position = Vector2(-37, 33)
 y_sort_enabled = true
 
 [node name="Player" parent="." unique_id=1016449922 instance=ExtResource("1_k3v36")]
-position = Vector2(-438, -9)
+position = Vector2(-139, 397)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1956985897]
 visible = false
@@ -452,6 +715,7 @@ position = Vector2(-130, 314)
 position = Vector2(-133, 337)
 
 [node name="Rain" type="ColorRect" parent="." unique_id=882345342]
+visible = false
 material = SubResource("ShaderMaterial_1nqbc")
 offset_left = -637.0
 offset_top = -602.0

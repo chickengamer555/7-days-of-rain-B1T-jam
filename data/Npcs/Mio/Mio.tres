@@ -138,10 +138,77 @@ script = ExtResource("1_u7fii")
 random_lines = Array[String](["", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
+[sub_resource type="Resource" id="Resource_nr7i4"]
+script = ExtResource("2_4ioex")
+spot = "spot1"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_k16yo"]
+script = ExtResource("2_4ioex")
+day = 2
+spot = "spot2"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_x5ol8"]
+script = ExtResource("2_4ioex")
+day = 3
+spot = "spot3"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hldga"]
+script = ExtResource("2_4ioex")
+day = 4
+spot = "spot4"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_nj3rs"]
+script = ExtResource("2_4ioex")
+day = 5
+spot = "spot5"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hloft"]
+script = ExtResource("2_4ioex")
+day = 6
+spot = "spot6"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_laejy"]
+script = ExtResource("2_4ioex")
+day = 7
+spot = "spot7"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_g57nn"]
+script = ExtResource("2_pd3pl")
+blocked_by_flags = Array[String](["mio_safe"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_nmgmr"]
+script = ExtResource("2_4ioex")
+day = 6
+phase = 2
+spot = "halfway"
+condition = SubResource("Resource_g57nn")
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_awr7y"]
+script = ExtResource("2_pd3pl")
+needs_flags = Array[String](["mio_safe"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_ahvxl"]
+script = ExtResource("2_4ioex")
+day = 6
+phase = 2
+condition = SubResource("Resource_awr7y")
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
 [resource]
 script = ExtResource("3_pd3pl")
 id = "mio"
 display_name = "Mio"
 rules = Array[ExtResource("1_u7fii")]([SubResource("Resource_x67wf"), SubResource("Resource_t5mw8"), SubResource("Resource_wdmpq"), SubResource("Resource_4y2bc"), SubResource("Resource_iaox5")])
 sprite = ExtResource("4_4ioex")
+schedule = Array[ExtResource("2_4ioex")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy"), SubResource("Resource_nmgmr"), SubResource("Resource_ahvxl")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

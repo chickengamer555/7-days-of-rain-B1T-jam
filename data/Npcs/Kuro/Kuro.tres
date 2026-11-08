@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn6pv6t3qvn8d" path="res://data/classes/CONVERSATIOM_RULE.gd" id="1_kbrjr"]
 [ext_resource type="Script" uid="uid://drvfddng8l7fd" path="res://data/classes/schedule_slot.gd" id="2_njrgi"]
+[ext_resource type="Script" uid="uid://brnj2crn66sd3" path="res://data/classes/CONDITION.gd" id="3_ilxfl"]
 [ext_resource type="Script" uid="uid://c3x5k0vs6q56c" path="res://data/classes/NPC_DATA.gd" id="3_xpk3a"]
 [ext_resource type="Texture2D" uid="uid://dxcr5px2g84d6" path="res://Assets/Dog.png" id="4_njrgi"]
 
@@ -10,10 +11,77 @@ script = ExtResource("1_kbrjr")
 random_lines = Array[String](["", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
+[sub_resource type="Resource" id="Resource_nr7i4"]
+script = ExtResource("2_njrgi")
+spot = "spot1"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_k16yo"]
+script = ExtResource("2_njrgi")
+day = 2
+spot = "spot2"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_x5ol8"]
+script = ExtResource("2_njrgi")
+day = 3
+spot = "spot3"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hldga"]
+script = ExtResource("2_njrgi")
+day = 4
+spot = "spot4"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_nj3rs"]
+script = ExtResource("2_njrgi")
+day = 5
+spot = "spot5"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hloft"]
+script = ExtResource("2_njrgi")
+day = 6
+spot = "spot6"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_laejy"]
+script = ExtResource("2_njrgi")
+day = 7
+spot = "spot7"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_g57nn"]
+script = ExtResource("3_ilxfl")
+blocked_by_flags = Array[String](["mio_safe"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_nmgmr"]
+script = ExtResource("2_njrgi")
+day = 6
+phase = 2
+spot = "halfway"
+condition = SubResource("Resource_g57nn")
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_awr7y"]
+script = ExtResource("3_ilxfl")
+needs_flags = Array[String](["mio_safe"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_ahvxl"]
+script = ExtResource("2_njrgi")
+day = 6
+phase = 2
+condition = SubResource("Resource_awr7y")
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
 [resource]
 script = ExtResource("3_xpk3a")
 id = "kuro"
 display_name = "Kuro"
 rules = Array[ExtResource("1_kbrjr")]([SubResource("Resource_q5ft1")])
 sprite = ExtResource("4_njrgi")
+schedule = Array[ExtResource("2_njrgi")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy"), SubResource("Resource_nmgmr"), SubResource("Resource_ahvxl")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

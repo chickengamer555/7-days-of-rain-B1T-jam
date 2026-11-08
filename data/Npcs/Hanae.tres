@@ -77,10 +77,52 @@ script = ExtResource("1_5nl6p")
 random_lines = Array[String](["", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
+[sub_resource type="Resource" id="Resource_nr7i4"]
+script = ExtResource("2_w184t")
+spot = "spot1"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_k16yo"]
+script = ExtResource("2_w184t")
+day = 2
+spot = "spot2"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_x5ol8"]
+script = ExtResource("2_w184t")
+day = 3
+spot = "spot3"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hldga"]
+script = ExtResource("2_w184t")
+day = 4
+spot = "spot4"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_nj3rs"]
+script = ExtResource("2_w184t")
+day = 5
+spot = "spot5"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hloft"]
+script = ExtResource("2_w184t")
+day = 6
+spot = "spot6"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_laejy"]
+script = ExtResource("2_w184t")
+day = 7
+spot = "spot7"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
 [resource]
 script = ExtResource("3_bnapt")
 id = "hanae"
 display_name = "Hanae"
 rules = Array[ExtResource("1_5nl6p")]([SubResource("Resource_w184t"), SubResource("Resource_q5ft1"), SubResource("Resource_7deqe")])
 sprite = ExtResource("4_w184t")
+schedule = Array[ExtResource("2_w184t")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
