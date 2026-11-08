@@ -14,7 +14,7 @@ void fragment() {
 	float wave = sin(px.x / wave_length * 6.2832 + TIME * wave_speed);
 	wave = floor(wave * wave_height + 0.5); // whole pixels only ( pixel consitincy)
 	float travel = screen_px.y + wave_height * 2.0 + dither_rows;
-	float edge = screen_px.y + wave_height - progress * travel + wave;
+	float edge = screen_px.y + wave_height + dither_rows - progress * travel + wave;
 	float a = 0.0;
 	if (px.y >= edge) {
 		a = 1.0; 
