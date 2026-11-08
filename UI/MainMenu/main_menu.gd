@@ -39,10 +39,10 @@ const FF_SPEEDS: Array[int] = [6, 12, 18, 24]
 
 func _ready() -> void:
 	_load_settings()
-	settings_btn.pressed.connect(func(): _show_view(settings_view))
-	controls_btn.pressed.connect(func(): _show_view(controls_view))
+	settings_btn.pressed.connect(func(): Transition.swap(func(): _show_view(settings_view))) 
+	controls_btn.pressed.connect(func(): Transition.swap(func(): _show_view(controls_view)))
 	quit_btn.pressed.connect(_on_quit_pressed)
-	settings_back_btn.pressed.connect(func(): _show_view(main_view))
+	settings_back_btn.pressed.connect(func(): Transition.swap(func(): _show_view(main_view)))
 	var normal = StyleBoxEmpty.new()
 	var hover = StyleBoxFlat.new()
 	hover.draw_center = false
@@ -180,10 +180,10 @@ func _on_start_btn_pressed() -> void:
 		var world = Clock.saved_world 
 		Clock.saved_world = null # Clear it for next itmne 
 		Clock.running = Clock.was_running # Put tome back to how it was 
-		get_tree().change_scene_to_node(world)  # get the saved game in
+		Transition.swap(func(): get_tree().change_scene_to_node(world))  # get the saved game in
 	else:
 		Clock.reset() 
-		get_tree().change_scene_to_file("res://Main/main.tscn")
+		Transition.change_scene("res://Main/main.tscn")
 
 
 func _on_controls_back_btn_pressed() -> void:
@@ -199,3 +199,4 @@ func _connect_button_sounds(parent: Node) -> void:
 func _on_button_pressed() -> void:
 	if Sound:
 		Sound.play_button()
+	Transition.swap(func(): _show_view(main_view))

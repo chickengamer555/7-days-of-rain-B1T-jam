@@ -275,10 +275,6 @@ texture = ExtResource("11_odcco")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bie7o"]
 texture = ExtResource("7_klepb")
-2:0/0 = 0
-3:0/0 = 0
-2:1/0 = 0
-3:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -299,6 +295,11 @@ texture = ExtResource("7_klepb")
 0:0/1/z_index = 1
 0:0/1/y_sort_origin = 2
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-5, 3, -5, -8, 21, -8, 21, 3, 23, 2, 24, 4, 24, 5, 24, 7, 21, 10, -5, 10, -8, 5, -8, 3, -7, 1)
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(-8, -8)
+2:0/0/y_sort_origin = -2
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 22, 8, 24, 8, 24, 14, 21, 15, 21, 24, -5, 24, -5, 14, -8, 15)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_odcco"]
 texture = ExtResource("8_xbil2")

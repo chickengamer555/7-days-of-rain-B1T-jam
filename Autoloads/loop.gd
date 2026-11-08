@@ -111,6 +111,7 @@ func resolve(trigger: String) -> void:
 	if Sound:
 		Sound.play_whoosh(2.0, 0.7)
 	get_tree().reload_current_scene()
+	Transition.reload()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if card_up and event.is_action_pressed("Interact"):

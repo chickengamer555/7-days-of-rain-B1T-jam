@@ -140,6 +140,26 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dak1o"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87p85"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.7764706, 0.7294118, 0.6745098, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqq2g"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htmks"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -158,8 +178,6 @@ expand_margin_bottom = 2.0
 shadow_color = Color(0, 0, 0, 0)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqq2g"]
-
 [node name="MainMenu" type="Control" unique_id=1426859149]
 layout_mode = 3
 anchors_preset = 15
@@ -177,7 +195,6 @@ frame_progress = 0.8743902
 speed_scale = 2.0
 
 [node name="RainBG" type="Control" parent="." unique_id=1429704880]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,7 +204,6 @@ grow_vertical = 2
 script = ExtResource("2_rainbg")
 
 [node name="MainView" type="Control" parent="." unique_id=414326665]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -210,12 +226,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Start Game"
 
 [node name="SettingsBtn" type="Button" parent="MainView" unique_id=1246558733]
@@ -233,12 +249,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Settings"
 
 [node name="ControlsBtn" type="Button" parent="MainView" unique_id=1057524618]
@@ -256,12 +272,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Controls"
 
 [node name="QuitBtn" type="Button" parent="MainView" unique_id=1875511904]
@@ -279,12 +295,12 @@ theme_override_fonts/font = ExtResource("34_87p85")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_htmks")
-theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Quit"
 
 [node name="SettingsView" type="Control" parent="." unique_id=1799818683]
@@ -436,6 +452,7 @@ focus_mode = 0
 text = "Back"
 
 [node name="ControlsView" type="Control" parent="." unique_id=85070334]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -497,8 +514,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -17.0
-offset_top = -18.0
+offset_top = -75.0
 offset_right = 17.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
