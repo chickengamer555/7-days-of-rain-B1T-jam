@@ -11,6 +11,8 @@ const PALETTE_INK_WARM: Color = Color(0.164706, 0.113725, 0.090196, 1.0)     # #
 const DROP_COUNT: int = 55
 const STROKE_VECTOR: Vector2 = Vector2(-1.0, 4.0)
 
+const RIVER = preload("res://Shaders/river_material.tres") # its the material river tiles are set to
+
 @export var rain_enabled: bool = true
 @export var auto_thunder: bool = true
 @export var corner_dither_enabled: bool = false # Disabled so pixel art remains crisp across all days
@@ -21,7 +23,9 @@ const STROKE_VECTOR: Vector2 = Vector2(-1.0, 4.0)
 
 var drops: Array[Vector2] = []
 var speeds: Array[float] = []
-
+var start_speed = 5.0 # speed at day 1
+var speed_gained = 100.0 # final goal to add
+var scroll = 0.0 # total distance wabe move
 var is_warm_palette: bool = false
 var palette_material: ShaderMaterial
 var rain_material: ShaderMaterial
@@ -43,6 +47,12 @@ func _ready() -> void:
 		_schedule_next_thunder()
 
 func _process(delta: float) -> void:
+	var total = 7 * 4 * Clock.SECONDS_PER_PHASE #420 seconds what you smoking
+	var so_far = Clock.stamp() * Clock.SECONDS_PER_PHASE + Clock.elapsed
+	var progress = clampf(so_far / total, 0.0, 1.0)
+	var speed = start_speed + speed_gained * progress # 5 to 105
+	scroll += speed * delta # more wabes by this frame speed
+	RIVER.set_shader_parameter("scroll", scroll)
 	# Hide when on MainMenu so it doesn't duplicate the title rain
 	var scene = get_tree().current_scene
 	if scene != null and scene.name == "MainMenu":

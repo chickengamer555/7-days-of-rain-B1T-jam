@@ -9,6 +9,7 @@ uniform float wave_length = 0.5;     // bigger = tighter wiggles
 uniform float dash_length = 4.0;     // how long each wave mark is, across the river
 uniform float density = 0.35;        // 0..1, how many dashes are showing
 uniform vec4 wave_color : source_color = vec4(0.117647, 0.109804, 0.196078, 1.0);
+uniform float scroll = 0.0; // (for script)
 
 varying vec2 world_pos;
 
@@ -37,7 +38,7 @@ void fragment() {
 		vec2 river = vec2(dot(p, dir), dot(p, vec2(-dir.y, dir.x)));
 
 		// Slide everything along the river over time, in whole pixels
-		float along = floor(river.x - TIME * speed);
+		float along = floor(river.x - scroll);
 		float across = river.y;
 
 		// Which wave this pixel is near, with a random offset per wave
