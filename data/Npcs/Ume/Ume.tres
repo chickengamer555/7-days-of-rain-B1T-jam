@@ -103,17 +103,52 @@ script = ExtResource("1_435tf")
 random_lines = Array[String](["", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_v2t6q"]
+[sub_resource type="Resource" id="Resource_nr7i4"]
 script = ExtResource("2_gg7fu")
-place = "Ume"
-spot = "Tea house"
+spot = "spot1"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_k16yo"]
+script = ExtResource("2_gg7fu")
+day = 2
+spot = "spot2"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_x5ol8"]
+script = ExtResource("2_gg7fu")
+day = 3
+spot = "spot3"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("2_gg7fu")
+day = 4
+spot = "spot4"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_nj3rs"]
+script = ExtResource("2_gg7fu")
+day = 5
+spot = "spot5"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_hloft"]
+script = ExtResource("2_gg7fu")
+day = 6
+spot = "spot6"
+metadata/_custom_type_script = "uid://drvfddng8l7fd"
+
+[sub_resource type="Resource" id="Resource_laejy"]
+script = ExtResource("2_gg7fu")
+day = 7
+spot = "spot7"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
 [resource]
 script = ExtResource("3_y2el8")
-id = "Ume"
+id = "ume"
 display_name = "Ume"
 rules = Array[ExtResource("1_435tf")]([SubResource("Resource_garow"), SubResource("Resource_3ovq8"), SubResource("Resource_lrhib"), SubResource("Resource_hi71u")])
 sprite = ExtResource("9_garow")
-schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_v2t6q")])
+schedule = Array[ExtResource("2_gg7fu")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_vrhvj"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"
