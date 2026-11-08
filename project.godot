@@ -24,6 +24,7 @@ Dialouge="*uid://cighbufvpxapt"
 Loop="*uid://bsualie5e2bbi"
 Weather="*uid://dfy1k0s5m8x3a"
 Sound="*res://Autoloads/sound.gd"
+Transition="*uid://ciy4w6624ql5w"
 
 [display]
 
