@@ -20,6 +20,7 @@ var is_drift_step: bool = false # is this step not mine
 @export var downstream_speed: float = 8.0
 @export var drift_speed: float = 1.0
 @export var tiles_per_second: float = 5.0
+@export var sprint_multiplier: float = 1.8
 @export_group("Textures")
 @export var tex_down: Texture2D = preload("res://Player/player_down.png")
 @export var tex_side: Texture2D = preload("res://Player/player_side.png")
@@ -91,7 +92,10 @@ func _physics_process(delta: float) -> void:
 		if is_drift_step and get_input() != Vector2.ZERO: # drifting and i pressed key
 			step_speed = downstream_speed
 			is_drift_step = false
-		global_position = global_position.move_toward(target_position, step_speed * TILE_SIZE * delta) 
+		var current_speed = step_speed
+		if _is_sprinting() and not is_drift_step:
+			current_speed = max(current_speed, _get_step_speed(Vector2.ZERO, false))
+		global_position = global_position.move_toward(target_position, current_speed * TILE_SIZE * delta) 
 		if global_position.distance_squared_to(target_position) > 0.1:
 			_animate_walking(delta)
 			return
@@ -164,7 +168,8 @@ func _update_facing(facing: Facing) -> void:
 func _animate_walking(delta: float) -> void:
 	if not sprite:
 		return
-	anim_time += delta * bob_speed
+	var current_bob = bob_speed * (sprint_multiplier if _is_sprinting() else 1.0)
+	anim_time += delta * current_bob
 	
 	var bob_offset = abs(sin(anim_time)) * -bob_amount
 	sprite.position.y = base_sprite_pos.y + bob_offset
@@ -256,16 +261,21 @@ func leave_boat(pos: Vector2) -> void:
 	if Sound:
 		Sound.set_boat_state(false) 
 
+func _is_sprinting() -> bool:
+	return Input.is_key_pressed(KEY_SHIFT) or Input.is_action_pressed("sprint")
+
 func _get_step_speed(dir: Vector2, drifting: bool) -> float:
-	if not boat: #on foot?
-		return tiles_per_second # normal walking speed
-	if drifting:
-		return drift_speed # slow drift 
-	if dir.x < 0: # going left
-		return upstream_speed
-	if dir.x > 0: # Going right?
-		return downstream_speed
-	return tiles_per_second # up or down normal walking speed
+	var spd := tiles_per_second
+	if boat:
+		if drifting:
+			spd = drift_speed
+		elif dir.x < 0:
+			spd = upstream_speed
+		elif dir.x > 0:
+			spd = downstream_speed
+	if _is_sprinting():
+		spd *= sprint_multiplier
+	return spd
 
 func _near_dock() -> bool:
 	for area in sensor.get_overlapping_areas():

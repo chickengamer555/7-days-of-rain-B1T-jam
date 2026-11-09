@@ -2,6 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://bg36iyl16yn63" path="res://Shaders/scene_wipe.gdshader" id="1_5k7as"]
 [ext_resource type="Script" uid="uid://db2shydcmefgf" path="res://UI/transition.gd" id="1_lpiu8"]
+[ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="2_font"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lpiu8"]
 shader = ExtResource("1_5k7as")
@@ -15,7 +16,7 @@ shader_parameter/dither_rows = 7.0
 
 [node name="Transition" type="CanvasLayer" unique_id=447745155]
 process_mode = 3
-layer = 100
+layer = 110
 script = ExtResource("1_lpiu8")
 duration = 1.0
 
@@ -27,3 +28,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Message" type="Label" parent="." unique_id=1512370300]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -20.0
+offset_right = 120.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1

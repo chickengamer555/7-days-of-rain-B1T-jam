@@ -3,11 +3,14 @@ extends CanvasLayer
 @export var duration: float = 0.7 # secs each way
 
 @onready var ink: ColorRect = $Ink
+@onready var message: Label = $Message
 
 var busy = false
 
 func _ready():
 	ink.material.set_shader_parameter("progress", 0.0)
+	if message != null:
+		message.hide()
 
 # ink rises covers screen
 func cover():
@@ -38,11 +41,18 @@ func reload():
 	await uncover()
 
 
-func swap(do_this: Callable):
+func swap(do_this: Callable, msg: String = ""):
 	if busy:
 		return
 	await cover()
+	if msg != "" and message != null:
+		message.text = msg
+		message.show()
+		await get_tree().create_timer(0.4).timeout
 	do_this.call()
+	if msg != "" and message != null:
+		await get_tree().create_timer(0.4).timeout
+		message.hide()
 	await uncover()
 
 func _wave(from: float, to: float):

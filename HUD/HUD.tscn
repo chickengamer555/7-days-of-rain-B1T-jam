@@ -73,7 +73,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-tooltip_text = "Skip to Next Day"
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_hourglass")
 stretch_mode = 3

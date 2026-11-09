@@ -56,7 +56,7 @@ func _on_hourglass_pressed() -> void:
 			Clock.advance_day()
 			if Sound != null:
 				Sound.play_whoosh(1.5, 0.8)
-		)
+		, "Skip to next day")
 	else:
 		Clock.advance_day()
 		if Sound != null:
