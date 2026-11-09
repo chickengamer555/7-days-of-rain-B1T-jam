@@ -10,6 +10,36 @@
 [ext_resource type="Script" uid="uid://bi35u3p34l30b" path="res://data/classes/EFFECT.gd" id="5_5xmeh"]
 [ext_resource type="Script" uid="uid://1m7x43xe4t0i" path="res://Dialouge-Prewritten/dialogue_tree.gd" id="6_uveua"]
 
+[sub_resource type="Resource" id="Resource_nigqn"]
+script = ExtResource("2_twyyh")
+blocked_by_ledger = Array[String](["R1"])
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_twyyh"]
+script = ExtResource("5_5xmeh")
+add_ledger = Array[String](["R1"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_o5mcm"]
+script = ExtResource("3_o5mcm")
+id = "1"
+speaker = "Sato"
+text = "The river is pushing against the dike… I see cracks along the dike that are leaking mud."
+effect = SubResource("Resource_twyyh")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_e8fap"]
+script = ExtResource("6_uveua")
+start_id = "1"
+nodes = Array[ExtResource("3_o5mcm")]([SubResource("Resource_o5mcm")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_gbm1g"]
+script = ExtResource("1_3i6my")
+condition = SubResource("Resource_nigqn")
+tree = SubResource("Resource_e8fap")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
 [sub_resource type="Resource" id="Resource_nmgmr"]
 script = ExtResource("2_twyyh")
 needs_ledger = Array[String](["R1"])
@@ -39,36 +69,6 @@ metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 script = ExtResource("1_3i6my")
 condition = SubResource("Resource_nmgmr")
 tree = SubResource("Resource_g57nn")
-metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
-[sub_resource type="Resource" id="Resource_nigqn"]
-script = ExtResource("2_twyyh")
-blocked_by_ledger = Array[String](["R1"])
-metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_twyyh"]
-script = ExtResource("5_5xmeh")
-add_ledger = Array[String](["R1"])
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
-
-[sub_resource type="Resource" id="Resource_o5mcm"]
-script = ExtResource("3_o5mcm")
-id = "1"
-speaker = "Sato"
-text = "The river is pushing against the dike… I see cracks along the dike that are leaking mud."
-effect = SubResource("Resource_twyyh")
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_e8fap"]
-script = ExtResource("6_uveua")
-start_id = "1"
-nodes = Array[ExtResource("3_o5mcm")]([SubResource("Resource_o5mcm")])
-metadata/_custom_type_script = "uid://1m7x43xe4t0i"
-
-[sub_resource type="Resource" id="Resource_gbm1g"]
-script = ExtResource("1_3i6my")
-condition = SubResource("Resource_nigqn")
-tree = SubResource("Resource_e8fap")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_5xmeh"]

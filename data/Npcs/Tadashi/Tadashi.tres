@@ -58,7 +58,6 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 script = ExtResource("2_ippjd")
 needs_flags = Array[String](["has_cost_book"])
 blocked_by_flags = Array[String](["tadashi_agrees"])
-blocked_by_ledger = Array[String](["E4"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_vulmf"]
