@@ -213,9 +213,9 @@ grow_vertical = 2
 
 [node name="StartBtn" type="Button" parent="MainView" unique_id=2002667060]
 layout_mode = 0
-offset_left = 15.0
+offset_left = 3.0
 offset_top = 129.0
-offset_right = 75.0
+offset_right = 63.0
 offset_bottom = 139.0
 focus_mode = 0
 theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -236,9 +236,9 @@ text = "Start Game"
 
 [node name="SettingsBtn" type="Button" parent="MainView" unique_id=1246558733]
 layout_mode = 0
-offset_left = 87.0
+offset_left = 68.0
 offset_top = 129.0
-offset_right = 133.0
+offset_right = 114.0
 offset_bottom = 139.0
 focus_mode = 0
 theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -259,9 +259,9 @@ text = "Settings"
 
 [node name="ControlsBtn" type="Button" parent="MainView" unique_id=1057524618]
 layout_mode = 0
-offset_left = 145.0
+offset_left = 119.0
 offset_top = 129.0
-offset_right = 191.0
+offset_right = 165.0
 offset_bottom = 139.0
 focus_mode = 0
 theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -282,9 +282,9 @@ text = "Controls"
 
 [node name="QuitBtn" type="Button" parent="MainView" unique_id=1875511904]
 layout_mode = 0
-offset_left = 203.0
+offset_left = 215.0
 offset_top = 129.0
-offset_right = 225.0
+offset_right = 237.0
 offset_bottom = 139.0
 focus_mode = 0
 theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -302,6 +302,29 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
 theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
 text = "Quit"
+
+[node name="CreditsBtn" type="Button" parent="MainView" unique_id=1559355438]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 129.0
+offset_right = 210.0
+offset_bottom = 139.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_focus_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_pressed_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_colors/font_hover_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("34_87p85")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxEmpty_87p85")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dak1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fqq2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_87p85")
+theme_override_styles/focus = SubResource("StyleBoxFlat_87p85")
+text = "Credits"
 
 [node name="SettingsView" type="Control" parent="." unique_id=1799818683]
 visible = false
@@ -538,4 +561,5 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_htmks")
 text = "Back"
 
 [connection signal="pressed" from="MainView/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MainView/CreditsBtn" to="." method="_on_credit_btn_pressed"]
 [connection signal="pressed" from="ControlsView/ControlsBackBtn" to="." method="_on_controls_back_btn_pressed"]

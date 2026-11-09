@@ -9,7 +9,7 @@ const PIXEL_FONT = preload("res://Assets/UI/old-school-adventures-font/OldSchool
 @onready var main_view: Control = $MainView
 @onready var settings_view: Control = $SettingsView
 @onready var controls_view: Control = $ControlsView
-
+@onready var credits_btn: Button = $MainView/CreditsBtn
 @onready var start_btn: Button = $MainView/StartBtn
 @onready var settings_btn: Button = $MainView/SettingsBtn
 @onready var controls_btn: Button = $MainView/ControlsBtn
@@ -41,6 +41,7 @@ func _ready() -> void:
 	_load_settings()
 	settings_btn.pressed.connect(func(): Transition.swap(func(): _show_view(settings_view))) 
 	controls_btn.pressed.connect(func(): Transition.swap(func(): _show_view(controls_view)))
+	credits_btn.pressed.connect(func(): Transition.change_scene("res://UI/credits.tscn")) #  Credits
 	quit_btn.pressed.connect(_on_quit_pressed)
 	settings_back_btn.pressed.connect(func(): Transition.swap(func(): _show_view(main_view)))
 	var normal = StyleBoxEmpty.new()

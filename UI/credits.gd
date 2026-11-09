@@ -21,3 +21,9 @@ func _process(delta):
 	if label.position.y + text_height < 0: # last line has left the top
 		set_process(false)
 		Transition.change_scene(next_scene)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"): # Esc
+		get_viewport().set_input_as_handled() # stop anything else reacting to Esc
+		set_process(false) # stop the scrolling
+		Transition.change_scene(next_scene) # same exit as when the credits finish
