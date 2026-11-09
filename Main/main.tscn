@@ -635,7 +635,7 @@ position = Vector2(408, 8)
 data = ExtResource("35_memorial")
 
 [node name="WorkshopFloorboard" parent="Interactables" unique_id=692071151 instance=ExtResource("29_interactable")]
-position = Vector2(240, 20)
+position = Vector2(254, 69)
 data = ExtResource("32_costbook")
 
 [node name="TeaHearth" parent="Interactables" unique_id=1215026900 instance=ExtResource("29_interactable")]

@@ -55,6 +55,51 @@ condition = SubResource("Resource_jrcm6")
 tree = SubResource("Resource_y3n7d")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
+[sub_resource type="Resource" id="Resource_wciyt"]
+script = ExtResource("2_t40qh")
+needs_ledger = Array[String](["M3"])
+from_day = 6
+to_day = 6
+metadata/_custom_type_script = "uid://brnj2crn66sd3"
+
+[sub_resource type="Resource" id="Resource_hejtn"]
+script = ExtResource("4_7vlo3")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_fqe6n"]
+script = ExtResource("5_y56be")
+add_flags = Array[String](["priest_lets_mio"])
+metadata/_custom_type_script = "uid://bi35u3p34l30b"
+
+[sub_resource type="Resource" id="Resource_iox0s"]
+script = ExtResource("3_4joq5")
+id = "1"
+speaker = "Genshin"
+text = "Mio wants to help? Hm well I guess the bell rope is long enough for two."
+choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_hejtn")])
+effect = SubResource("Resource_fqe6n")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_v6npt"]
+script = ExtResource("3_4joq5")
+id = "2"
+speaker = "Genshin"
+text = "Tell her she may ring the evening chime with the “Priest Genshin The Hot Shot”."
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_l1iv8"]
+script = ExtResource("4_45rh3")
+start_id = "1"
+nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_iox0s"), SubResource("Resource_v6npt")])
+metadata/_custom_type_script = "uid://1m7x43xe4t0i"
+
+[sub_resource type="Resource" id="Resource_slq0a"]
+script = ExtResource("1_qdc14")
+condition = SubResource("Resource_wciyt")
+tree = SubResource("Resource_l1iv8")
+metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
+
 [sub_resource type="Resource" id="Resource_nigqn"]
 script = ExtResource("2_t40qh")
 needs_ledger = Array[String](["S4"])
@@ -124,54 +169,9 @@ condition = SubResource("Resource_nigqn")
 tree = SubResource("Resource_8mp7m")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_wciyt"]
-script = ExtResource("2_t40qh")
-needs_ledger = Array[String](["M3"])
-from_day = 6
-to_day = 6
-metadata/_custom_type_script = "uid://brnj2crn66sd3"
-
-[sub_resource type="Resource" id="Resource_hejtn"]
-script = ExtResource("4_7vlo3")
-next_id = "2"
-metadata/_custom_type_script = "uid://bocbuuj64elde"
-
-[sub_resource type="Resource" id="Resource_fqe6n"]
-script = ExtResource("5_y56be")
-add_flags = Array[String](["priest_lets_mio"])
-metadata/_custom_type_script = "uid://bi35u3p34l30b"
-
-[sub_resource type="Resource" id="Resource_iox0s"]
-script = ExtResource("3_4joq5")
-id = "1"
-speaker = "Genshin"
-text = "Mio wants to help? Hm well I guess the bell rope is long enough for two."
-choices = Array[ExtResource("4_7vlo3")]([SubResource("Resource_hejtn")])
-effect = SubResource("Resource_fqe6n")
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_v6npt"]
-script = ExtResource("3_4joq5")
-id = "2"
-speaker = "Genshin"
-text = "Tell her she may ring the evening chime with the “Priest Genshin The Hot Shot”."
-metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
-
-[sub_resource type="Resource" id="Resource_l1iv8"]
-script = ExtResource("4_45rh3")
-start_id = "1"
-nodes = Array[ExtResource("3_4joq5")]([SubResource("Resource_iox0s"), SubResource("Resource_v6npt")])
-metadata/_custom_type_script = "uid://1m7x43xe4t0i"
-
-[sub_resource type="Resource" id="Resource_slq0a"]
-script = ExtResource("1_qdc14")
-condition = SubResource("Resource_wciyt")
-tree = SubResource("Resource_l1iv8")
-metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
-
 [sub_resource type="Resource" id="Resource_s84me"]
 script = ExtResource("1_qdc14")
-random_lines = Array[String](["I do declare that I have the largest hat!", "No check the source files Sakura. I swear my sprite is the tallest. Yes the hat counts!", "You know my family started this shrine. Without this shrine you all would be nothing!", "That damn Sato keeps fishing. Doesn't he know that the fish are Shizu-hime's children!", "Stars are just holes in the sky formed from crows pecking. Crows are so cool and handsome!", "HUSH NOW CHILD. I'm clearly praying. ", "Don't listen to that Ume she lives a life of sin unlike my clearly superior life.", "Sure Tadashi and Kenji have brawn but clearly the brain is better.", "You know what I just realized? I'm super awesome.", "Hey chump, go figure out what my name means and then get back to me.", "Wait this isn't the first time we've talked is it?", "Ah my super cool awesome godly senses, they're acting up! What could it mean…", "You know I was Haruko's oldest friend. Yeah me.", "Praise Shizu-hime praise me praise Shizu-hime praise me.", "You know out of all priests I’M the best one.", "Where is Tomo? He better not be skipping out on work again.", "TOMO SHINE MY SHOES AND PUFF OUT MY HAT.", "If Tomo skips one more day I swear I'll smite him down. Yeah, I can definitely do that…", "TOMO THE TORII GATES NEED DUSTING. NO I CAN'T DO IT.", " Why did I hire Tomo? I could easily run this place by myself.", "Okabe is the head chief but like it's only because I didn't want to be the head chief.", "There are some weird time shenanigans happening behind my back. I just know it.", "(Praying). What's that Shizu-hime? Oh stop it. No, you hang up first… they hung up.", "Has this bell always had the power to do that?", "Tasks for Tomo… 1 Compliment me. 2 Call me “The hot shot”. 3 Manicure my nails…", "See I'm the HEAD priest Tomo is just a lowly shrine NOVICE. ", "Shizu-hime keeps giving me divinations of a flood. What could it possibly mean…", "Shizu-hime told me in a dream to repair the dike. Silly her, that's Tadashi's job.", "You know most people here just call me “The hot shot”.", "You know in the priest community everyone calls me “The hot shot”", "Sakura I will pay you 1 Ryō just please call me “The hot shot”. ", "Never fear “Priest Genshin The Hot Shot” is here!!!", "Sakura get out of my way and go pray.  "])
+random_lines = Array[String](["I do declare that I have the largest hat!", "No check the source files Sakura. I swear my sprite is the tallest. Yes the hat counts!", "You know my family started this shrine. Without this shrine you all would be nothing!", "That damn Sato keeps fishing. Doesn't he know that the fish are Shizu-hime's children!", "Stars are holes in the sky formed from crows pecking. Crows are cool and handsome!", "HUSH NOW CHILD. I'm clearly praying. ", "Don't listen to that Ume she lives a life of sin unlike my clearly superior life.", "Sure Tadashi and Kenji have brawn but clearly the brain is better.", "You know what I just realized? I'm super awesome.", "Hey chump, go figure out what my name means and then get back to me.", "Wait this isn't the first time we've talked is it?", "Ah my super cool awesome godly senses, they're acting up! What could it mean…", "You know I was Haruko's oldest friend. Yeah me.", "Praise Shizu-hime praise me praise Shizu-hime praise me.", "You know out of all priests I’M the best one.", "Where is Tomo? He better not be skipping out on work again.", "TOMO SHINE MY SHOES AND PUFF OUT MY HAT.", "If Tomo skips one more day I swear I'll smite him down. Yeah, I can definitely do that…", "TOMO THE TORII GATES NEED DUSTING. NO I CAN'T DO IT.", " Why did I hire Tomo? I could easily run this place by myself.", "Okabe is the head chief but like it's only because I didn't want to be the head chief.", "There are some weird time shenanigans happening behind my back. I just know it.", "(Praying). What's that Shizu-hime? Oh stop it. No, you hang up first… they hung up.", "Has this bell always had the power to do that?", "Tasks for Tomo… 1 Compliment me. 2 Call me “The hot shot”. 3 Manicure my nails…", "See I'm the HEAD priest Tomo is just a lowly shrine NOVICE. ", "Shizu-hime keeps giving me divinations of a flood. What could it possibly mean…", "Shizu-hime told me in a dream to repair the dike. Silly her, that's Tadashi's job.", "You know most people here just call me “The hot shot”.", "You know in the priest community everyone calls me “The hot shot”", "Sakura I will pay you 1 Ryō just please call me “The hot shot”. ", "Never fear “Priest Genshin The Hot Shot” is here!!!", "Sakura get out of my way and go pray.  "])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
@@ -219,7 +219,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("3_q8q0v")
 id = "genshin"
 display_name = "Genshin"
-rules = Array[ExtResource("1_qdc14")]([SubResource("Resource_2o2vm"), SubResource("Resource_gbm1g"), SubResource("Resource_slq0a"), SubResource("Resource_s84me")])
+rules = Array[ExtResource("1_qdc14")]([SubResource("Resource_2o2vm"), SubResource("Resource_slq0a"), SubResource("Resource_gbm1g"), SubResource("Resource_s84me")])
 sprite = ExtResource("8_4joq5")
 schedule = Array[ExtResource("2_e23w1")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_uqf7g"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

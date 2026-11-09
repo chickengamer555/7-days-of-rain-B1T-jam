@@ -74,6 +74,7 @@ metadata/_custom_type_script = "uid://brnj2crn66sd3"
 script = ExtResource("2_njrgi")
 day = 6
 phase = 2
+spot = "shrine"
 condition = SubResource("Resource_awr7y")
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 

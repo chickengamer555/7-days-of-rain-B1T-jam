@@ -58,7 +58,7 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_o5mcm")
 id = "1"
 speaker = "Sato"
-text = "The river is pushing against the dike… I can see cracks along the dike that are leaking mud."
+text = "The river is pushing against the dike… I see cracks along the dike that are leaking mud."
 effect = SubResource("Resource_twyyh")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 

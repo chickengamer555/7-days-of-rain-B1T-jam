@@ -43,7 +43,7 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_node")
 id = "3"
 speaker = "Embankment"
-text = "Stalks of bamboo jut from the tears. Without stone facing, the river will tear this apart on Day 7."
+text = "Stalks of bamboo jut from the cracks. Without stone facing they will break."
 effect = SubResource("Resource_eff_dike")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 

@@ -97,6 +97,7 @@ func resolve(trigger: String) -> void:
 		if is_victory:
 			Flags.clear()
 			Clock.reset()
+			Clock.running = false
 			# Restore weather state for title screen
 			var weather = get_node_or_null("/root/Weather")
 			if weather:

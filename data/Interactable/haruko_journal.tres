@@ -36,7 +36,7 @@ metadata/_custom_type_script = "uid://bocbuuj64elde"
 script = ExtResource("4_node")
 id = "2"
 speaker = "Haruko's Journal"
-text = "'The shrine stands because the village stands. We do not ring for glory, but to keep the water still.'"
+text = "'The shrine stands because the village stands. We ring it, to keep the water still.'"
 choices = Array[ExtResource("5_choice")]([SubResource("Resource_choice_2")])
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
