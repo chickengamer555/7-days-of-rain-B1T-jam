@@ -6,7 +6,7 @@ const LINE_HEIGHT = 10
 const MARGIN = 12
 const INK = Color("#1e1c32")
 
-var mouse: Image = _make_cursor()
+var mouse: Texture2D = _make_cursor()
 var margin_style = StyleBoxEmpty.new() 
 
 # Called when the node enters the scene tree for the first time.
@@ -90,7 +90,7 @@ func _unhandled_input(event): # Make sure the proper keys are pressed and handli
 func open_ledger(): # Opens the ledgers checks which ones we know which ones we dont and adds the ones we do know to a list to displayit 
 	if Sound:
 		Sound.play_whoosh(-4.0, 1.35)
-	Input.set_custom_mouse_cursor(mouse, Input.CURSOR_ARROW, Vector2(21, 0))
+	Cursor.set_look(mouse, Vector2(7, 0), false)
 	Clock.running = false
 	for child in $LedgerScreen/Scroll/Lines.get_children():
 		child.queue_free()
@@ -113,7 +113,7 @@ func open_ledger(): # Opens the ledgers checks which ones we know which ones we 
 func close_ledger(): # Closes the ledger simply 
 	if Sound:
 		Sound.play_button()
-	Input.set_custom_mouse_cursor(null)
+	Cursor.reset_look()
 	$LedgerScreen.hide()
 	Clock.running = true
 	update_hourglass_visibility()
@@ -126,8 +126,7 @@ func draw_ruling():
 		y += LINE_HEIGHT # down 1 row
 	page.draw_rect(Rect2(MARGIN, 0, 1, page.size.y), INK)
 		
-func _make_cursor() -> Image: # Just couldnt be fucked to edit the mouse image so coded the crop
-	var img: Image = load("res://Assets/UI/New Piskel-1.png.png").get_image()  
-	img = img.get_region(Rect2i(6, 12, 16, 16))   
-	img.resize(48, 48, Image.INTERPOLATE_NEAREST) 
-	return img
+func _make_cursor() -> Texture2D:
+	var img: Image = load("res://Assets/UI/New Piskel-1.png.png").get_image()
+	img = img.get_region(Rect2i(6, 12, 16, 16))
+	return ImageTexture.create_from_image(img)

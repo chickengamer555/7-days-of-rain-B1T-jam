@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://relnqsylfkip"]
+
+[ext_resource type="Script" uid="uid://cuxnav51pvte4" path="res://UI/cursor.gd" id="1_wbkk5"]
+[ext_resource type="Shader" uid="uid://clu6l7yo7e361" path="res://Shaders/contrast_outline.gdshader" id="2_7eugj"]
+[ext_resource type="Texture2D" uid="uid://gkgii1bgutw4" path="res://Assets/UI/Mouse 2.png" id="2_gd4nk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ukdnp"]
+shader = ExtResource("2_7eugj")
+shader_parameter/paper_color = Color(0.776471, 0.729412, 0.67451, 1)
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+shader_parameter/outline_width = 1.0
+shader_parameter/outline_enabled = true
+
+[node name="Cursor" type="CanvasLayer" unique_id=789608234]
+script = ExtResource("1_wbkk5")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1852878676]
+material = SubResource("ShaderMaterial_ukdnp")
+texture = ExtResource("2_gd4nk")
+centered = false

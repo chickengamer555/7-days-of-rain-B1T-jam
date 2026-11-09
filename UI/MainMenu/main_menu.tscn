@@ -502,7 +502,8 @@ theme_override_font_sizes/font_size = 7
 text = "WASD : Walk
 E : Interact / Talk
 Q : Ledger
-Hold F : Fast Forward"
+Hold F : Fast Forward
+Shift: Sprint"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -514,9 +515,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -17.0
-offset_top = -75.0
+offset_top = -51.0
 offset_right = 17.0
-offset_bottom = -57.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
