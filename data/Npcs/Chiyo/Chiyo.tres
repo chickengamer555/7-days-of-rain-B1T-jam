@@ -16,6 +16,11 @@ needs_ledger = Array[String](["S2", "S5"])
 from_day = 6
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_6784v"]
+script = ExtResource("4_xf5eg")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_k7kt1"]
 script = ExtResource("5_f3stg")
 add_ledger = Array[String](["S6"])
@@ -25,14 +30,35 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_6784v")
 id = "1"
 speaker = "Chiyo"
-text = "You know about Haruko's prayer... The release words for Shizu-hime are: 'We can stand now, thank you.' Ring the bell and say them when the village is safe."
+text = "So you know about Haruko's prayer... "
+choices = Array[ExtResource("4_xf5eg")]([SubResource("Resource_6784v")])
 effect = SubResource("Resource_k7kt1")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_ubks8"]
+script = ExtResource("4_xf5eg")
+next_id = "3"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_dvxr6"]
+script = ExtResource("3_6784v")
+id = "2"
+speaker = "Chiyo"
+text = "The release words for Shizu-hime are: 'We can stand now, thank you.' "
+choices = Array[ExtResource("4_xf5eg")]([SubResource("Resource_ubks8")])
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("3_6784v")
+id = "3"
+speaker = "Chiyo"
+text = "Go… ring the bell… let the heavens hear it."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_acuwy"]
 script = ExtResource("6_qqfsi")
 start_id = "1"
-nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_xr3ve")])
+nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_xr3ve"), SubResource("Resource_dvxr6"), SubResource("Resource_vrhvj")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_uveua"]
@@ -48,29 +74,43 @@ to_day = 2
 to_phase = 0
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_vrhvj"]
+[sub_resource type="Resource" id="Resource_55wdi"]
+script = ExtResource("4_xf5eg")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
+[sub_resource type="Resource" id="Resource_8fyys"]
 script = ExtResource("5_f3stg")
 add_ledger = Array[String](["S2"])
 metadata/_custom_type_script = "uid://bi35u3p34l30b"
 
-[sub_resource type="Resource" id="Resource_6784v"]
+[sub_resource type="Resource" id="Resource_qqfsi"]
 script = ExtResource("3_6784v")
 id = "1"
 speaker = "Chiyo"
-text = "Forty years ago, the bell rope broke and no one rang it for a month. The river swallowed the lower houses."
-effect = SubResource("Resource_vrhvj")
+text = "Forty years ago, the bell rope broke and no one rang it for a month… "
+choices = Array[ExtResource("4_xf5eg")]([SubResource("Resource_55wdi")])
+effect = SubResource("Resource_8fyys")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_6ys3e"]
+script = ExtResource("3_6784v")
+id = "2"
+speaker = "Chiyo"
+text = "The gods were furious… The river nearly swallowed the town whole."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_gbm1g"]
 script = ExtResource("6_qqfsi")
 start_id = "1"
-nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_6784v")])
+nodes = Array[ExtResource("3_6784v")]([SubResource("Resource_qqfsi"), SubResource("Resource_6ys3e")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_xf5eg"]
 script = ExtResource("1_mlhc1")
 condition = SubResource("Resource_nigqn")
 tree = SubResource("Resource_gbm1g")
+random_lines = Array[String](["... I remember it so clearly.", "... It was 40 years ago wasn't it?", "... Why... did we really deserve such punishment?", "... Kenji's poor father... the boat capsized.", "... We never knew... the bell.", "... I think... my age is getting to me.", "... I remember Ume... she was a sweet little girl.", "... Shizu-hime... Shizu-hime.", "... We must pray... it's all we can do.", "... She's imprisoned... I couldn't help her.", "... Mio came by... reminds me of Ume.", "... Sometimes I see him... Kenji's father... Living in him.", "... If only we knew...", "... Kuro and Mio... such good friends.", "... Tadashi... is Selena okay?", "...Sato... he always was fascinated by that river.", "... I think... Genshin was born with his hat.", "... Okabe's father... was much better.", "... Do the judges... like this game?", "... What will I have for dinner?", "... Hanae as a baby... and now a mother!", "... The days pass by... am I content?", "... Please... don't let it happen again.", "... Shizu-hime... I'm sorry.", "... Oh kami... forgive us.", "... Make sure you pray.", "... Tomo... He has a pure heart... he has lived.", "...These days it gets harder... to function.", "... This town... is my home... it should be a home... for others.", "... The rice fields... I hope to see next harvest.", "... Hope... It's all we have."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_f3stg"]

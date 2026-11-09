@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 script = ExtResource("2_node")
 id = "2"
 speaker = "Hourglass"
-text = "Pale sand hovers within the glass chambers, attuned to the temporal pulse of Mizuhara."
+text = "Pale sand hovers within the glass chambers, attuned to the temporal pulse of Mizuahara."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_hourglass"]

@@ -17,6 +17,11 @@ to_day = 5
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("4_x67wf")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eff_stay"]
 script = ExtResource("5_886hs")
 add_flags = Array[String](["kenji_stays"])
@@ -26,14 +31,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_x67wf")
 id = "1"
 speaker = "Kenji"
-text = "You're right... if the river rises, the villagers on the south bank will have no way across without my boat. I won't run away. I will stay and help everyone escape."
+text = "If the river rises, the villagers on the bank will have no way across without my boat. "
+choices = Array[ExtResource("4_x67wf")]([SubResource("Resource_vrhvj")])
 effect = SubResource("Resource_eff_stay")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_5xl4r"]
+script = ExtResource("3_x67wf")
+id = "2"
+speaker = "Kenji"
+text = "I won't run away. I will stay and help everyone escape!"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_stay"]
 script = ExtResource("6_5xl4r")
 start_id = "1"
-nodes = Array[ExtResource("3_x67wf")]([SubResource("Resource_node_stay")])
+nodes = Array[ExtResource("3_x67wf")]([SubResource("Resource_node_stay"), SubResource("Resource_5xl4r")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_rule_stay"]
@@ -50,6 +63,11 @@ from_phase = 2
 to_day = 3
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_x67wf"]
+script = ExtResource("4_x67wf")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_6w86x"]
 script = ExtResource("5_886hs")
 add_ledger = Array[String](["V2"])
@@ -59,14 +77,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_x67wf")
 id = "1"
 speaker = "Kenji"
-text = "I'm only leaving to warn my sister in the low valley. But if this rain breaks the dike, nobody here will be safe either."
+text = "I'm only leaving to warn my family over yonder. But if this rain breaks the dike… (gulp)."
+choices = Array[ExtResource("4_x67wf")]([SubResource("Resource_x67wf")])
 effect = SubResource("Resource_6w86x")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_8vtiq"]
+script = ExtResource("3_x67wf")
+id = "2"
+speaker = "Kenji"
+text = "Thankfully Tadashi made the dike. I know it's as unbreakable as his spirit!"
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_w5aw8"]
 script = ExtResource("6_5xl4r")
 start_id = "1"
-nodes = Array[ExtResource("3_x67wf")]([SubResource("Resource_jfbd0")])
+nodes = Array[ExtResource("3_x67wf")]([SubResource("Resource_jfbd0"), SubResource("Resource_8vtiq")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_vulmf"]
@@ -77,7 +103,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_gbm1g"]
 script = ExtResource("1_o10xo")
-random_lines = Array[String](["The current is swifter than yesterday.", "Keep clear of the water's edge."])
+random_lines = Array[String](["What's that? Tadashi could beat me in an arm wrestle? Pshh no way. ", "Tadashi's my rival. I aspire each day to be as strong as him! Don't tell him I said that.", "Yeah my dad did die in that great flood. I must live on and carry his spirit with me!", "I sure hope the rest of my family is doing fine.", "I saw Ume licking her lips at me… I don't know what to make of that. ", "Yeah little word of the wise. Don't call Genshin a hot shot.", "There's just too many idiots in this village. Yes, I know I'm one of them.", "Woah there the river seems to be getting more ferocious by the day.", "Feel free to take a spin in the boat any time.", "Apparently it was a chicken that made the boats rideable.", "I pray to Shizu-hime that my family are safe and sound.", "Hey go easy on Tadashi, he's going through a lot. ", "Seems I've gotta give up my job, Mio's got a toy boat so she's the next ferry man!", "Honestly I think Mio could beat Genshin in a fight.", "Sato says the rivers are uneasy, better make sure the boats are tied up. ", "I'm the second son in my family, just look at my name. My father used to say that.", "Row row row your boat gently down the stream. Merrily merrily life is but a dream.", "Ume keeps asking to watch me “tie the boat ups” whatever that means.", "Hey check in on Chiyo for me, can't believe that old bat is still striking strong.", "Everyone's been talking about this Haruko but I'll be honest I don't know who they are.", "You know, if you offer me 100 Ryō. I still wouldn't work for Genshin.", "Okabe's such an idiot I still don't know why he's head. ", "Do you know how Selena is doing?", "198, 199, TWO HUNDRED well that's my daily workout done.", "Have you seen Kuro around? He stole my bacon. ", "Man Hanae is such a good mother. I hope one day I can start my own family, not with Ume.", "Hopefully these boats can ride in this weather.", "These days I'm just a humble boat man looking for a wife and family.", "Tomo might be the strongest out of all of us. To deal with Genshin like that.", "Honestly Chiyo could easily beat Genshin in a fight.", ""])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
@@ -97,7 +123,7 @@ day = 3
 spot = "spot3"
 metadata/_custom_type_script = "uid://drvfddng8l7fd"
 
-[sub_resource type="Resource" id="Resource_x67wf"]
+[sub_resource type="Resource" id="Resource_6446b"]
 script = ExtResource("2_vueqy")
 day = 4
 spot = "spot4"
@@ -126,7 +152,7 @@ script = ExtResource("2_70q0h")
 blocked_by_flags = Array[String](["kenji_stays"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
-[sub_resource type="Resource" id="Resource_vrhvj"]
+[sub_resource type="Resource" id="Resource_886hs"]
 script = ExtResource("2_vueqy")
 day = 5
 phase = 2
@@ -140,5 +166,5 @@ id = "kenji"
 display_name = "Kenji"
 rules = Array[ExtResource("1_o10xo")]([SubResource("Resource_rule_stay"), SubResource("Resource_vulmf"), SubResource("Resource_gbm1g")])
 sprite = ExtResource("4_vueqy")
-schedule = Array[ExtResource("2_vueqy")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_x67wf"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy"), SubResource("Resource_vrhvj")])
+schedule = Array[ExtResource("2_vueqy")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_6446b"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy"), SubResource("Resource_886hs")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

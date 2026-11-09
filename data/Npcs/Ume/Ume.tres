@@ -130,7 +130,7 @@ metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 script = ExtResource("3_meevf")
 id = "2"
 speaker = "Ume"
-text = "He told me he \"intends to take his skiff and leave at dusk in 5 days\". Ohhh kenji."
+text = "He told me he \"intends to take his skiff and leave at dusk in 5 days\". Ohhh Kenji."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_qmtur"]
@@ -147,7 +147,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_hi71u"]
 script = ExtResource("1_435tf")
-random_lines = Array[String](["Warm yourself by the hearth.", "A cup of hot roasted barley tea is good for damp bones."])
+random_lines = Array[String](["Ohh will my tea bring all the boys to the yard? Is it better than yours?", "Now now little bell why don't you come have some tea with me.", "Ohhh little bell, why do the boys not respond to me? Is it because of my age?", "It's hard being this spritely and beautiful. ", "Little bell, what do the other women have that I don't? ", "Ohhh I saw Tadashi earlier working hard with his big… hammer.", "Ohh the rice fields are growing quite well this year.", "That damn Chiyo got married and I didn't because apparently I'm too much of a “player”.", "Ohhh hello little bell I'm sure I've got some butter candy for you. ", "Ohhh little bell I was thinking about spiking my tea for when the boys come over (wink). ", "I heard the boys calling me senile, ohh they want me so bad I just know it.", "(Sighhhh) Kenji's calves… Tadashi's biceps… Oh hello little bell I didn't see you there.", "Ohh I heard that Tadashi boy has a wife… well life's all about overcoming obstacles (wink).", "Ohhh little bell, a little advice, the boys here are smoking hot. Not Genshin.", "Ohhh little bell. I made some delightful tea. I'll share if you bring one of the boys over…", "Ohhh I had this dream last night where Kenji and Tadashi were all mine, heh heh heh.", "Bah, screw those boys I know they want me.", "Ohhh little bell what is a twink?", "Ohhh little bell did you go up to the shrine and pray today?", "Ah that Mio sure is a young whipper snapper. ", "You see, little bell Okabe just doesn't have the muscles that Kenji and Tadashi do.", "Ohhh that Okabe mistook me for a plum! Can you believe it little bell?", "Little bell a word if you will, don't listen to Genshin. No one calls him “the hot shot”.", "Ohhh that Sato is able to fight the mighty pull of the river! What a man.", "Ohhh I'm annoyed that Genshin got to Tomo before I could. ", "Ohh that Genshin I tell you, yuck. ", "Heh Heh Heh I heard from that Tomo boy that Genshin has quite the god complex. ", "Bah stupid Kuro always digging up the rice paddies.", "Kenji and Tadashi's steaming rivalry is what fuels me.", "I swear gimme five minutes with those boys and I'll change their life. ", "Ohhh back in my day all the boys wanted me, they all called me “The hot shot”. ", "Little bell that silly Okabe is more senile than me!"])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]

@@ -17,6 +17,11 @@ to_day = 6
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("4_8s73j")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eff_evac"]
 script = ExtResource("3_eff")
 add_flags = Array[String](["evacuation_ordered"])
@@ -26,14 +31,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("4_node")
 id = "1"
 speaker = "Okabe"
-text = "The river has swallowed the sixth stake, and forty years ago this exact rain washed the village away. Everyone, hear me! Pack what you can carry and evacuate to the high ground at the shrine!"
+text = "The river has gotten too high! Which is uh bad because then the village will flood!"
+choices = Array[ExtResource("4_8s73j")]([SubResource("Resource_vrhvj")])
 effect = SubResource("Resource_eff_evac")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_8s73j"]
+script = ExtResource("4_node")
+id = "2"
+speaker = "Okabe"
+text = "My subjects please run to the shrine! Apart from Tadashi, Tadashi carry me to the shrine! "
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_evac"]
 script = ExtResource("5_tree")
 start_id = "1"
-nodes = Array[ExtResource("4_node")]([SubResource("Resource_node_evac")])
+nodes = Array[ExtResource("4_node")]([SubResource("Resource_node_evac"), SubResource("Resource_8s73j")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_rule_evac"]
@@ -42,9 +55,9 @@ condition = SubResource("Resource_cond_evac")
 tree = SubResource("Resource_tree_evac")
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
-[sub_resource type="Resource" id="Resource_rule_fallback"]
+[sub_resource type="Resource" id="Resource_sgo7o"]
 script = ExtResource("1_rule")
-random_lines = Array[String](["The rain is heavy, but we have weathered storms before.", "We must stay calm until there is clear proof of danger."])
+random_lines = Array[String](["Business business business, numbers, is this working?", "You know what's better than 1 house. 2 houses!", "I think the village folk are starting to catch on...", "Build a house over there! How was that? Did I sound bossy?", "That little brat Mio keeps calling me unko.", "Where is Ume? No not the fruit!", "The rice paddies look good? Will we have a bountiful harvest?", "Wawaweewaa! Head of the town, head of the town. I have 2 houses go do dis go do dat.", "Hypothetically what if I didn't know what I was doing...", "Wait, I'm amazing at this.", "Twa's my father who founded the town!", "Make sure to pray each day! The hot shot says so.", "Why did Hanae have to give birth to a brat like Mio.", "I'm not an idiot I swears it!", "Hehe I think the rain is Shizu-hime's piss.", "Hmmm the dikes are important right?", "Should I start developing a third house? I think I deserve it.", "My father had to rebuild the town after the last flood!", "I just love how easily I get along with all the other villagers.", "The hot shot let me wear his hat hehehe.", "Where is that Tomo? I could use him right now.", "Do you think we need more houses?", "You know I came up with the idea of adding benches (attempts to flex).", "I'm twice the man Kenji will ever be!", "CHIYO IS 80!?!?!?!", "Sometimes I just like rolling in the grass.", "Rain rain go away come back any other day!", "I did my job for the day, can I go play now?", "I swear my house used to be reallyyyy big!", "Hmm Sakura, find out how to make a good town.", "Splish splash I be taking a bath!!!"])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
@@ -92,7 +105,7 @@ metadata/_custom_type_script = "uid://drvfddng8l7fd"
 script = ExtResource("7_data")
 id = "okabe"
 display_name = "Okabe"
-rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_evac"), SubResource("Resource_rule_fallback")])
+rules = Array[ExtResource("1_rule")]([SubResource("Resource_rule_evac"), SubResource("Resource_sgo7o")])
 sprite = ExtResource("8_sprite")
 schedule = Array[ExtResource("6_slot")]([SubResource("Resource_nr7i4"), SubResource("Resource_k16yo"), SubResource("Resource_x5ol8"), SubResource("Resource_hldga"), SubResource("Resource_nj3rs"), SubResource("Resource_hloft"), SubResource("Resource_laejy")])
 metadata/_custom_type_script = "uid://c3x5k0vs6q56c"

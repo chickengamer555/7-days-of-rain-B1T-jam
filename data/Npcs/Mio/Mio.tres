@@ -27,7 +27,7 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_fv784")
 id = "1"
 speaker = "Mio"
-text = "The priest said I can help ring the bell? Then I won't go up the mountain trail alone. I will stay here and wait with you."
+text = "REALLY? Genshin said I can ring the bell? I guess I won't go up the mountain trail alone."
 effect = SubResource("Resource_eff_save_mio")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -51,6 +51,11 @@ to_day = 2
 to_phase = 1
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
+[sub_resource type="Resource" id="Resource_vrhvj"]
+script = ExtResource("4_fv784")
+next_id = "2"
+metadata/_custom_type_script = "uid://bocbuuj64elde"
+
 [sub_resource type="Resource" id="Resource_eff_v3"]
 script = ExtResource("5_qp1cs")
 add_ledger = Array[String](["V3"])
@@ -60,14 +65,22 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_fv784")
 id = "1"
 speaker = "Mio"
-text = "I heard Headman Okabe talking to the priestess. He said he will only order an evacuation if Sato and Chiyo both warn of danger."
+text = "I heard stupid old Okabe talking to Haruko I think it was?"
+choices = Array[ExtResource("4_fv784")]([SubResource("Resource_vrhvj")])
 effect = SubResource("Resource_eff_v3")
+metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
+
+[sub_resource type="Resource" id="Resource_fv784"]
+script = ExtResource("3_fv784")
+id = "2"
+speaker = "Mio"
+text = "He said he will only let us all leave the village if Sato and Chiyo tell him to."
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
 [sub_resource type="Resource" id="Resource_tree_v3"]
 script = ExtResource("6_7qkr4")
 start_id = "1"
-nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_node_v3")])
+nodes = Array[ExtResource("3_fv784")]([SubResource("Resource_node_v3"), SubResource("Resource_fv784")])
 metadata/_custom_type_script = "uid://1m7x43xe4t0i"
 
 [sub_resource type="Resource" id="Resource_rule_v3"]
@@ -78,7 +91,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_rule_fallback"]
 script = ExtResource("1_u7fii")
-random_lines = Array[String](["The rain is getting louder.", "I hope grandmother doesn't catch cold."])
+random_lines = Array[String](["Blahh THE RAIN IS AWESOME!", "Me and Kuro are splashing in puddles.", "My grandmother will save us!", "Woahhh the river was running so fast.", "Do you think Kenji will let me ride his boat?", "Genshins stupid, Okabe stupid.", "Grandma told me we must always pray to Shizu-hime.", "I like the rain but not when it goes on for this long.", "Shizu-hime, Shizu-hime, Shizu-hime!!!", "Ume's so cool she gives me free drinks!", "Where's Tadashi I want a piggy back ride.", "Sato speaks to the river hehehe.", "Grandma tell mes not to grow up like Ume.", "SPLASH SPLASH SPLASH.", "I wanna grow up to be like grandma.", "Kenji says I can be anything when I grow up!", "Tadashi awesome! Okabe unko!", "Kuro's my best friend!", "Kuro go steal Kenji's bacon!", "I want to wear Genshin's hat...", "The mountain is HUGEEEEE!!!", "I hope we can help Shizu-hime.", "I'm gonna save the village one day!!!", "What's a hot shot?", "La La La La Lahhhhhhh.", "Sato awesome! Kenji awesome!", "I like Tomo because he helps me pray!", "Uh, Shizu-hime please protect the village and Kuro.", "I get to play all day!!!", "I can't wait for the rice to be done.", "I like the memorial it's a cooooool stone thingy."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]

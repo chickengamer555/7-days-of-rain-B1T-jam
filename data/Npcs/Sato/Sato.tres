@@ -26,7 +26,7 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_o5mcm")
 id = "1"
 speaker = "Sato"
-text = "When the brown floodwaters reach the sixth measuring stake by the bend, the pressure will burst through the cracks in the dike."
+text = "I don't think the dike can handle this mighty river..."
 effect = SubResource("Resource_pwt6m")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -58,7 +58,7 @@ metadata/_custom_type_script = "uid://bi35u3p34l30b"
 script = ExtResource("3_o5mcm")
 id = "1"
 speaker = "Sato"
-text = "The river is pushing against the bend at Kuma. I can see hairline cracks weeping mud along the dike face."
+text = "The river is pushing against the dike… I can see cracks along the dike that are leaking mud."
 effect = SubResource("Resource_twyyh")
 metadata/_custom_type_script = "uid://c3bdbn2jbepsa"
 
@@ -76,7 +76,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_5xmeh"]
 script = ExtResource("1_3i6my")
-random_lines = Array[String](["The fish have gone deep into the riverbed.", "The current is too fast for nets today."])
+random_lines = Array[String](["The fish sure are biting.", "The river speaks to me and I speak back.", "Tadashi vs Kenji who's winning?", "Genshin's yelling at me again, can't he just shut up.", "It appears the river gets more ferocious with each passing day.", "The river flows within me and I flow with the river.", "Ume keeps looking at me funny.", "Kuro's a good dog ain't he.", "Mio's been splashing about it seems she loves this.", "Hm the rain also seems to be getting worse...", "Shizu-hime lives in me and I live for her.", "Fishy fishys come to the bait come to the bait.", "What's that idiot Okabe saying this time?", "Hey if you see Tomo tell him I say hi.", "The river sure is a feisty one I will tame it one day.", "Tadashi made my fishing rod, may Shizu-hime bless him.", "Nothing like fishing in a storm!", "When I die I will become the current that makes the river run.", "I'm making sure to check the river stake each day!", "The river seems to be getting higher (gulp)...", "Kenji lets me borrow his boats for fishing further down.", "I THINK I GOT ONE... drat, got away.", "I pray to Shizu-hime as one breathes. They simply do.", "We are Shizu-hime's children so we serve her, simple as simple.", "I should bring some fresh fish over for Hanae!", "Where's Kuro? I got some little fishys for him.", "Ever heard of the ocean? It's apparently a really big river.", "I was born by the river, I die by the river. Just as Shizu-hime plans.", "Wanna do some fishing with me?", "Okabe doesn't know anything about what's happening.", "Oh Shizu-himeeee oh the mighty mighty riverrrrr la la la laaaaa."])
 metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_nr7i4"]
