@@ -8,6 +8,7 @@ var SECONDS_PER_PHASE = 15
 var FAST_FOWARD_SPEED = 12 # How much holding fast foward speeds time up
 var saved_world: Node = null # paused game while on title screen
 var was_running = false # was clock running when paused
+var pending_advance_day: bool = false
 
 signal phase_changed #Npcs and hud will listen
 signal flood_arrived #Looping autload listens to this
@@ -15,7 +16,33 @@ signal flood_arrived #Looping autload listens to this
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if Dialouge != null and not Dialouge.conversation_ended.is_connected(_on_conversation_ended):
+		Dialouge.conversation_ended.connect(_on_conversation_ended)
+
+func request_advance_day() -> void:
+	pending_advance_day = true
+
+func _on_conversation_ended() -> void:
+	if pending_advance_day:
+		pending_advance_day = false
+		if Transition != null:
+			Transition.swap(func():
+				advance_day()
+				if Sound != null:
+					Sound.play_whoosh(1.5, 0.8)
+			)
+		else:
+			advance_day()
+			if Sound != null:
+				Sound.play_whoosh(1.5, 0.8)
+
+func advance_day() -> void:
+	if day >= 7:
+		return
+	day += 1
+	phase = 0
+	elapsed = 0.0
+	phase_changed.emit()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

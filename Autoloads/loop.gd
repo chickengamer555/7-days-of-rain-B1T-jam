@@ -107,7 +107,11 @@ func resolve(trigger: String) -> void:
 			return
 
 	# Loopable reset:
+	if Ledger != null:
+		Ledger.loop_count += 1
+		Ledger.save_game()
 	Flags.clear()
+	Flags.add("loop_completed")
 	Clock.reset()
 	if Sound:
 		Sound.play_whoosh(2.0, 0.7)

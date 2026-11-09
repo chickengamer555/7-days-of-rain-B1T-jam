@@ -17,9 +17,50 @@ func _ready() -> void:
 	Ledger.entry_learned.connect(flash_new_entry) #Flash when smth learned
 	$NewEntryTimer.timeout.connect($NewEntryIcon.hide) # zHide icon timer ends
 	$DayLabel.text = str(Clock.day) # Shows day
+	$HourglassBox/HourglassButton.pressed.connect(_on_hourglass_pressed)
+	$HourglassBox/HourglassButton.button_down.connect(func(): $HourglassBox.position.y = 8)
+	$HourglassBox/HourglassButton.button_up.connect(func(): $HourglassBox.position.y = 7)
+	update_hourglass_visibility()
 
 func update_clock(): # Tween animation for clock hands spinning 
 	$DayLabel.text = str(Clock.day)
+	update_hourglass_visibility()
+
+func update_hourglass_visibility() -> void:
+	var has_looped: bool = false
+	if Flags != null and Flags.has("loop_completed"):
+		has_looped = true
+	elif Ledger != null and (Ledger.loop_count >= 1 or Ledger.known.has("A1")):
+		has_looped = true
+
+	if has_looped and Clock.day < 7:
+		$HourglassBox.show()
+	else:
+		$HourglassBox.hide()
+
+func _on_hourglass_pressed() -> void:
+	if Transition != null and Transition.busy:
+		return
+	if Dialouge != null and Dialouge.active:
+		return
+	if $LedgerScreen.visible:
+		return
+	if Clock.day >= 7:
+		return
+
+	if Sound:
+		Sound.play_button()
+
+	if Transition != null:
+		Transition.swap(func():
+			Clock.advance_day()
+			if Sound != null:
+				Sound.play_whoosh(1.5, 0.8)
+		)
+	else:
+		Clock.advance_day()
+		if Sound != null:
+			Sound.play_whoosh(1.5, 0.8)
 
 func _process(delta):
 	var seconds = floor(Clock.elapsed)
@@ -75,6 +116,7 @@ func close_ledger(): # Closes the ledger simply
 	Input.set_custom_mouse_cursor(null)
 	$LedgerScreen.hide()
 	Clock.running = true
+	update_hourglass_visibility()
 
 func draw_ruling():
 	var page = $LedgerScreen/Scroll/Lines # page

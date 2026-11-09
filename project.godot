@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="7 Days of rain"
-run/main_scene="uid://cx6r0j7g4d1va"
+run/main_scene="res://UI/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,7 +24,7 @@ Loop="*res://Autoloads/LOOP.tscn"
 Weather="*res://Effects/rain_weather.tscn"
 Sound="*res://Autoloads/sound.gd"
 Transition="*res://UI/Transition.tscn"
-Dialouge="*uid://cighbufvpxapt"
+Dialouge="*res://Autoloads/DIALOUGE.tscn"
 
 [display]
 
@@ -40,7 +40,7 @@ window/stretch/scale_mode="integer"
 theme/default_font_antialiasing=0
 theme/default_font_hinting=0
 theme/default_font_subpixel_positioning=0
-theme/custom_font="uid://bj105rloibyjq"
+theme/custom_font="res://Assets/pixel_font.ttf"
 
 [input]
 

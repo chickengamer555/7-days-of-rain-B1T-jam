@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cyjgs1wakyjye" path="res://Assets/UI/old-school-adventures-font/OldSchoolAdventures-42j9.ttf" id="4_amwvk"]
 [ext_resource type="Texture2D" uid="uid://ca72732fptx3r" path="res://Assets/Clock/New Piskel (8)-2.png (1).png" id="4_t1yhm"]
 [ext_resource type="Texture2D" uid="uid://cljpn6y3ksn5n" path="res://Assets/UI/pop up notification.png" id="6_lkt0t"]
+[ext_resource type="Texture2D" uid="uid://ccrkxe2yvuhi0" path="res://Assets/Interactable/New Piskel-2.png (2).png" id="7_hourglass"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkt0t"]
 bg_color = Color(0.7764706, 0.7294118, 0.6745098, 1)
@@ -55,6 +56,27 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_lkt0t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_lkt0t")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HourglassBox" type="Panel" parent="." unique_id=1849203814]
+visible = false
+offset_left = 39.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 17.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkt0t")
+
+[node name="HourglassButton" type="TextureButton" parent="HourglassBox" unique_id=1849203815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Skip to Next Day"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_hourglass")
+stretch_mode = 3
 
 [node name="NewEntryIcon" type="TextureRect" parent="." unique_id=291051747]
 visible = false

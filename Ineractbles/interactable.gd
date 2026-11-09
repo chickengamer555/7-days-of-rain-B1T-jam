@@ -9,11 +9,13 @@ extends Area2D
 @onready var sprite_2d: Sprite2D = get_node_or_null("Sprite2D")
 
 func _ready() -> void:
+		if sprite_2d == null:
+				sprite_2d = get_node_or_null("Sprite2D")
 		_show_sprite() # one more so it shows in game 
 
 func _show_sprite() -> void:
-		if not is_node_ready(): # wait for _ ready 
-				return
+		if sprite_2d == null:
+				sprite_2d = get_node_or_null("Sprite2D")
 		if sprite_2d == null or data == null:
 				return
 		if data.sprite:

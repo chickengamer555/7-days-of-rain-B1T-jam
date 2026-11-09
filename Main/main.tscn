@@ -38,7 +38,6 @@
 [ext_resource type="Resource" uid="uid://cn1l7g1agc45u" path="res://data/Interactable/flood_memorial.tres" id="35_memorial"]
 [ext_resource type="Resource" uid="uid://c6nlfwgwxf5ta" path="res://data/Interactable/river_stakes.tres" id="36_stakes"]
 [ext_resource type="Resource" uid="uid://bg0rgr1upn8th" path="res://data/Interactable/cracked_dike.tres" id="37_dike"]
-[ext_resource type="Resource" uid="uid://cx4hourglass" path="res://data/Interactable/hourglass.tres" id="38_hourglass"]
 [ext_resource type="Resource" uid="uid://cox1k002bc8qm" path="res://data/Interactable/tea_hearth.tres" id="39_hearth"]
 [ext_resource type="Script" uid="uid://2mb3prtpkj8k" path="res://Main/town_rain.gd" id="40_gbm1g"]
 [ext_resource type="Resource" uid="uid://dpgotcjtanh4o" path="res://data/Interactable/halfway_hut.tres" id="40_hut"]
@@ -614,10 +613,6 @@ data = ExtResource("30_bell")
 [node name="DonationBox" parent="Interactables" unique_id=14789948 instance=ExtResource("29_interactable")]
 position = Vector2(-15, -401)
 data = ExtResource("31_donation")
-
-[node name="Hourglass" parent="Interactables" unique_id=1112760482 instance=ExtResource("29_interactable")]
-position = Vector2(46, -442)
-data = ExtResource("38_hourglass")
 
 [node name="HarukoJournal" parent="Interactables" unique_id=1601436647 instance=ExtResource("29_interactable")]
 z_index = -2
