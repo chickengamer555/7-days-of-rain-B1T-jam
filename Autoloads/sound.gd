@@ -7,7 +7,6 @@ var SFX_BUTTON = preload("res://Assets/SFX/Button Click.ogg")
 var SFX_COLLECT = preload("res://Assets/SFX/Collect.ogg")
 var SFX_DIALOGUE = preload("res://Assets/SFX/Dialogue.ogg")
 var SFX_TYPEWRITER = preload("res://Assets/SFX/Typewriter.ogg")
-var SFX_WATER = preload("res://Assets/SFX/Water Flowing.ogg")
 var SFX_WHOOSH = preload("res://Assets/SFX/Wind woosh.ogg")
 
 var button_player: AudioStreamPlayer
@@ -27,15 +26,13 @@ func _ready() -> void:
 	# Ensure looping streams are configured
 	if SFX_TYPEWRITER is AudioStreamOggVorbis:
 		SFX_TYPEWRITER.loop = true
-	if SFX_WATER is AudioStreamOggVorbis:
-		SFX_WATER.loop = true
+
 
 	# Dedicated audio players
 	button_player = _create_player("ButtonPlayer", -2.0)
 	collect_player = _create_player("CollectPlayer", 0.0)
 	dialogue_player = _create_player("DialoguePlayer", -4.0)
 	typewriter_player = _create_player("TypewriterPlayer", -6.0, SFX_TYPEWRITER)
-	water_player = _create_player("WaterPlayer", water_base_db, SFX_WATER)
 	whoosh_player = _create_player("WhooshPlayer", -2.0)
 
 	_connect_autoloads()
@@ -74,15 +71,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Fast_foward"):
 		play_whoosh(-4.0, 1.25)
 
-	# Ambient water stream management based on active scene
-	var scene = get_tree().current_scene
-	if scene != null:
-		if scene.name == "Main":
-			if not water_player.playing:
-				start_water()
-		elif scene.name == "MainMenu":
-			if water_player.playing:
-				stop_water()
+
 
 func _on_entry_learned(_id: String) -> void:
 	play_collect()
