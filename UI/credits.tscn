@@ -75,6 +75,7 @@ Grass swaying & player stepping - Chicken
 River - Chicken
 Boat rocking - Chicken
 Town rain - Chicken
+Transition wave - Chicken
 Clock implementation & animation - Alibi, Chicken
 Hand cursor - Chicken, Alibi
 Tileset implementation - Chicken
@@ -85,18 +86,20 @@ Dike cracking - Chicken
 Title screen implementation - Chicken
 Settings - Chicken, PizzaDev
 Controls page - Chicken, PizzaDev
+Mouse cursor, Chicken
 
 AUDIO
-All SFX & music - Gaming House
+Composing (Menu and gameplay) - Gaming House
+Sfxs - Gaming house
 
 WRITING & DATA
 Story - PizzaDev
-NPC story dialogue - Jpman, Pizzadev
-NPC randomized dialogue - Jpman
-Interactable text - PizzaDev, Jpman, Chicken 
-Implementation into engine - Jpman, Chicken
-Data management in engine - Jpman, Chicken
-
+NPC story dialogue - Chicken, Pizzadev
+NPC randomized dialogue - Chicken
+Interactable text - PizzaDev, Chicken 
+Implementation into engine - Chicken
+Data management in engine - Chicken
+Npc scheduling setup, Chicken 
 THIRD PARTY
 \"Old School Adventures\" font by Chequered Ink
 Made with Godot Engine"
