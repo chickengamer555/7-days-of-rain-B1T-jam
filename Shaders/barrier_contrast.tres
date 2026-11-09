@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Shaders/barrier_contrast.gdshader" id="1_barrier"]
+
+[resource]
+shader = ExtResource("1_barrier")
+shader_parameter/paper_color = Color(0.776471, 0.729412, 0.67451, 1)
+shader_parameter/ink_color = Color(0.117647, 0.109804, 0.196078, 1)
+shader_parameter/mode = 0
+shader_parameter/shadow_offset = Vector2(1, 1)

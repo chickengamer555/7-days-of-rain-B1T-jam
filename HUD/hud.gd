@@ -17,6 +17,7 @@ func _ready() -> void:
 	Ledger.entry_learned.connect(flash_new_entry) #Flash when smth learned
 	$NewEntryTimer.timeout.connect($NewEntryIcon.hide) # zHide icon timer ends
 	$DayLabel.text = str(Clock.day) # Shows day
+	$HourglassBox/HourglassButton.focus_mode = Control.FOCUS_NONE
 	$HourglassBox/HourglassButton.pressed.connect(_on_hourglass_pressed)
 	$HourglassBox/HourglassButton.button_down.connect(func(): $HourglassBox.position.y = 8)
 	$HourglassBox/HourglassButton.button_up.connect(func(): $HourglassBox.position.y = 7)
@@ -39,6 +40,7 @@ func update_hourglass_visibility() -> void:
 		$HourglassBox.hide()
 
 func _on_hourglass_pressed() -> void:
+	$HourglassBox/HourglassButton.release_focus()
 	if Transition != null and Transition.busy:
 		return
 	if Dialouge != null and Dialouge.active:

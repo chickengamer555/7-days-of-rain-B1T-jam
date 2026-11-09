@@ -36,6 +36,7 @@ var is_drift_step: bool = false # is this step not mine
 @export_flags_2d_physics var boat_mask: int = 0
 enum Facing { DOWN, UP, LEFT, RIGHT }
 var current_facing: Facing = Facing.DOWN
+var bump_cooldown: float = 0.0
 
 var anim_time: float = 0.0
 var base_sprite_pos: Vector2 = Vector2.ZERO
@@ -86,6 +87,7 @@ func get_input() -> Vector2:
 	return dir
 
 func _physics_process(delta: float) -> void:
+	bump_cooldown = maxf(0.0, bump_cooldown - delta)
 	_update_prompt()
 	grass_clock += delta # Count the grass timer
 	_flatten_grass() # latten the grass
@@ -138,28 +140,30 @@ func _physics_process(delta: float) -> void:
 				if not test_move(global_transform, motion_y, hit_y):
 					motion = motion_y
 				else:
+					_trigger_bump()
 					_animate_idle(delta)
 					return
 		elif motion.length() < 0.5:   # already touching it
+			_trigger_bump()
 			_animate_idle(delta)
 			return
 	target_position = global_position + motion
 	is_moving = true
 
+func _trigger_bump() -> void:
+	if bump_cooldown <= 0.0:
+		bump_cooldown = 0.28
+		if Sound:
+			Sound.play_bump()
+
 func _determine_facing(dir: Vector2) -> void:
 	var prev_facing = current_facing
 	if dir.x != 0 and dir.y != 0:
-		# Diagonal: keep current facing if it already matches one of the diagonal components
-		if current_facing == Facing.RIGHT and dir.x > 0:
-			pass
-		elif current_facing == Facing.LEFT and dir.x < 0:
-			pass
-		elif current_facing == Facing.UP and dir.y < 0:
-			pass
-		elif current_facing == Facing.DOWN and dir.y > 0:
-			pass
+		# Diagonal: only use front (DOWN) and back (UP) sprites
+		if dir.y > 0:
+			current_facing = Facing.DOWN
 		else:
-			current_facing = Facing.RIGHT if dir.x > 0 else Facing.LEFT
+			current_facing = Facing.UP
 	elif dir.y == 0:
 		if dir.x > 0:
 			current_facing = Facing.RIGHT

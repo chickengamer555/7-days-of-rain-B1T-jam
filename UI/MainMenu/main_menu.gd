@@ -62,6 +62,8 @@ func _ready() -> void:
 	_connect_button_sounds(self)
 	
 	_show_view(main_view)
+	if Sound:
+		Sound.play_menu_music()
 	if Clock.saved_world != null: # a game is paused
 		start_btn.text = "Resume"
 
@@ -176,6 +178,8 @@ func _style_recursive(parent: Node, normal: StyleBox, hover: StyleBox) -> void:
 
 
 func _on_start_btn_pressed() -> void:
+	if Sound:
+		Sound.play_game_music(0.4)
 	if Clock.saved_world != null:
 		var world = Clock.saved_world 
 		Clock.saved_world = null # Clear it for next itmne 

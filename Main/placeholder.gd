@@ -4,6 +4,8 @@ extends Node2D
 const NPC_SCENE = preload("res://data/Npcs/NPC.tscn") # Load npc scene
 
 func _ready():
+		if Sound:
+				Sound.play_game_music()
 		Clock.phase_changed.connect(refresh_npcs) #update npcs each phase
 		Dialouge.conversation_ended.connect(refresh_npcs) # update npcs after each convo
 		refresh_npcs()
@@ -17,6 +19,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				_go_to_menu.call_deferred() # wait till end of frame 
 
 func _go_to_menu():
+	if Sound:
+		Sound.play_menu_music(0.4)
 	var tree = get_tree()
 	await Transition.cover() # ink with town showing 
 	tree.root.remove_child(self)

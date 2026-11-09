@@ -8,7 +8,9 @@ var SFX_COLLECT = preload("res://Assets/SFX/Collect.ogg")
 var SFX_DIALOGUE = preload("res://Assets/SFX/Dialogue.ogg")
 var SFX_TYPEWRITER = preload("res://Assets/SFX/Typewriter.ogg")
 var SFX_WHOOSH = preload("res://Assets/SFX/Wind woosh.ogg")
-var SFX_BGM = preload("res://Assets/SFX/bit1 background music.ogg")
+var SFX_BGM_INTRO = preload("res://Assets/SFX/bit1 into musicR.ogg")
+var SFX_BGM_GAME = preload("res://Assets/SFX/bit1 background music.ogg")
+var SFX_BGM = SFX_BGM_GAME # Backwards compatibility alias
 
 var button_player: AudioStreamPlayer
 var collect_player: AudioStreamPlayer
@@ -29,8 +31,10 @@ func _ready() -> void:
 	# Ensure looping streams are configured
 	if SFX_TYPEWRITER is AudioStreamOggVorbis:
 		SFX_TYPEWRITER.loop = true
-	if SFX_BGM is AudioStreamOggVorbis:
-		SFX_BGM.loop = true
+	if SFX_BGM_INTRO is AudioStreamOggVorbis:
+		SFX_BGM_INTRO.loop = true
+	if SFX_BGM_GAME is AudioStreamOggVorbis:
+		SFX_BGM_GAME.loop = true
 
 	# Dedicated audio players
 	button_player = _create_player("ButtonPlayer", -2.0)
@@ -38,9 +42,9 @@ func _ready() -> void:
 	dialogue_player = _create_player("DialoguePlayer", -4.0)
 	typewriter_player = _create_player("TypewriterPlayer", -6.0, SFX_TYPEWRITER)
 	whoosh_player = _create_player("WhooshPlayer", -2.0)
-	music_player = _create_player("MusicPlayer", music_base_db, SFX_BGM)
+	music_player = _create_player("MusicPlayer", music_base_db, SFX_BGM_INTRO)
 
-	play_music()
+	play_menu_music()
 
 	_connect_autoloads()
 
@@ -96,6 +100,14 @@ func play_button(pitch_scale: float = 1.0) -> void:
 		return
 	button_player.stream = SFX_BUTTON
 	button_player.pitch_scale = pitch_scale * randf_range(0.96, 1.04)
+	button_player.play()
+
+func play_bump() -> void:
+	if button_player == null or SFX_BUTTON == null:
+		return
+	button_player.stream = SFX_BUTTON
+	button_player.pitch_scale = randf_range(0.46, 0.52)
+	button_player.volume_db = -12.0
 	button_player.play()
 
 func play_collect() -> void:
@@ -156,12 +168,34 @@ func set_boat_state(on_boat: bool) -> void:
 
 # ----------------- Background Music API -----------------
 
+func play_menu_music(fade_in: float = 0.0) -> void:
+	_switch_bgm(SFX_BGM_INTRO, fade_in)
+
+func play_game_music(fade_in: float = 0.0) -> void:
+	_switch_bgm(SFX_BGM_GAME, fade_in)
+
 func play_music(fade_in: float = 0.0) -> void:
-	if music_player == null or SFX_BGM == null:
+	play_game_music(fade_in)
+
+func _switch_bgm(target_stream: AudioStream, fade_in: float = 0.0) -> void:
+	if music_player == null or target_stream == null:
 		return
-	if music_player.playing:
+	if music_player.stream == target_stream and music_player.playing:
 		return
-	music_player.stream = SFX_BGM
+	if fade_in > 0.0 and music_player.playing:
+		var half_fade = maxf(0.1, fade_in * 0.5)
+		var tween = create_tween()
+		if tween:
+			tween.tween_property(music_player, "volume_db", -60.0, half_fade)
+			tween.tween_callback(func():
+				music_player.stop()
+				music_player.stream = target_stream
+				music_player.play()
+			)
+			tween.tween_property(music_player, "volume_db", music_base_db, half_fade)
+			return
+	music_player.stop()
+	music_player.stream = target_stream
 	if fade_in > 0.0:
 		music_player.volume_db = -60.0
 		music_player.play()
