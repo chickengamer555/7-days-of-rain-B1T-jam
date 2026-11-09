@@ -8,6 +8,7 @@ var SFX_COLLECT = preload("res://Assets/SFX/Collect.ogg")
 var SFX_DIALOGUE = preload("res://Assets/SFX/Dialogue.ogg")
 var SFX_TYPEWRITER = preload("res://Assets/SFX/Typewriter.ogg")
 var SFX_WHOOSH = preload("res://Assets/SFX/Wind woosh.ogg")
+var SFX_BGM = preload("res://Assets/SFX/bit1 background music.ogg")
 
 var button_player: AudioStreamPlayer
 var collect_player: AudioStreamPlayer
@@ -15,10 +16,12 @@ var dialogue_player: AudioStreamPlayer
 var typewriter_player: AudioStreamPlayer
 var water_player: AudioStreamPlayer
 var whoosh_player: AudioStreamPlayer
+var music_player: AudioStreamPlayer
 
 var is_on_boat: bool = false
 var water_base_db: float = -14.0
 var water_boat_db: float = -7.0
+var music_base_db: float = -8.0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS # Persists and processes across pause & scenes
@@ -26,7 +29,8 @@ func _ready() -> void:
 	# Ensure looping streams are configured
 	if SFX_TYPEWRITER is AudioStreamOggVorbis:
 		SFX_TYPEWRITER.loop = true
-
+	if SFX_BGM is AudioStreamOggVorbis:
+		SFX_BGM.loop = true
 
 	# Dedicated audio players
 	button_player = _create_player("ButtonPlayer", -2.0)
@@ -34,6 +38,9 @@ func _ready() -> void:
 	dialogue_player = _create_player("DialoguePlayer", -4.0)
 	typewriter_player = _create_player("TypewriterPlayer", -6.0, SFX_TYPEWRITER)
 	whoosh_player = _create_player("WhooshPlayer", -2.0)
+	music_player = _create_player("MusicPlayer", music_base_db, SFX_BGM)
+
+	play_music()
 
 	_connect_autoloads()
 
@@ -146,3 +153,37 @@ func set_boat_state(on_boat: bool) -> void:
 		var tween = create_tween()
 		if tween:
 			tween.tween_property(water_player, "volume_db", target_db, 0.4)
+
+# ----------------- Background Music API -----------------
+
+func play_music(fade_in: float = 0.0) -> void:
+	if music_player == null or SFX_BGM == null:
+		return
+	if music_player.playing:
+		return
+	music_player.stream = SFX_BGM
+	if fade_in > 0.0:
+		music_player.volume_db = -60.0
+		music_player.play()
+		var tween = create_tween()
+		if tween:
+			tween.tween_property(music_player, "volume_db", music_base_db, fade_in)
+	else:
+		music_player.volume_db = music_base_db
+		music_player.play()
+
+func stop_music(fade_out: float = 0.0) -> void:
+	if music_player == null or not music_player.playing:
+		return
+	if fade_out > 0.0:
+		var tween = create_tween()
+		if tween:
+			tween.tween_property(music_player, "volume_db", -60.0, fade_out)
+			tween.tween_callback(music_player.stop)
+	else:
+		music_player.stop()
+
+func set_music_volume(volume_db: float) -> void:
+	music_base_db = volume_db
+	if music_player:
+		music_player.volume_db = volume_db

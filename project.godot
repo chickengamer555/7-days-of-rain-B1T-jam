@@ -25,7 +25,7 @@ Weather="*res://Effects/rain_weather.tscn"
 Sound="*res://Autoloads/sound.gd"
 Transition="*res://UI/Transition.tscn"
 Dialouge="*res://Autoloads/DIALOUGE.tscn"
-Cursor="*uid://relnqsylfkip"
+Cursor="*res://UI/Cursor.tscn"
 
 [display]
 

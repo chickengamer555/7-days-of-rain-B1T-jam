@@ -78,11 +78,12 @@ func teleport_to(new_pos: Vector2) -> void:
 func get_input() -> Vector2:
 	var x := Input.get_axis("left", "right")
 	var y := Input.get_axis("up", "down")
+	var dir := Vector2.ZERO
 	if x != 0:
-		return Vector2(signf(x), 0)
+		dir.x = signf(x)
 	if y != 0:
-		return Vector2(0, signf(y))
-	return Vector2.ZERO
+		dir.y = signf(y)
+	return dir
 
 func _physics_process(delta: float) -> void:
 	_update_prompt()
@@ -125,7 +126,21 @@ func _physics_process(delta: float) -> void:
 	var hit := KinematicCollision2D.new() # only go as far as wall
 	if test_move(global_transform, motion, hit):
 		motion = hit.get_travel()
-		if motion.length() < 0.5:   # already touching it
+		if motion.length() < 0.5 and dir.x != 0 and dir.y != 0:
+			# Diagonal blocked by wall: attempt sliding along open horizontal or vertical axis
+			var motion_x = Vector2(dir.x * TILE_STEP, 0)
+			var hit_x = KinematicCollision2D.new()
+			if not test_move(global_transform, motion_x, hit_x):
+				motion = motion_x
+			else:
+				var motion_y = Vector2(0, dir.y * TILE_STEP)
+				var hit_y = KinematicCollision2D.new()
+				if not test_move(global_transform, motion_y, hit_y):
+					motion = motion_y
+				else:
+					_animate_idle(delta)
+					return
+		elif motion.length() < 0.5:   # already touching it
 			_animate_idle(delta)
 			return
 	target_position = global_position + motion
@@ -133,7 +148,19 @@ func _physics_process(delta: float) -> void:
 
 func _determine_facing(dir: Vector2) -> void:
 	var prev_facing = current_facing
-	if dir.y == 0:
+	if dir.x != 0 and dir.y != 0:
+		# Diagonal: keep current facing if it already matches one of the diagonal components
+		if current_facing == Facing.RIGHT and dir.x > 0:
+			pass
+		elif current_facing == Facing.LEFT and dir.x < 0:
+			pass
+		elif current_facing == Facing.UP and dir.y < 0:
+			pass
+		elif current_facing == Facing.DOWN and dir.y > 0:
+			pass
+		else:
+			current_facing = Facing.RIGHT if dir.x > 0 else Facing.LEFT
+	elif dir.y == 0:
 		if dir.x > 0:
 			current_facing = Facing.RIGHT
 		else:
