@@ -11,8 +11,7 @@
 [sub_resource type="Resource" id="Resource_cond_day6"]
 script = ExtResource("2_cond")
 from_day = 6
-from_phase = 2
-to_day = 6
+blocked_by_flags = Array[String](["mio_safe"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_choice_1"]

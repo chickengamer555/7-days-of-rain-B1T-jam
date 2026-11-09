@@ -12,8 +12,7 @@
 
 [sub_resource type="Resource" id="Resource_meevf"]
 script = ExtResource("2_garow")
-to_day = 1
-to_phase = 1
+blocked_by_ledger = Array[String](["E1"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_vrhvj"]
@@ -56,9 +55,8 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_aleyx"]
 script = ExtResource("2_garow")
-from_day = 2
-to_day = 2
-to_phase = 1
+needs_ledger = Array[String](["E1"])
+blocked_by_ledger = Array[String](["E2"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_iuwkg"]
@@ -101,10 +99,8 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_l1hfs"]
 script = ExtResource("2_garow")
-from_day = 2
-from_phase = 2
-to_day = 2
-to_phase = 2
+needs_ledger = Array[String](["E2"])
+blocked_by_ledger = Array[String](["V1"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_5tdey"]

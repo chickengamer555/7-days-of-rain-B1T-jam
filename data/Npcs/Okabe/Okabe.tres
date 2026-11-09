@@ -13,8 +13,7 @@
 [sub_resource type="Resource" id="Resource_cond_evac"]
 script = ExtResource("2_cond")
 needs_ledger = Array[String](["V3", "R2", "S2"])
-to_day = 6
-to_phase = 1
+blocked_by_flags = Array[String](["evacuation_ordered"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_vrhvj"]

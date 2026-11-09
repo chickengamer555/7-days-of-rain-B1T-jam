@@ -2,6 +2,7 @@ class_name Condition
 extends Resource 
 
 @export var needs_ledger: Array[String] = []
+@export var blocked_by_ledger: Array[String] = []
 @export var needs_flags: Array[String] = []
 @export var blocked_by_flags: Array[String] = []
 @export var from_day: int = 1
@@ -14,6 +15,9 @@ extends Resource
 func is_met() -> bool:
 	if not Ledger.knows_all(needs_ledger):
 		return false
+	for id in blocked_by_ledger:
+		if Ledger.known.has(id):
+			return false
 	if not Flags.has_all_tags(needs_flags):
 		return false
 	if Flags.has_any_tag(blocked_by_flags):

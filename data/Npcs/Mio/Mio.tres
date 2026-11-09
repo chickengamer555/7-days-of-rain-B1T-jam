@@ -13,9 +13,7 @@
 [sub_resource type="Resource" id="Resource_cond_save_mio"]
 script = ExtResource("2_pd3pl")
 needs_flags = Array[String](["priest_lets_mio"])
-from_day = 6
-to_day = 6
-to_phase = 2
+blocked_by_flags = Array[String](["mio_safe"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_eff_save_mio"]
@@ -45,10 +43,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_cond_v3"]
 script = ExtResource("2_pd3pl")
-from_day = 2
-from_phase = 1
-to_day = 2
-to_phase = 1
+blocked_by_ledger = Array[String](["V3"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_vrhvj"]

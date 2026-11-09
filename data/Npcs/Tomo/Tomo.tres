@@ -12,10 +12,8 @@
 
 [sub_resource type="Resource" id="Resource_ahvxl"]
 script = ExtResource("2_e0noe")
-from_day = 2
-from_phase = 1
-to_day = 2
-to_phase = 1
+needs_ledger = Array[String](["S1"])
+blocked_by_ledger = Array[String](["S3"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_1tldf"]
@@ -45,10 +43,8 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 
 [sub_resource type="Resource" id="Resource_i843k"]
 script = ExtResource("2_e0noe")
-from_day = 3
-from_phase = 1
-to_day = 3
-to_phase = 1
+needs_ledger = Array[String](["E1"])
+blocked_by_ledger = Array[String](["E5"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_3siqg"]

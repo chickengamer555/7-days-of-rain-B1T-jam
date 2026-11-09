@@ -12,9 +12,7 @@
 
 [sub_resource type="Resource" id="Resource_jrcm6"]
 script = ExtResource("2_t40qh")
-from_phase = 2
-to_day = 1
-to_phase = 2
+blocked_by_ledger = Array[String](["S1"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_garow"]
@@ -58,8 +56,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 [sub_resource type="Resource" id="Resource_wciyt"]
 script = ExtResource("2_t40qh")
 needs_ledger = Array[String](["M3"])
-from_day = 6
-to_day = 6
+blocked_by_flags = Array[String](["priest_lets_mio"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_hejtn"]
@@ -103,6 +100,7 @@ metadata/_custom_type_script = "uid://dn6pv6t3qvn8d"
 [sub_resource type="Resource" id="Resource_nigqn"]
 script = ExtResource("2_t40qh")
 needs_ledger = Array[String](["S4"])
+blocked_by_flags = Array[String](["has_stones"])
 metadata/_custom_type_script = "uid://brnj2crn66sd3"
 
 [sub_resource type="Resource" id="Resource_y56be"]
