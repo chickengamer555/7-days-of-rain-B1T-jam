@@ -713,7 +713,6 @@ position = Vector2(-130, 314)
 position = Vector2(-133, 337)
 
 [node name="Rain" type="ColorRect" parent="." unique_id=882345342]
-visible = false
 material = SubResource("ShaderMaterial_1nqbc")
 offset_left = -637.0
 offset_top = -602.0
